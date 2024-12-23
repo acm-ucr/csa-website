@@ -3,8 +3,8 @@ module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      colors:{
-        csa:{
+      colors: {
+        csa: {
           "red-100": "#7C2413",
           "red-200": "#842A35",
           "green-100": "#6F77765",
