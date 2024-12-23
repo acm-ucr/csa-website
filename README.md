@@ -11,7 +11,7 @@
 
 ## Figma
 
-[UCR CSA Figma Design]([https://www.figma.com/](https://www.figma.com/design/IjTcI9KDaZ86rKPULbXrMn/CSA-Club-Website?node-id=0-1&t=2hZHrqJFLW9lxPk6-1))
+[UCR CSA Figma Design](https://www.figma.com/design/IjTcI9KDaZ86rKPULbXrMn/CSA-Club-Website?node-id=0-1&t=2hZHrqJFLW9lxPk6-1)
 
 ## Node.js
 
