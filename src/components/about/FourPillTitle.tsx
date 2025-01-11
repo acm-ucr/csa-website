@@ -2,9 +2,14 @@ import React from "react";
 
 const Heading = () => {
   return (
-    <p className="pr-6 text-right font-serif text-3xl font-semibold text-csa-red-100">
-      Four Pillars
-    </p>
+    <div className="flex justify-end">
+      <div className="flex-col">
+        <p className="w-fit pr-8 text-3xl font-semibold text-csa-red-100">
+          Four Pillars
+        </p>
+        <p className="me-4 ml-auto h-1 w-24 bg-csa-tan-300"></p>
+      </div>
+    </div>
   );
 };
 
