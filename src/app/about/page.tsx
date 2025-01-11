@@ -1,12 +1,12 @@
 import React from "react";
 // import About from "@/components/about/About";
-import Heading from "@/components/about/Heading";
+import Heading from "@/components/about/FourPillTitle";
 
 const page = () => {
   return (
     <div>
       {/* <About /> */}
-      <Heading title={"Four Pillars"} />
+      <Heading />
     </div>
   );
 };
