@@ -1,9 +1,9 @@
 import React from "react";
-import About from "@/components/about/About";
+import WhoWeAre from "@/components/about/WhoWeAre";
 const page = () => {
   return (
     <div>
-      <About />
+      <WhoWeAre />
     </div>
   );
 };
