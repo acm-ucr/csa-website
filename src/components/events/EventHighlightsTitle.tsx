@@ -2,9 +2,9 @@ import React from "react";
 
 const EHTitle = () => {
   return (
-      <p className="text-left text-5xl font-semibold text-csa-red-100">
-        Event Highlights
-      </p>
+    <p className="text-left text-5xl font-semibold text-csa-red-100">
+      Event Highlights
+    </p>
   );
 };
 
