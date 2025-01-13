@@ -1,9 +1,11 @@
-const Home = () => {
+import React from "react";
+import EHTitle from "@/components/events/EventHighlightsTitle";
+const page = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Hello World
+    <div>
+      <EHTitle />
     </div>
   );
 };
 
-export default Home;
+export default page;
