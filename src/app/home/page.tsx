@@ -3,10 +3,10 @@ import React from "react";
 import MemberTitle from "@/components/home/MemberExperienceTitle";
 
 const page = () => {
-    return (
+  return (
     <div>
-        <MemberTitle />
+      <MemberTitle />
     </div>
-    )
+  );
 };
 export default page;
