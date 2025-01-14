@@ -16,10 +16,10 @@ const Navigation = () => {
         }}
         href="/"
       >
-        <Image src={CsaLogo} alt="Logo" className="left-0 md:w-[6%]" />
+        <Image src={CsaLogo} alt="Logo" className="left-0 w-20 mx-5"/>
       </Link>
 
-      <div className="absolute right-0 flex w-[80%] justify-evenly text-xl text-white">
+      <div className="absolute right-0 flex w-[80%] justify-evenly">
         {tags.map((tag, index) => (
           <Link
             href={tag.link}
@@ -27,7 +27,7 @@ const Navigation = () => {
             onClick={() => {
               setClicked(tag.name);
             }}
-            className={`${tag.name == "Join" ? "inline-flex items-center rounded-md bg-csa-yellow-100 px-6 py-2 text-white" : "inline-flex items-center text-white"}`}
+            className={`inline-flex items-center text-xl font-lora ${tag.name == "Join" ? "rounded-md bg-csa-yellow-100 px-6 py-2 text-white" : "text-white"}`}
           >
             {tag.name}
             {clicked == tag.name && (
