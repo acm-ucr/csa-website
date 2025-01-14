@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+import NavBar from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <NavBar/>
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
