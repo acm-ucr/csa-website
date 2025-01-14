@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar/>
+        <NavBar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
