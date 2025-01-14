@@ -1,4 +1,3 @@
-import React from "react";
 import WhoWeAre from "@/components/about/WhoWeAre";
 const page = () => {
   return (
