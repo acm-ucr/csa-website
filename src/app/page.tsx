@@ -1,4 +1,3 @@
-
 import XinDescription from "@/components/home/XinDescription";
 import QuoteBox from "@/components/home/QuoteBox";
 const Home = () => {
@@ -10,6 +9,7 @@ const Home = () => {
                 the Chinese American culture throughout the UCR and Riverside communities"
         name="First name last name"
       />
+    </div>
   );
 };
 
