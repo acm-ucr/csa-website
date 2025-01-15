@@ -1,7 +1,7 @@
-import React from "react";
+import WhoWeAre from "@/components/about/WhoWeAre";
+import Heading from "@/components/about/FourPillTitle";
 import Title from "@/components/Title";
-
-const About = () => {
+const page = () => {
   return (
     <div>
       <Title text="About" />
@@ -9,4 +9,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default page;
