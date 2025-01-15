@@ -1,12 +1,12 @@
 import React from "react";
 import Title from "@/components/Title";
 
-const Events = () => {
+const Gallery = () => {
   return (
     <div>
-      <Title text="Events" />
+      <Title text="Gallery" />
     </div>
   );
 };
 
-export default Events;
+export default Gallery;

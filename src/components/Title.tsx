@@ -9,7 +9,7 @@ interface TitleNameProps {
 const Title: React.FC<TitleNameProps> = ({ text }) => {
   return (
     <div className="relative mt-1 flex items-center justify-center">
-      <div className="mr-4 mt-4 h-[.7vh] w-[20vw] bg-[#6F7765]" />
+      <div className="mr-4 mt-4 h-[.8vh] w-[20vw] bg-csa-green-100" />
       <Image src={banner} alt="Banner" className="h-1/3 w-1/3 object-cover" />
       <div className="absolute mt-4 flex justify-center">
         <svg
@@ -20,14 +20,14 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         >
           <path
             id="curve"
-            d="M50,150 Q200,30 350,150"
+            d="M50,150 Q200,10 370,150"
             fill="transparent"
             stroke="none"
           />
 
           <text
             fill="#7C2413"
-            font-size="7vw"
+            font-size="6.5vw"
             font-weight="bold"
             font-family="serif"
           >
@@ -38,7 +38,7 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         </svg>{" "}
       </div>
 
-      <div className="ml-4 mt-4 h-[.7vh] w-[20vw] bg-[#6F7765]" />
+      <div className="ml-4 mt-4 h-[.8vh] w-[20vw] bg-csa-green-100" />
     </div>
   );
 };
