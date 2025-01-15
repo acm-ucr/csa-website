@@ -1,7 +1,12 @@
-import React from "react";
-
-const About = () => {
-  return <div>Stanley Lew</div>;
+import WhoWeAre from "@/components/about/WhoWeAre";
+import Heading from "@/components/about/FourPillTitle";
+const Page = () => {
+  return (
+    <div>
+      <WhoWeAre />
+      <Heading />
+    </div>
+  );
 };
 
-export default About;
+export default Page;
