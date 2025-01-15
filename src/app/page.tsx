@@ -1,11 +1,11 @@
-import React from "react";
-import EHTitle from "@/components/events/EventHighlightsTitle";
-const page = () => {
+import XinDescription from "@/components/home/XinDescription";
+
+const Home = () => {
   return (
-    <div>
-      <EHTitle />
+    <div className="flex h-screen w-screen items-center justify-center">
+      <XinDescription />
     </div>
   );
 };
 
-export default page;
+export default Home;
