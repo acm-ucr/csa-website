@@ -5,28 +5,28 @@ import React, { useState } from "react";
 import CsaLogo from "@/public/home/csalogo.svg";
 import WebMarker from "@/public/home/webpageMarker.svg";
 import { tags } from "@/data/navBarData";
-import { AlignJustify } from 'lucide-react';
+import { AlignJustify } from "lucide-react";
 
 const Navigation = () => {
   const [clicked, setClicked] = useState("Home");
   const [mobileScreen, setMobile] = useState(false);
- 
+
   const handleMobile = () => {
-    setMobile(!mobileScreen)
-  }
+    setMobile(!mobileScreen);
+  };
 
   return (
     <div className="fixed top-0 flex w-full items-center justify-between border-b-8 border-csa-yellow-100 bg-csa-red-200">
       <Link
         onClick={() => {
-          setClicked("");
+          setClicked("Home");
         }}
         href="/"
       >
-        <Image src={CsaLogo} alt="Logo" className="left-0 mx-5 my-3 w-20" />
+        <Image src={CsaLogo} alt="CSA_Logo" className="left-0 mx-5 my-3 w-20" />
       </Link>
 
-      <div className="absolute right-0 hidden md:flex w-[80%] justify-evenly">
+      <div className="absolute right-0 hidden w-[80%] justify-evenly md:flex">
         {tags.map((tag, index) => (
           <Link
             href={tag.link}
@@ -34,7 +34,7 @@ const Navigation = () => {
             onClick={() => {
               setClicked(tag.name);
             }}
-            className={`hover:cursor-pointer font-lora inline-flex items-center text-xl ${tag.name == "Join" ? "rounded-md bg-csa-yellow-100 px-6 py-2 text-white" : "text-white"}`}
+            className={`font-lora inline-flex items-center text-xl hover:cursor-pointer ${tag.name == "Join" ? "rounded-md bg-csa-yellow-100 px-6 py-2 text-white" : "text-white"}`}
           >
             {tag.name}
             {clicked == tag.name && (
@@ -50,7 +50,7 @@ const Navigation = () => {
       <div
         className={
           mobileScreen
-            ? "fixed top-10 -z-10 flex w-full flex-col items-center justify-evenly md:hidden bg-csa-red-200"
+            ? "fixed top-10 -z-10 flex w-full flex-col items-center justify-evenly bg-csa-red-200 md:hidden"
             : "fixed hidden"
         }
       >
@@ -62,14 +62,14 @@ const Navigation = () => {
               setClicked(tag.name);
               handleMobile();
             }}
-            className={`hover:cursor-pointer mb-4 font-lora inline-flex items-center text-xl text-white ${tag.name == "Join" && "rounded-md bg-csa-yellow-100 px-6 py-2 text-white"}`}
+            className={`font-lora mb-4 inline-flex items-center text-xl text-white hover:cursor-pointer ${tag.name == "Join" && "rounded-md bg-csa-yellow-100 px-6 py-2"}`}
           >
             {tag.name}
           </Link>
         ))}
       </div>
       <div onClick={handleMobile}>
-        <AlignJustify className= "flex justify-self-end mr-3 md:hidden text-3xl text-white hover:cursor-pointer" />
+        <AlignJustify className="mr-3 flex text-3xl text-white hover:cursor-pointer md:hidden" />
       </div>
     </div>
   );
