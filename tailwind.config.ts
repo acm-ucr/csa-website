@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'bodoni': ['Libre Bodoni', 'serif'],
-        'Lora': ['Lora', 'serif'],
+        bodoni: ["Libre Bodoni", "serif"],
+        Lora: ["Lora", "serif"],
       },
       colors: {
         csa: {
