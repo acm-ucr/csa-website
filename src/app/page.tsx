@@ -1,9 +1,17 @@
+import React from "react";
 import XinDescription from "@/components/home/XinDescription";
+import QuoteBox from "@/components/home/QuoteBox";
+import quotes from "@/data/quote-data";
+import EHTitle from "@/components/events/EventHighlightsTitle";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen items-center justify-center">
+    <div className="flex h-screen w-screen flex-col items-center justify-center gap-10 bg-csa-tan-100">
+      <EHTitle />
       <XinDescription />
+      {quotes.map(({ quote, person }, index) => (
+        <QuoteBox quote={quote} name={person} key={index} />
+      ))}
     </div>
   );
 };
