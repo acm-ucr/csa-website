@@ -2,6 +2,7 @@ import "./globals.css";
 import { Libre_Bodoni } from "next/font/google";
 import { Lora } from "next/font/google";
 import { ReactQueryClientProvider } from "@/utils/react-query";
+import NavBar from "@/components/NavBar";
 
 const libre_bodoni = Libre_Bodoni({ subsets: ["latin"] });
 const lora = Lora({
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className={`${libre_bodoni.className} ${lora.variable}`}>
+        <NavBar />
         <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
       </body>
     </html>
