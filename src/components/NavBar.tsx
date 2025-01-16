@@ -26,7 +26,7 @@ const Navigation = () => {
         <Image src={CsaLogo} alt="CSA_Logo" className="left-0 mx-5 my-3 w-20" />
       </Link>
 
-      <div className="absolute right-0 hidden w-[80%] justify-evenly md:flex">
+      <div className="absolute right-0 hidden w-[45%] justify-evenly px-1 md:flex">
         {tags.map((tag, index) => (
           <Link
             href={tag.link}
