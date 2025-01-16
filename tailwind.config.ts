@@ -11,7 +11,7 @@ module.exports = {
         csa: {
           "red-100": "#7C2413",
           "red-200": "#842A35",
-          "green-100": "#6F77765",
+          "green-100": "#6F7765",
           "yellow-100": "#D0AD6B",
           "yellow-200": "#E0C799",
           "yellow-300": "#E9A545",

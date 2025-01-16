@@ -2,3 +2,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-lora: "Lora", serif;
+}
+
+.font-lora {
+  font-family: var(--font-lora);
+}

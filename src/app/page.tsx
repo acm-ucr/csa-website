@@ -1,10 +1,19 @@
-import Header from "@/components/home/Header";
+import React from "react";
+import XinDescription from "@/components/home/XinDescription";
+import QuoteBox from "@/components/home/QuoteBox";
+import quotes from "@/data/quote-data";
+import EHTitle from "@/components/events/EventHighlightsTitle";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main>
-      <Header />
-      {/* Add other components here */}
-    </main>
+    <div className="flex h-screen w-screen flex-col items-center justify-center gap-10 bg-csa-tan-100">
+      <EHTitle />
+      <XinDescription />
+      {quotes.map(({ quote, person }, index) => (
+        <QuoteBox quote={quote} name={person} key={index} />
+      ))}
+    </div>
   );
-}
+};
+
+export default Home;
