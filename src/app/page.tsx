@@ -1,9 +1,10 @@
-const Home = () => {
-  return (
-    <div className="flex h-screen w-screen items-center justify-center">
-      Hello World
-    </div>
-  );
-};
+import Header from '@/components/home/Header';
 
-export default Home;
+export default function Home() {
+  return (
+    <main>
+      <Header />
+      {/* Add other components here */}
+    </main>
+  );
+}
