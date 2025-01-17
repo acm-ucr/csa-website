@@ -6,7 +6,7 @@ import EHTitle from "@/components/events/EventHighlightsTitle";
 
 const Home = () => {
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center gap-10 bg-csa-tan-100">
+    <div className="bg-csa-tan-100 pt-[12.2vh] md:pt-[14.4vh]">
       <EHTitle />
       <XinDescription />
       {quotes.map(({ quote, person }, index) => (
