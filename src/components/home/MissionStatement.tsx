@@ -1,10 +1,8 @@
-import React from "react";
-
 const MissionStatement = () => {
   return (
     <div className="px-8 py-4">
       <div className="border-l-8 border-csa-tan-300 pl-6">
-        <p className="mb-0 text-left text-5xl font-bold text-csa-red-100">
+        <p className="text-left text-5xl font-bold text-csa-red-100">
           Mission statement
         </p>
         <p className="mt-4 text-left text-2xl leading-9 text-csa-gray-100">
