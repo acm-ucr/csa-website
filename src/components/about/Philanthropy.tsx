@@ -9,7 +9,11 @@ const Philanthropy = () => {
         <p className="font-lora p-4 text-5xl font-bold text-csa-gray-200">
           Philanthropy
         </p>
-        <Image src={HeartImage} alt="heartImage" className="w-7/12 absolute right-[-40%] top-[-90%]" />
+        <Image
+          src={HeartImage}
+          alt="heartImage"
+          className="absolute right-[-40%] top-[-90%] w-7/12"
+        />
       </div>
     </div>
   );
