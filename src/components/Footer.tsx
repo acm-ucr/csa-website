@@ -6,7 +6,7 @@ import CsaLogo from "@/public/home/csalogo.svg";
 import { icons } from "@/data/footerData";
 
 const Footer = () => {
-  const [clicked, setClicked] = useState("Home");
+  const [, setClicked] = useState("Home");
   return (
     <div className="relative bottom-0 flex h-24 w-full items-center justify-between border-t-8 border-csa-yellow-100 bg-csa-red-200 align-bottom">
       <Link
