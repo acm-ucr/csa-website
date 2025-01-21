@@ -1,18 +1,19 @@
 import React from "react";
-import Image from "@/public/about/heart.svg";
+import Image from "next/image";
+import HeartImage from "@/public/about/heart.svg";
 
 const Philanthropy = () => {
   return (
-    <div className="relative grid grid-cols-4 p-6">
-      <div className="col-span-2 flex items-center rounded-3xl border-8 border-csa-green-100 bg-white p-2">
-        <p className="font-lora p-4 text-left text-5xl font-bold text-csa-gray-200">
+    <div className="flex m-6">
+      <div className="relative h-[12vh] w-[25vw] border-8 border-csa-green-100 rounded-3xl flex items-center">        
+        <p className="font-lora p-4 text-5xl font-bold text-csa-gray-200">
           Philanthropy
         </p>
         <div
-          className="absolute left-1/2"
-          style={{ transform: "translateY(5%) translateX(-50%)" }}
+          className="absolute right"
+          style={{ transform: "translateY(5%) translateX(110%)" }}
         >
-          <img src={Image.src} alt="heart" className="h-3/4 w-3/4" />
+          <Image src={HeartImage} alt="heartImage" className="h-3/4 w-3/4" />
         </div>
       </div>
     </div>
