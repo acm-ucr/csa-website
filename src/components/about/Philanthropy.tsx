@@ -9,12 +9,7 @@ const Philanthropy = () => {
         <p className="font-lora p-4 text-5xl font-bold text-csa-gray-200">
           Philanthropy
         </p>
-        <div
-          className="right absolute"
-          style={{ transform: "translateY(5%) translateX(110%)" }}
-        >
-          <Image src={HeartImage} alt="heartImage" className="h-3/4 w-3/4" />
-        </div>
+        <Image src={HeartImage} alt="heartImage" className="w-7/12 absolute right-[-40%] top-[-90%]" />
       </div>
     </div>
   );
