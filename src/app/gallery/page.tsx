@@ -4,7 +4,7 @@ import Title from "@/components/Title";
 
 const page = () => {
   return (
-    <div>
+    <div className="bg-csa-tan-100">
       <WhoWeAre />
       <Heading />
       <Title text="gallery" />

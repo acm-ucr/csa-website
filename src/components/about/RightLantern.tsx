@@ -6,7 +6,7 @@ const RightLantern = () => {
     <Image
       src={lantern}
       alt="Chinese Latnern"
-      className="absolute right-0 -z-10 -translate-y-64 translate-x-6 scale-90"
+      className="absolute right-0 -z-10 w-3/12 scale-90"
     />
   );
 };
