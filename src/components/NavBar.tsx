@@ -16,7 +16,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="fixed top-0 flex w-full items-center justify-between border-b-8 border-csa-yellow-100 bg-csa-red-200">
+    <div className="fixed top-0 flex w-full items-center justify-between border-b-8 border-csa-yellow-100 bg-csa-red-200 z-20">
       <Link
         onClick={() => {
           setClicked("Home");
