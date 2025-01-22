@@ -4,8 +4,8 @@ import redenvelope from "@/public/about/envelope.webp";
 
 const Culture = () => {
   return (
-    <div className="m-12 flex">
-      <div className="relative flex h-[12vh] w-[25vw] items-center rounded-3xl border-8 border-csa-red-100 bg-white">
+    <div className="ml-20 flex">
+      <div className="relative flex h-[12vh] w-[45vw] items-center rounded-3xl border-8 border-csa-red-100 bg-white">
         <p className="font-lora absolute right-2 p-4 text-3xl font-bold text-csa-gray-200">
           Culture
         </p>
