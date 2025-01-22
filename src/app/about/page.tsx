@@ -9,11 +9,11 @@ import Philanthropy from "@/components/about/Philanthropy";
 
 const page = () => {
   return (
-    <div>
+    <div className="bg-csa-tan-100">
+      <RightLantern />
+      <Title text="about" />
       <WhoWeAre />
       <Heading />
-      <Title text="about" />
-      <RightLantern />
       <Philanthropy />
       <Social />
       <Culture />
