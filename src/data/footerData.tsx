@@ -1,4 +1,3 @@
-//import Image from "next/image";
 import { Instagram } from "lucide-react";
 import { Facebook } from "lucide-react";
 import { Youtube } from "lucide-react";

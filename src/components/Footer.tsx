@@ -23,7 +23,7 @@ const Footer = () => {
           <Link
             href={icon.link}
             key={index}
-            className="inline-flex items-center text-xl text-white hover:scale-150 hover:transform hover:cursor-pointer hover:text-csa-yellow-300"
+            className="inline-flex scale-125 items-center text-xl text-white hover:scale-150 hover:cursor-pointer hover:text-csa-yellow-300"
           >
             {icon.image}
           </Link>
