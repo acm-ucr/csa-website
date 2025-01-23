@@ -10,7 +10,7 @@ const Home = () => {
     <div className="bg-csa-tan-100">
       <div className="grid grid-flow-col grid-rows-3 gap-4">
         <Image
-          src="/home/dragon.png"
+          src="/home/dragon.webp"
           alt="dragon"
           width={450}
           height={450}
