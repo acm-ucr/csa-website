@@ -4,6 +4,7 @@ import QuoteBox from "@/components/home/QuoteBox";
 import quotes from "@/data/quote-data";
 import EHTitle from "@/components/events/EventHighlightsTitle";
 import MissionStatement from "@/components/home/MissionStatement";
+import Carousel from "@/components/home/Carousel";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       {quotes.map(({ quote, person }, index) => (
         <QuoteBox quote={quote} name={person} key={index} />
       ))}
+      <Carousel />
     </div>
   );
 };
