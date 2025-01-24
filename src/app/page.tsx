@@ -4,13 +4,12 @@ import QuoteBox from "@/components/home/QuoteBox";
 import quotes from "@/data/quote-data";
 import EHTitle from "@/components/events/EventHighlightsTitle";
 import Image from "next/image";
-import Dragon from "@/public/home/dragon.png"
-
+import Dragon from "@/public/home/dragon.png";
 
 const Home = () => {
   return (
-    <div className="bg-csa-tan-100  ">
-      <Image src = {Dragon} alt ='dragon' className=" w-1/4  left-0 top-0" />
+    <div className="bg-csa-tan-100">
+      <Image src={Dragon} alt="dragon" className="left-0 top-0 w-1/4" />
       <EHTitle />
       <XinDescription />
       {quotes.map(({ quote, person }, index) => (
