@@ -18,12 +18,12 @@ const Footer = () => {
         <Image src={CsaLogo} alt="CSA_Logo" className="left-0 mx-5 w-20" />
       </Link>
 
-      <div className="absolute right-0 flex w-[30%] justify-evenly md:w-[20%]">
+      <div className="absolute right-0 flex w-[50%] justify-evenly md:w-[30%]">
         {icons.map((icon, index) => (
           <Link
             href={icon.link}
             key={index}
-            className="inline-flex scale-125 items-center text-xl text-white hover:scale-150 hover:cursor-pointer hover:text-csa-yellow-300"
+            className="inline-flex scale-[1.5] items-center text-xl text-white hover:scale-[2] hover:cursor-pointer hover:text-csa-yellow-300"
           >
             {icon.image}
           </Link>
