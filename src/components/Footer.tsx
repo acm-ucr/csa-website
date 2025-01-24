@@ -18,7 +18,7 @@ const Footer = () => {
         <Image src={CsaLogo} alt="CSA_Logo" className="left-0 mx-5 w-20" />
       </Link>
 
-      <div className="absolute right-0 flex w-[50%] justify-evenly md:w-[30%]">
+      <div className="absolute right-0 flex w-[50%] justify-evenly md:w-[25%]">
         {icons.map((icon, index) => (
           <Link
             href={icon.link}
