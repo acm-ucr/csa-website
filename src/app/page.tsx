@@ -4,7 +4,7 @@ import QuoteBox from "@/components/home/QuoteBox";
 import quotes from "@/data/quote-data";
 import EHTitle from "@/components/events/EventHighlightsTitle";
 import Image from "next/image";
-import Dragon from "@/public/home/dragon.png";
+import Dragon from "@/public/home/dragon.webp";
 
 const Home = () => {
   return (
