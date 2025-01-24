@@ -12,13 +12,9 @@ const XinDescription = () => {
         that defines the Chinese American.
       </p>
       <div className="flex items-center justify-center py-[6vh]">
-        <div className="relative">
-          <div className="h-52 w-52 rounded-full border-8 border-csa-tan-200 bg-csa-tan-100"></div>
-          <Image
-            src={xinImage}
-            alt="Xin_Image"
-            className="absolute right-6 top-4 w-40"
-          />
+        <div className="relative flex items-center justify-center">
+          <div className="aspect-square w-[16vw] rounded-full border-8 border-csa-tan-200 bg-csa-tan-100"></div>
+          <Image src={xinImage} alt="Xin_Image" className="absolute w-[12vw]" />
         </div>
       </div>
     </div>
