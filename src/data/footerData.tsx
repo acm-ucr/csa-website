@@ -4,6 +4,7 @@ import { AiOutlineYoutube } from "react-icons/ai";
 import { CiGlobe } from "react-icons/ci";
 import { FiLinkedin } from "react-icons/fi";
 
+
 export const icons = [
   {
     name: "instagram",
