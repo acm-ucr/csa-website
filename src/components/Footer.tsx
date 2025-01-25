@@ -7,9 +7,7 @@ import { icons } from "@/data/footerData";
 const Footer = () => {
   return (
     <div className="relative bottom-0 flex h-24 w-full items-center justify-between border-t-8 border-csa-yellow-100 bg-csa-red-200 align-bottom">
-      <Link
-        href="/"
-      >
+      <Link href="/">
         <Image src={CsaLogo} alt="CSA_Logo" className="left-0 mx-5 w-20" />
       </Link>
 
@@ -18,9 +16,9 @@ const Footer = () => {
           <Link
             href={icon.link}
             key={index}
-            className="inline-flex items-center justify-center text-3xl text-white hover:text-5xl hover:cursor-pointer hover:text-csa-yellow-300"
+            className="inline-flex items-center justify-center text-3xl text-white hover:cursor-pointer hover:text-5xl hover:text-csa-yellow-300"
           >
-          {icon.image}
+            {icon.image}
           </Link>
         ))}
       </div>
