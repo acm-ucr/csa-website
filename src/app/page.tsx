@@ -3,7 +3,7 @@ import XinDescription from "@/components/home/XinDescription";
 import QuoteBox from "@/components/home/QuoteBox";
 import quotes from "@/data/quote-data";
 import Image from "next/image";
-import Dragon from "@/public/home/Dragon.png";
+import Dragon from "@/public/home/Dragon.webp";
 
 const Home = () => {
   return (
