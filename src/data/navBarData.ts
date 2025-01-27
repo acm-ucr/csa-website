@@ -8,7 +8,7 @@ export const tags = [
     link: "/about",
   },
   {
-    name: "Board",
+    name: "webp",
     link: "/board",
   },
   {
