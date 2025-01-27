@@ -6,17 +6,17 @@ import { icons } from "@/data/footerData";
 
 const Footer = () => {
   return (
-    <div className="relative bottom-0 flex h-24 w-full items-center justify-between border-t-8 border-csa-yellow-100 bg-csa-red-200 align-bottom">
+    <div className="flex items-center border-t-8 border-csa-yellow-100 bg-csa-red-200">
       <Link href="/">
-        <Image src={CsaLogo} alt="CSA_Logo" className="left-0 mx-5 w-20" />
+        <Image src={CsaLogo} alt="CSA_Logo" className="ml-5 w-[6vw]" />
       </Link>
 
-      <div className="absolute right-0 flex w-[50%] justify-evenly md:w-[30%]">
+      <div className="absolute right-0 flex gap-4 mr-6">
         {icons.map((icon, index) => (
           <Link
             href={icon.link}
             key={index}
-            className="inline-flex items-center justify-center text-3xl text-white hover:cursor-pointer hover:text-5xl hover:text-csa-yellow-300"
+            className="text-5xl text-white hover:text-csa-yellow-300"
           >
             {icon.image}
           </Link>
