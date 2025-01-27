@@ -8,7 +8,12 @@ const LanternBackground = () => {
       <Image
         src={Lantern}
         alt="Lantern background"
-        className="w-70 absolute right-20 top-28"
+        className="absolute"
+        style={{
+          width: "70vw",
+          right: "20vw",
+          top: "28vh",
+        }}
       />
     </div>
   );
