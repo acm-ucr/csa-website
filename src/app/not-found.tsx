@@ -1,5 +1,11 @@
+import ErrorImages from "@/components/not-foundImages";
+
 const NotFound = () => {
-  return <div>404 Page Not Found</div>;
+  return (
+    <div>
+      <ErrorImages />
+    </div>
+  );
 };
 
 export default NotFound;
