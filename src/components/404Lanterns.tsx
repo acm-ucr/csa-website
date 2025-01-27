@@ -1,16 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import lanterns from "@/public/notfound/404lanterns.svg";
+import Lantern from "@/public/notfound/lantern404.webp";
 
 const LanternBackground = () => {
   return (
-    <div className="absolute right-0 top-8 h-[840px] w-[600px] opacity-100">
+    <div>
       <Image
-        src={lanterns}
-        alt="Lanterns background"
-        layout="fill"
-        objectFit="contain"
-        className="absolute"
+        src={Lantern}
+        alt="Lantern background"
+        className="w-70 absolute right-20 top-28"
       />
     </div>
   );
