@@ -1,4 +1,4 @@
-import Briana from "@/public/board/Briana_Lam.JPG";
+import Brianna from "@/public/board/Briana_Lam.JPG";
 import Ryan_Lew from "@/public.board/Ryan_Lew.JPG";
 import Megan from "@/public/board/Megan_Ho.JPG";
 import Renne from "@/public/board/Renne_Sanchex.JPG";
@@ -30,8 +30,8 @@ import Stephanie from "@/public/board/Stephanie_Huang.JPG";
 
 export const boardInfo = [
   {
-    image: Briana,
-    name: "Briana Lam",
+    image: Brianna,
+    name: "Brianna Lam",
     title: "President",
     color: "csa-red-100",
   },
@@ -151,7 +151,7 @@ export const boardInfo = [
   },
   {
     image: Nathan,
-    name: "Nathan Ceung",
+    name: "Nathan Cheung",
     title: "Chinese Culture Night Producer",
     color: "csa-tan-100",
   },
