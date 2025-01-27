@@ -139,7 +139,7 @@ export const boardInfo = [
   },
   {
     image: Mia,
-    name: "Mai Chiang",
+    name: "Mia Chiang",
     title: "Chinese Culture Night Director",
     color: "csa-tan-100",
   },
