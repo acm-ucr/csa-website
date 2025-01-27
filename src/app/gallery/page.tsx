@@ -1,13 +1,9 @@
-import WhoWeAre from "@/components/about/WhoWeAre";
-import Heading from "@/components/about/FourPillTitle";
 import Title from "@/components/Title";
 import Gallery from "@/components/gallery/Gallery";
 
 const page = () => {
   return (
-    <div>
-      <WhoWeAre />
-      <Heading />
+    <div className="bg-csa-tan-100">
       <Title text="gallery" />
       <Gallery />
     </div>
