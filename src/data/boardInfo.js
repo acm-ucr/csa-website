@@ -13,18 +13,18 @@ import Yoonah from "@/public/board/Yoonah_Choi.webp";
 import Isabelle from "@/public/board/Isabelle_Huang.webp";
 import Yuhan from "@/public/board/Yuhan_Shi.webp";
 import Joshua from "@/public/board/Joshua_Yu.webp";
-import webp from "@/public/board/webp_Gao.webp";
+import Anson from "@/public/board/Anson_Gao.webp";
 import Kathy from "@/public/board/Kathy_Liu.webp";
-import webp from "@/public/board/webp_Lau.webp";
+import Connor from "@/public/board/Connor_Lao.jpg";
 import Mia from "@/public/board/Mia_Chiang.webp";
 import Samantha from "@/public/board/Samantha_Lee.webp";
 import Nathan from "@/public/board/Nathan_Cheung.webp";
 import Peter from "@/public/board/Peter_Hsia.webp";
-import webp from "@/public/board/webp_Banh.webp";
+import Andy from "@/public/board/Andy_Banh.webp";
 import Kaelyn from "@/public/board/Kaelyn_Lam.webp";
-import webp from "@/public/board/webp_Lam.webp";
+import Aidan from "@/public/board/Aidan_Lam.webp";
 import Andrew from "@public/board/Andrew_Zhang.webp";
-import webp from "@/public/board/webp_Hang.webp";
+import Caitlyn from "@/public/board/Caitlyn_Hang.webp";
 import Ryan_Nguyen from "@/public/board/Ryan_Nguyen.webp";
 import Stephanie from "@/public/board/Stephanie_Huang.webp";
 
@@ -120,8 +120,8 @@ export const boardInfo = [
     color: "csa-yellow-300",
   },
   {
-    image: webp,
-    name: "webp Gao",
+    image: Anson,
+    name: "Anson Gao",
     title: "Media Chair",
     color: "csa-yellow-300",
   },
@@ -132,8 +132,8 @@ export const boardInfo = [
     color: "csa-yellow-300",
   },
   {
-    image: webp,
-    name: "webp Lau",
+    image: Connor,
+    name: "Connor Lau",
     title: "Family Chair",
     color: "csa-yellow-300",
   },
@@ -162,8 +162,8 @@ export const boardInfo = [
     color: "csa-tan-100",
   },
   {
-    image: webp,
-    name: "webp Banh",
+    image: Andy,
+    name: "Andy Banh",
     title: "Dance Coordinator",
     color: "csa-grey-200",
   },
@@ -174,8 +174,8 @@ export const boardInfo = [
     color: "csa-grey-200",
   },
   {
-    image: webp,
-    name: "webp Lam",
+    image: Aidan,
+    name: "Aidan Lam",
     title: "Esport Coordinator",
     color: "csa-grey-200",
   },
@@ -186,8 +186,8 @@ export const boardInfo = [
     color: "csa-grey-200",
   },
   {
-    image: webp,
-    name: "webp Hang",
+    image: Caitlyn,
+    name: "Caitlun Hang",
     title: "Sports Coordinator",
     color: "csa-grey-200",
   },
