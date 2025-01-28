@@ -1,11 +1,7 @@
-import ErrorImages from "@/components/not-foundImages";
+import NotFound from "@/components/NotFound";
 
-const NotFound = () => {
-  return (
-    <div>
-      <ErrorImages />
-    </div>
-  );
+const NotFoundPage = () => {
+  return <NotFound />;
 };
 
-export default NotFound;
+export default NotFoundPage;
