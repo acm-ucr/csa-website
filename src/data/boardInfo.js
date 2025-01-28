@@ -15,7 +15,7 @@ import Yuhan from "@/public/board/Yuhan_Shi.webp";
 import Joshua from "@/public/board/Joshua_Yu.webp";
 import Anson from "@/public/board/Anson_Gao.webp";
 import Kathy from "@/public/board/Kathy_Liu.webp";
-import Connor from "@/public/board/Connor_Lau.webp";
+import Connor from "@/public/board/Connor_Lao.jpg";
 import Mia from "@/public/board/Mia_Chiang.webp";
 import Samantha from "@/public/board/Samantha_Lee.webp";
 import Nathan from "@/public/board/Nathan_Cheung.webp";
@@ -187,7 +187,7 @@ export const boardInfo = [
   },
   {
     image: Caitlyn,
-    name: "Caitlyn Hang",
+    name: "Caitlun Hang",
     title: "Sports Coordinator",
     color: "csa-grey-200",
   },
