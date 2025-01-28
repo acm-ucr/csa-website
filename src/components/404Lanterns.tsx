@@ -10,9 +10,9 @@ const LanternBackground = () => {
         alt="Lantern background"
         className="absolute"
         style={{
-          width: "32vw",
-          right: "4vw",
-          top: "27vh",
+          width: "41vw",
+          right: "7vw",
+          top: "12.5vh",
         }}
       />
     </div>
