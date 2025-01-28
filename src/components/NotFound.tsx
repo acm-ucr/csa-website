@@ -12,7 +12,7 @@ const NotFound = () => {
           width: "40.40vw",
           right: "11vw",
           top: "0vh",
-          zIndex: 0,
+          zIndex: 10,
         }}
       />
       <p
