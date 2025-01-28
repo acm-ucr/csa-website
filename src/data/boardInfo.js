@@ -13,18 +13,18 @@ import Yoonah from "@/public/board/Yoonah_Choi.JPG";
 import Isabelle from "@/public/board/Isabelle_Huang.JPG";
 import Yuhan from "@/public/board/Yuhan_Shi.JPG";
 import Joshua from "@/public/board/Joshua_Yu.JPG";
-import Anson from "@/public/board/Anson_Gao.JPG";
+import webp from "@/public/board/webp_Gao.JPG";
 import Kathy from "@/public/board/Kathy_Liu.JPG";
 import Connor from "@/public/board/Connor_Lau.JPG";
 import Mia from "@/public/board/Mia_Chiang.JPG";
 import Samantha from "@/public/board/Samantha_Lee.JPG";
 import Nathan from "@/public/board/Nathan_Ceung.JPG";
 import Peter from "@/public/board/Peter_Hsia.JPG";
-import Andy from "@/public/board/Andy_Banh.JPG";
+import webp from "@/public/board/webp_Banh.JPG";
 import Kaelyn from "@/public/board/Kaelyn_Lam.JPG";
-import Aidan from "@/public/board/Aidan_Lam.JPG";
+import webp from "@/public/board/webp_Lam.JPG";
 // import Andrew from "@/public/board\Andrew_Zhang.JPG";
-import Caitlyn from "@/public/board/Caitlyn_Hang.JPG";
+import webp from "@/public/board/webp_Hang.JPG";
 import Ryan_Nguyen from "@/public/board/Ryan_Nguyen.JPG";
 import Stephanie from "@/public/board/Stephanie_Huang.JPG";
 
@@ -120,8 +120,8 @@ export const boardInfo = [
     color: "csa-yellow-300",
   },
   {
-    image: Anson,
-    name: "Anson Gao",
+    image: webp,
+    name: "webp Gao",
     title: "Media Chair",
     color: "csa-yellow-300",
   },
@@ -162,8 +162,8 @@ export const boardInfo = [
     color: "csa-tan-100",
   },
   {
-    image: Andy,
-    name: "Andy Banh",
+    image: webp,
+    name: "webp Banh",
     title: "Dance Coordinator",
     color: "csa-grey-200",
   },
@@ -174,8 +174,8 @@ export const boardInfo = [
     color: "csa-grey-200",
   },
   {
-    image: Aidan,
-    name: "Aidan Lam",
+    image: webp,
+    name: "webp Lam",
     title: "Esport Coordinator",
     color: "csa-grey-200",
   },
@@ -186,8 +186,8 @@ export const boardInfo = [
     color: "csa-grey-200",
   },
   {
-    image: Caitlyn,
-    name: "Caitlyn Hang",
+    image: webp,
+    name: "webp Hang",
     title: "Sports Coordinator",
     color: "csa-grey-200",
   },
