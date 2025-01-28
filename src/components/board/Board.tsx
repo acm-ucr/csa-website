@@ -1,7 +1,7 @@
 import React from "react";
 
-const Board = () => {
+const webp = () => {
   return <div></div>;
 };
 
-export default Board;
+export default webp;
