@@ -18,12 +18,12 @@ import Kathy from "@/public/board/Kathy_Liu.JPG";
 import Connor from "@/public/board/Connor_Lau.JPG";
 import Mia from "@/public/board/Mia_Chiang.JPG";
 import Samantha from "@/public/board/Samantha_Lee.JPG";
-import Nathan from "@/public/board/Nathan_Ceung.JPG";
+import Nathan from "@/public/board/Nathan_Cheung.JPG";
 import Peter from "@/public/board/Peter_Hsia.JPG";
 import Andy from "@/public/board/Andy_Banh.JPG";
 import Kaelyn from "@/public/board/Kaelyn_Lam.JPG";
 import Aidan from "@/public/board/Aidan_Lam.JPG";
-// import Andrew from "@/public/board\Andrew_Zhang.JPG";
+import Andrew from "@public/board/Andrew_Zhang.jpg";
 import Caitlyn from "@/public/board/Caitlyn_Hang.JPG";
 import Ryan_Nguyen from "@/public/board/Ryan_Nguyen.JPG";
 import Stephanie from "@/public/board/Stephanie_Huang.JPG";
@@ -180,7 +180,7 @@ export const boardInfo = [
     color: "csa-grey-200",
   },
   {
-    // image: Andrew,
+    image: Andrew,
     name: "Andrew Zhang",
     title: "Sports Coordinator",
     color: "csa-grey-200",
