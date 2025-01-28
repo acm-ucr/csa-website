@@ -1,9 +1,11 @@
 import Title from "@/components/Title";
+import Gallery from "@/components/gallery/Gallery";
 
 const page = () => {
   return (
     <div className="bg-csa-tan-100">
       <Title text="gallery" />
+      <Gallery />
     </div>
   );
 };
