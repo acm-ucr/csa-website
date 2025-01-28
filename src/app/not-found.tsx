@@ -1,12 +1,13 @@
+import NotFound from "@/components/NotFound";
 import Lantern from "@/components/404Lanterns";
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
-    <div>
-      404 Page Not Found
+    <div className="notfound-container">
+      <NotFound />
       <Lantern />
     </div>
   );
 };
 
-export default NotFound;
+export default NotFoundPage;
