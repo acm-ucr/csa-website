@@ -3,7 +3,7 @@ import CryingPanda from "@/public/not-found/cryingPanda.webp";
 import PandaWithFlower from "@/public/not-found/pandaWithFlower.webp";
 import Po from "@/public/not-found/teletubby_po.webp";
 import PandaWithWok from "@/public/not-found/pandaWithWok.webp";
-import Lantern from "@/public/notfound/lantern404.webp";
+import Lantern from "@/public/not-found/lantern404.webp";
 
 const NotFound = () => {
   return (
@@ -11,24 +11,15 @@ const NotFound = () => {
       <Image
         src={Lantern}
         alt="Lantern background"
-        className="absolute opacity-100"
+        className="absolute z-0 opacity-100"
         style={{
-          width: "40.40vw",
+          width: "35.18vw",
           right: "11vw",
           top: "0vh",
-          zIndex: 0,
         }}
       />
-      <p
-        className="text-[12vw] font-bold text-csa-yellow-300"
-        style={{ zIndex: 10 }}
-      >
-        404
-      </p>
-      <p
-        className="font-lora text-[2.5vw] text-csa-gray-100"
-        style={{ zIndex: 10 }}
-      >
+      <p className="z-10 text-[12vw] font-bold text-csa-yellow-300">404</p>
+      <p className="font-lora z-10 text-[2.5vw] text-csa-gray-100">
         page not found :(
       </p>
 
