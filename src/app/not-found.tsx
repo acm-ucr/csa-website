@@ -1,11 +1,7 @@
-import NotFoundText from "@/components/NotFoundText";
+import NotFound from "@/components/NotFound";
 
-const NotFound = () => {
-  return (
-    <div>
-      <NotFoundText />
-    </div>
-  );
+const NotFoundPage = () => {
+  return <NotFound />;
 };
 
-export default NotFound;
+export default NotFoundPage;
