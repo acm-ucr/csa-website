@@ -8,7 +8,7 @@ const CherryTree = () => {
       <Image
         src={Tree}
         alt="Tree"
-        className="absolute left-0 top-56 w-[28vw]"
+        className="absolute left-0 top-[40vh] w-[28vw]"
       />
     </div>
   );
