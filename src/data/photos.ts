@@ -4,7 +4,14 @@ import imageThree from '@/public/home/carousel/carousel_three.webp';
 import imageFour from '@/public/home/carousel/carousel_four.webp';
 import imageFive from '@/public/home/carousel/carousel_five.webp';
 
-const photos = [
+import { StaticImageData } from 'next/image';
+
+interface Photo {
+    src: StaticImageData;
+    alt: string;
+  }
+
+export const photos: Photo[] = [
     {
         src: imageOne,
         alt: 'Photo 1',
@@ -26,5 +33,3 @@ const photos = [
         alt: 'Photo 5',
     },
 ];
-
-export default photos;
