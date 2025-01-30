@@ -16,7 +16,7 @@ const transition = {
   duration: 0.8,
   delay: 0.5,
   ease: [0, 0.71, 0.2, 1.01],
-}
+};
 
 const Carousel = ({ photos }: CarouselProps) => {
   const [currInd, setCurrInd] = useState<number>(0);
@@ -38,11 +38,11 @@ const Carousel = ({ photos }: CarouselProps) => {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center w-full">
-      <div className="relative flex items-center justify-center w-full max-w-4xl">
+    <div className="relative flex w-full flex-col items-center justify-center">
+      <div className="relative flex w-full max-w-4xl items-center justify-center">
         {/* left pic */}
         <motion.div
-          className="z-10 absolute left-0 hidden md:block"
+          className="absolute left-0 z-10 hidden md:block"
           initial={{ opacity: 0, x: "-100%" }}
           animate={{ opacity: 1, x: "0%" }}
           transition={transition}
@@ -51,13 +51,13 @@ const Carousel = ({ photos }: CarouselProps) => {
           <Image
             src={photos[getAdjacentIndex(-1)]?.src}
             alt={photos[getAdjacentIndex(-1)]?.alt}
-            className="rounded-xl w-full max-w-2xl cursor-pointer"
+            className="w-full max-w-2xl cursor-pointer rounded-xl"
           />
         </motion.div>
 
         {/* main pic */}
         <motion.div
-          className="z-20 relative w-full max-w-2xl"
+          className="relative z-20 w-full max-w-2xl"
           initial={{ opacity: 0, y: "10%" }}
           animate={{ opacity: 1, y: "0%" }}
           transition={transition}
@@ -71,7 +71,7 @@ const Carousel = ({ photos }: CarouselProps) => {
 
         {/* right pic */}
         <motion.div
-          className="z-10 absolute right-0 w-full max-w-2xl hidden md:block"
+          className="absolute right-0 z-10 hidden w-full max-w-2xl md:block"
           initial={{ opacity: 0, x: "100%" }}
           animate={{ opacity: 1, x: "0%" }}
           transition={transition}
@@ -80,23 +80,23 @@ const Carousel = ({ photos }: CarouselProps) => {
           <Image
             src={photos[getAdjacentIndex(1)]?.src}
             alt={photos[getAdjacentIndex(1)]?.alt}
-            className="rounded-xl cursor-pointer"
+            className="cursor-pointer rounded-xl"
           />
         </motion.div>
       </div>
 
       {/* dots */}
-      <div className="flex mt-4 space-x-2">
+      <div className="mt-4 flex space-x-2">
         {photos.map((_, index: number) => (
           <motion.div
             key={index}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
+            className={`h-3 w-3 cursor-pointer rounded-full ${
               currInd === index ? "bg-blue-500" : "bg-gray-300"
             }`}
             onClick={() => goToRev(index)}
             whileHover={{ scale: 1.2 }}
             transition={transition}
-            />
+          />
         ))}
       </div>
     </div>
