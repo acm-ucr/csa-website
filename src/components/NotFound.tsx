@@ -11,12 +11,7 @@ const NotFound = () => {
       <Image
         src={Lantern}
         alt="Lantern background"
-        className="absolute z-0 opacity-100"
-        style={{
-          width: "35.18vw",
-          right: "11vw",
-          top: "0vh",
-        }}
+        className="absolute right-[11vw] top-0 z-0 h-screen w-[35.18vw] opacity-100"
       />
       <p className="z-10 text-[12vw] font-bold text-csa-yellow-300">404</p>
       <p className="font-lora z-10 text-[2.5vw] text-csa-gray-100">
