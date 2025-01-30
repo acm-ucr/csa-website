@@ -6,6 +6,8 @@ import Image from "next/image";
 import Dragon from "@/public/home/Dragon.webp";
 import EHTitle from "@/components/events/EventHighlightsTitle";
 import MissionStatement from "@/components/home/MissionStatement";
+import Carousel from "@/components/home/Carousel";
+import { photos } from "@/data/photos";
 
 const Home = () => {
   return (
@@ -17,6 +19,7 @@ const Home = () => {
       {quotes.map(({ quote, person }, index) => (
         <QuoteBox quote={quote} name={person} key={index} />
       ))}
+      <Carousel photos={photos}/>
     </div>
   );
 };
