@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import pinkFlower from "@/public/gallery/pinkFlower.webp";
 

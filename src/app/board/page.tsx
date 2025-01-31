@@ -1,11 +1,9 @@
-import React from "react";
 import GroupPhoto from "@/components/board/GroupPhoto";
-const page = () => {
+const Page = () => {
   return (
     <div className="bg-csa-tan-100">
       <GroupPhoto />
     </div>
   );
 };
-
-export default page;
+export default Page;
