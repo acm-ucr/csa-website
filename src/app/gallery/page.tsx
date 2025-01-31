@@ -1,7 +1,7 @@
 import Title from "@/components/Title";
 import Gallery from "@/components/gallery/Gallery";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="bg-csa-tan-100">
       <Title text="gallery" />
@@ -10,4 +10,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

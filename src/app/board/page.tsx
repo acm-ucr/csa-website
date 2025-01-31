@@ -1,7 +1,5 @@
-import React from "react";
-
-const page = () => {
+const Page = () => {
   return <div className="bg-csa-tan-100"></div>;
 };
 
-export default page;
+export default Page;

@@ -7,7 +7,7 @@ import Culture from "@/components/about/Culture";
 import RightLantern from "@/components/about/RightLantern";
 import Philanthropy from "@/components/about/Philanthropy";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="bg-csa-tan-100">
       <RightLantern />
@@ -22,4 +22,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
