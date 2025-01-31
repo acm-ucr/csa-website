@@ -1,5 +1,5 @@
 import Brianna from "@/public/board/Briana_Lam.webp";
-import Ryan_Lew from "@/public.board/Ryan_Lew.webp";
+import Ryan_Lew from "@/public/board/Ryan_Lew.webp";
 import Megan from "@/public/board/Megan_Ho.webp";
 import Renne from "@/public/board/Renne_Sanchex.webp";
 import Marcus from "@/public/board/Marcus_Lee.webp";
