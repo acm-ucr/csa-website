@@ -3,10 +3,6 @@ module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        bodoni: ["Libre Bodoni", "serif"],
-        Lora: ["Lora", "serif"],
-      },
       colors: {
         csa: {
           "red-100": "#7C2413",
