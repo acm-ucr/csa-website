@@ -10,11 +10,12 @@ import MissionStatement from "@/components/home/MissionStatement";
 
 const Home = () => {
   return (
-    <div className="bg-csa-tan-100 pt-[12.2vh] md:pt-[14.4vh]">
-      <Image src={Dragon} alt="dragon" className="left-0 top-0 w-1/4" />
-      <MissionStatement />
-      <EHTitle />
+    <div className="bg-csa-tan-400 pt-[12.2vh] md:pt-[14.4vh]">
       <Header />
+      <MissionStatement />
+      <Image src={Dragon} alt="dragon" className="left-0 top-0 w-1/4" />
+
+      <EHTitle />
       <XinDescription />
       {quotes.map(({ quote, person }, index) => (
         <QuoteBox quote={quote} name={person} key={index} />
