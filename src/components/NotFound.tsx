@@ -7,7 +7,7 @@ import Lantern from "@/public/not-found/lantern404.webp";
 
 const NotFound = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center bg-csa-tan-100">
+    <div className="relative flex h-screen flex-col items-center justify-center bg-csa-tan-100">
       <Image
         src={Lantern}
         alt="Lantern background"
