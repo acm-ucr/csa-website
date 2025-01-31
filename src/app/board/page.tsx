@@ -1,6 +1,7 @@
+
 import React from "react";
 import GroupPhoto from "@/components/board/GroupPhoto";
-const page = () => {
+const Page = () => {
   return (
     <div className="bg-csa-tan-100">
       <GroupPhoto />
@@ -8,4 +9,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
