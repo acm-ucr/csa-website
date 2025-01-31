@@ -20,8 +20,12 @@ const GroupPhoto = () => {
           className="absolute bottom-0 left-0 w-1/5"
         />
       </div>
-      <div className="h-[40rem] relative flex overflow-hidden">
-        <Image src={BoarShadow} alt="Boar Shadow" className="absolute -right-[5vw]"/>
+      <div className="relative flex h-[40rem] overflow-hidden">
+        <Image
+          src={BoarShadow}
+          alt="Boar Shadow"
+          className="absolute -right-[5vw]"
+        />
         <Image src={Boar} alt="Boar" className="absolute -right-[5vw]" />
       </div>
     </div>
