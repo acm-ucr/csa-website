@@ -1,5 +1,5 @@
 import Image from "next/image";
-import lantern from "@/public/about/lantern.png";
+import lantern from "@/public/about/lantern.webp";
 
 const RightLantern = () => {
   return (
