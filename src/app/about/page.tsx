@@ -6,6 +6,7 @@ import Academic from "@/components/about/AcademicComponent";
 import Culture from "@/components/about/Culture";
 import RightLantern from "@/components/about/RightLantern";
 import Philanthropy from "@/components/about/Philanthropy";
+import CherryTree from "@/components/about/CherryTree";
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
       <RightLantern />
       <Title text="about" />
       <WhoWeAre />
+      <CherryTree />
       <Heading />
       <Philanthropy />
       <Social />
