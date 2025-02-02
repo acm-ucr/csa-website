@@ -1,9 +1,8 @@
-import React from "react";
 import Image from "next/image";
 import GroupImage from "@/public/board/Group-Photo-CSA.webp";
 import WhiteFlower from "@/public/board/whiteflowers.svg";
 import Boar from "@/public/board/boar.svg";
-import BoarShadow from "@/public/board/boarshadow.svg";
+/* import BoarShadow from "@/public/board/boarshadow.svg"; */
 
 const GroupPhoto = () => {
   return (
@@ -20,13 +19,8 @@ const GroupPhoto = () => {
           className="absolute bottom-0 left-0 w-1/5"
         />
       </div>
-      <div className="relative flex h-[40rem] overflow-hidden">
-        <Image
-          src={BoarShadow}
-          alt="Boar Shadow"
-          className="absolute -right-[5vw]"
-        />
-        <Image src={Boar} alt="Boar" className="absolute -right-[5vw]" />
+      <div className="flex -translate-y-[6%] translate-x-[10%] items-center justify-end">
+        <Image src={Boar} alt="Boar" className="w-11/12" />
       </div>
     </div>
   );
