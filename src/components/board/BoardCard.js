@@ -4,14 +4,28 @@ import redDiamond from "@/public/board/redDiamond.webp";
 const BoardCard = ({ image, name, title, color }) => {
   return (
     <div className="">
-      <div className="mx-[10%] my-[5%] flex justify-center overflow-hidden transition duration-300 ease-in-out hover:scale-105">
-        <Image src={redDiamond} alt="redDiamond" className="absolute" />
-        <Image src={image} alt="picture of person" className="" />
+      <div className="= flex justify-center">
+        <Image
+          src={redDiamond}
+          alt="redDiamond"
+          className=""
+          width={600}
+          height={600}
+        />
+        <Image
+          src={image}
+          alt="picture of person"
+          className="absolute object-cover"
+          width={300}
+          height={300}
+        />
       </div>
-      <p className="flex justify-center text-center text-[90%] md:text-4xl">
+      <p
+        className={`flex justify-center text-center text-3xl text-[90%] md:text-4xl ${color}`}
+      >
         {name}
       </p>
-      <p className="flex justify-center text-center text-[90%] md:text-4xl">
+      <p className="flex justify-center text-center text-2xl text-[90%] md:text-4xl">
         {title}
       </p>
     </div>
