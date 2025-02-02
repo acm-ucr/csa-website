@@ -12,7 +12,6 @@ const Board = () => {
             name={CARD.name}
             title={CARD.title}
             image={CARD.image}
-            color={CARD.color}
           />
         ))}
       </div>

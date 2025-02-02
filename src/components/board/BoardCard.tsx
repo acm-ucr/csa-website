@@ -10,17 +10,10 @@ interface BoardCardProps {
   image: StaticImageData;
   name: string;
   title: string;
-  color: string;
   index: number;
 }
 
-const BoardCard: React.FC<BoardCardProps> = ({
-  image,
-  name,
-  title,
-  color,
-  index,
-}) => {
+const BoardCard: React.FC<BoardCardProps> = ({ image, name, title, index }) => {
   const diamondColor =
     diamondImages[Math.floor(index / 3) % diamondImages.length];
   return (
