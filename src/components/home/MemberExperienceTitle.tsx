@@ -3,7 +3,7 @@ import Ram from "@/public/home/ram.webp";
 
 const MemberTitle = () => {
   return (
-    <div className="relative pb-24 pt-24">
+    <div className="relative pb-[11vh] pt-[11vh]">
       <p className="mr-2 pr-4 text-right text-5xl font-semibold text-csa-red-100">
         Member Experiences
       </p>
