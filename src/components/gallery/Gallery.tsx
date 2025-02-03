@@ -14,7 +14,7 @@ const Gallery = () => {
       <Image
         src={blueFlower}
         alt="blueFlower"
-        className="absolute bottom-0 right-0 w-48"
+        className="absolute bottom-0 right-0 w-2/12"
       />
     </div>
   );
