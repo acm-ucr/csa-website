@@ -1,3 +1,5 @@
+import React from "react";
+
 const Header = () => {
   return (
     <div className="relative mr-[10vw] border-r-8 border-csa-red-100 pr-[2vw] text-right">
