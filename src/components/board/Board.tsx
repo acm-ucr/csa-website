@@ -4,7 +4,7 @@ import { boardInfo } from "@/data/boardInfo";
 const Board = () => {
   return (
     <>
-      <div className="mb-[16%] mt-[5%] grid grid-cols-3 gap-2 md:grid-cols-3">
+      <div className="mb-[16%] grid grid-cols-3 gap-2 md:grid-cols-3">
         {boardInfo.map((CARD, index) => (
           <BoardCard
             key={index}
