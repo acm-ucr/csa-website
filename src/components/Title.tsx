@@ -20,7 +20,7 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         >
           <path
             id="curve"
-            d="M50,150 Q200,10 370,150"
+            d="M50,140 Q220,0 360,145"
             fill="transparent"
             stroke="none"
           />
