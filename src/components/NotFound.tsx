@@ -11,7 +11,7 @@ const NotFound = () => {
       <Image
         src={Lantern}
         alt="Lantern background"
-        className="absolute right-0 top-0 w-auto object-cover md:h-[128%]"
+        className="absolute right-0 top-0 w-[50vw] object-cover md:h-[128%] md:w-auto"
       />
       <p className="z-10 text-[25vw] font-bold text-csa-yellow-300 md:text-[12vw]">
         404
@@ -23,25 +23,25 @@ const NotFound = () => {
       <Image
         src={PandaWithFlower}
         alt="PandaWithFlower"
-        className="absolute left-5 top-[3vh] w-[40%] md:left-10 md:w-[15vw]"
+        className="absolute left-5 top-[3vh] w-[30%] md:left-10 md:w-[15vw]"
       />
 
       <Image
         src={CryingPanda}
         alt="CryingPanda"
-        className="absolute left-[35vw] top-[12vh] w-[30%] md:left-[16vw] md:top-[16vh] md:w-[13vw]"
+        className="absolute left-[30vw] top-[12vh] w-[20%] md:left-[16vw] md:top-[16vh] md:w-[13vw]"
       />
 
       <Image
         src={Po}
         alt="Po"
-        className="absolute bottom-0 left-5 w-[40%] md:w-52"
+        className="absolute bottom-0 left-5 w-[30%] md:w-52"
       />
 
       <Image
         src={PandaWithWok}
         alt="APandaWithWok"
-        className="absolute bottom-0 right-0 w-[40%] md:w-60"
+        className="absolute bottom-0 right-0 w-[30%] md:w-60"
       />
     </div>
   );
