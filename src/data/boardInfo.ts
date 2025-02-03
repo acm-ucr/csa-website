@@ -1,7 +1,7 @@
 import Brianna from "@/public/board/Briana_Lam.webp";
 import Ryan_Lew from "@/public/board/Ryan_Lew.webp";
 import Megan from "@/public/board/Megan_Ho.webp";
-import Renne from "@/public/board/Renne_Sanchex.webp";
+import Renne from "@/public/board/Renne_Sanchez.webp";
 import Marcus from "@/public/board/Marcus_Lee.webp";
 import Dominic from "@/public/board/Dominic_Rivera.webp";
 import Alex from "@/public/board/Alex_Sin.webp";
@@ -15,7 +15,7 @@ import Yuhan from "@/public/board/Yuhan_Shi.webp";
 import Joshua from "@/public/board/Joshua_Yu.webp";
 import Anson from "@/public/board/Anson_Gao.webp";
 import Kathy from "@/public/board/Kathy_Liu.webp";
-import Connor from "@/public/board/Connor_Lao.webp";
+import Connor from "@/public/board/Connor_Lau.webp";
 import Mia from "@/public/board/Mia_Chiang.webp";
 import Samantha from "@/public/board/Samantha_Lee.webp";
 import Nathan from "@/public/board/Nathan_Cheung.webp";
@@ -23,10 +23,10 @@ import Peter from "@/public/board/Peter_Hsia.webp";
 import Andy from "@/public/board/Andy_Banh.webp";
 import Kaelyn from "@/public/board/Kaelyn_Lam.webp";
 import Aidan from "@/public/board/Aidan_Lam.webp";
-import Andrew from "@public/board/Andrew_Zhang.webp";
+import Andrew from "@/public/board/Andrew_Zhang.webp";
 import Caitlyn from "@/public/board/Caitlyn_Hang.webp";
 import Ryan_Nguyen from "@/public/board/Ryan_Nguyen.webp";
-import Stephanie from "@/public/board/Stephanie_Huang.webp";
+// import Stephanie from "@/public/board/Stephanie_Huang.webp";
 
 export const boardInfo = [
   {
@@ -197,10 +197,10 @@ export const boardInfo = [
     title: "Philanthropy Chair",
     color: "csa-yellow-300",
   },
-  {
-    image: Stephanie,
-    name: "Stephanie Huang",
-    title: "Academic Chair",
-    color: "csa-yellow-300",
-  },
+  // {
+  //   image: Stephanie,
+  //   name: "Stephanie Huang",
+  //   title: "Academic Chair",
+  //   color: "csa-yellow-300",
+  // },
 ];

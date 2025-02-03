@@ -9,3 +9,8 @@
 .font-lora {
   font-family: var(--font-lora);
 }
+
+.diamond {
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
