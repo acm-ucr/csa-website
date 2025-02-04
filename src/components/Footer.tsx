@@ -8,15 +8,19 @@ const Footer = () => {
   return (
     <div className="flex items-center border-t-8 border-csa-yellow-100 bg-csa-red-200">
       <Link href="/">
-        <Image src={CsaLogo} alt="CSA_Logo" className="ml-5 w-[6vw]" />
+        <Image
+          src={CsaLogo}
+          alt="CSA_Logo"
+          className="ml-5 w-[20vw] md:w-[6vw]"
+        />
       </Link>
 
-      <div className="absolute right-0 mr-6 flex gap-4">
+      <div className="absolute right-0 mr-8 flex gap-7 md:mr-6 md:gap-4">
         {icons.map((icon, index) => (
           <Link
             href={icon.link}
             key={index}
-            className="text-5xl text-white hover:scale-110 hover:text-csa-yellow-300"
+            className="w-[6vw] text-5xl text-white hover:scale-110 hover:text-csa-yellow-300 md:w-full"
             target="_blank"
           >
             {icon.image}
