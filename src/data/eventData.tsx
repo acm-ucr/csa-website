@@ -7,7 +7,7 @@ import Banquet from "@/public/gallery/Banquet.webp";
 export const events = [
   {
     name: "Clubbing",
-    info: <Image src={clubbing} alt="Clubbing" />, //Fill with info about events
+    info: <Image src={clubbing} alt="Clubbing" />,
     border: "border-csa-green-100",
     text: "text-csa-green-100",
   },
