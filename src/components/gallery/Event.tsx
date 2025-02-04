@@ -18,11 +18,11 @@ const Events = () => {
           >
             <AccordionItem value={`item-${index}`} className="text-center">
               <AccordionTrigger
-                className={`px-20 text-3xl underline md:px-52 ${event.text}`}
+                className={`w-[56vw] justify-center text-4xl underline md:w-[44vw] ${event.text}`}
               >
                 {event.name}
               </AccordionTrigger>
-              <AccordionContent className="text-2xl">
+              <AccordionContent className="w-[52vw] justify-self-center md:w-[40vw]">
                 {event.info}
               </AccordionContent>
             </AccordionItem>
