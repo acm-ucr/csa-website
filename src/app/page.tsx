@@ -16,8 +16,8 @@ const Home = () => {
       <MissionStatement />
       <Image src={Dragon} alt="dragon" className="left-0 top-0 w-1/4" />
 
-      <EHTitle />
       <XinDescription />
+      <EHTitle />
       {quotes.map(({ quote, person }, index) => (
         <QuoteBox quote={quote} name={person} key={index} />
       ))}
