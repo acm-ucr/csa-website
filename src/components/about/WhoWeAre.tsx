@@ -1,6 +1,6 @@
 const WhoWeAre = () => {
   return (
-    <div className="ml-5 mt-3">
+    <div className="ml-5">
       <p className="text-left text-5xl font-medium text-csa-red-100">
         Who We Are
       </p>
