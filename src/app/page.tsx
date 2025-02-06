@@ -11,7 +11,7 @@ import MemberTitle from "@/components/home/MemberExperienceTitle";
 
 const Home = () => {
   return (
-    <div className="bg-csa-tan-400 pt-[12.2vh] md:pt-[14.4vh]">
+    <div className="bg-csa-tan-400">
       <Header />
       <MissionStatement />
       <Image src={Dragon} alt="dragon" className="left-0 top-0 w-1/4" />
