@@ -5,7 +5,6 @@ import Title from "@/components/Title";
 const Page = () => {
   return (
     <div className="bg-csa-tan-100">
-      {" "}
       <Title text="board" />
       <Board />
       <GroupPhoto />
