@@ -4,7 +4,7 @@ import xinImage from "@/public/home/xinimage.svg";
 
 const XinDescription = () => {
   return (
-    <div className="grid grid-cols-1 items-center border-y-8 border-csa-tan-300 bg-csa-green-100 md:grid-cols-3">
+    <div className="grid grid-cols-1 items-center border-y-8 border-csa-tan-300 bg-csa-green-100 md:grid-cols-3 my-[3vh] md:my-[5vh]">
       <p className="px-[4vh] pt-[4vh] text-left text-2xl text-white md:col-span-2 md:py-[6vh] md:pl-[4vw] md:text-2xl">
         The Chinese character 心 ("xin") which stands for heart. The theme that
         we have been promoting is "Two Worlds, One Heart” which is a
