@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <div className="bg-csa-tan-400 pt-[12.2vh] md:pt-[14.4vh]">
       <Landing />
-      <EHTitle />
       <XinDescription />
+      <EHTitle />
       {quotes.map(({ quote, person }, index) => (
         <QuoteBox quote={quote} name={person} key={index} />
       ))}
