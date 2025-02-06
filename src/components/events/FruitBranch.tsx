@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import fruitBranch from "@/public/events/fruitBranch.svg";
 const FruitBranch = () => {

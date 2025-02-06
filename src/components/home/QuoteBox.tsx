@@ -1,5 +1,3 @@
-import React from "react";
-
 const QuoteBox = ({ quote, name }: { quote: string; name: string }) => {
   return (
     <div className="flex justify-center">
