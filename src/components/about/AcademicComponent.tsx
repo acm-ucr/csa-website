@@ -13,7 +13,6 @@ const Academic = () => {
           className="absolute translate-x-[20%] translate-y-[-9%]"
         />
       </div>
-      <div></div>
     </div>
   );
 };

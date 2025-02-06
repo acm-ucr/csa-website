@@ -6,7 +6,7 @@ import Academic from "@/components/about/AcademicComponent";
 import Culture from "@/components/about/Culture";
 import RightLantern from "@/components/about/RightLantern";
 import Philanthropy from "@/components/about/Philanthropy";
-
+import FourPillars from "@/components/about/FourPillars";
 const page = () => {
   return (
     <div className="bg-csa-tan-100">
@@ -14,10 +14,7 @@ const page = () => {
       <Title text="about" />
       <WhoWeAre />
       <Heading />
-      <Philanthropy />
-      <Social />
-      <Culture />
-      <Academic />
+      <FourPillars/>
     </div>
   );
 };
