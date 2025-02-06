@@ -48,11 +48,9 @@ const Navigation = () => {
         ))}
       </div>
       <div
-        className={
-          mobileScreen
-            ? "fixed top-10 -z-10 flex w-full flex-col items-center justify-evenly bg-csa-red-200 md:hidden"
-            : "fixed hidden"
-        }
+        className={`fixed top-24 z-10 w-full flex-col items-center justify-evenly bg-csa-red-200 md:hidden ${
+          mobileScreen ? "flex" : "hidden"
+        }`}
       >
         {tags.map((tag, index) => (
           <Link
