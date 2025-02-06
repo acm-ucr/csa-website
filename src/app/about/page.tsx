@@ -14,7 +14,7 @@ const page = () => {
       <Title text="about" />
       <WhoWeAre />
       <Heading />
-      <FourPillars/>
+      <FourPillars />
     </div>
   );
 };
