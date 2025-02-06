@@ -11,7 +11,7 @@ const Footer = () => {
         <Image
           src={CsaLogo}
           alt="CSA_Logo"
-          className="mt-2 w-[22vw] md:ml-5 md:mt-0 md:w-[6vw]"
+          className="mt-2 w-[20vw] md:ml-5 md:mt-0 md:w-[6vw]"
         />
       </Link>
 
@@ -20,7 +20,7 @@ const Footer = () => {
           <Link
             href={icon.link}
             key={index}
-            className="text-2xl text-white hover:scale-110 hover:text-csa-yellow-300 md:text-5xl"
+            className="text-3xl text-white hover:scale-110 hover:text-csa-yellow-300 md:text-5xl"
             target="_blank"
           >
             {icon.image}
