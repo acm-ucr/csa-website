@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import CsaLogo from "@/public/home/csalogo.svg";
@@ -15,7 +14,7 @@ const Footer = () => {
         />
       </Link>
 
-      <div className="] flex gap-4 md:absolute md:right-0 md:mr-6">
+      <div className="flex gap-4 md:absolute md:right-0 md:mr-6">
         {icons.map((icon, index) => (
           <Link
             href={icon.link}
