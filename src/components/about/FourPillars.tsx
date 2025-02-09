@@ -36,7 +36,7 @@ const FourPillars = () => {
         <Image
           src={redenvelope}
           alt="Red Envelope"
-          className="absolute ml-2 w-[30vw] translate-x-[-34%] translate-y-[5%] md:h-[300px] md:w-[260px]"
+          className="absolute ml-5 w-[30vw] translate-x-[-34%] translate-y-[5%] md:ml-3 md:h-[20vw] md:w-[18vw]"
         />
       </div>
       <div className="relative col-start-1 ml-36 flex h-[8vh] w-[60vw] items-center rounded-3xl border-8 border-csa-yellow-100 bg-white md:col-start-2 md:ml-20 md:h-[12vh] md:w-[28vw]">
