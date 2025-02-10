@@ -6,7 +6,7 @@ const WhoWeAre = () => {
       </p>
 
       <div className="ml-2 mr-auto h-2 w-[9%] bg-csa-tan-300" />
-      <p className="text-left">
+      <p className="font-large font-lora w-[49%] text-left text-2xl">
         The Chinese Student Association (CSA) at UC Riverside is a social,
         cultural, and service orientated organization that strives to promote
         the Chinese American culture throughout the UCR and Riverside
@@ -15,13 +15,10 @@ const WhoWeAre = () => {
         social outlet for students with similar backgrounds and interests. Our
         organization is a great way to meet lifelong friends and create fond
         memories that will contribute to a successful college experience and
-        beyond!{" "}
+        beyond!
       </p>
     </div>
   );
 };
 
 export default WhoWeAre;
-
-// npm i
-// npm run dev
