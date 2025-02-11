@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import banner from "@/public/home/banner.svg";
 
@@ -8,7 +7,7 @@ interface TitleNameProps {
 
 const Title: React.FC<TitleNameProps> = ({ text }) => {
   return (
-    <div className="relative flex items-center justify-center">
+    <div className="relative hidden items-center justify-center md:flex">
       <div className="mr-4 mt-4 h-[.8vh] w-[20vw] bg-csa-green-100" />
       <Image src={banner} alt="Banner" className="h-1/3 w-1/3 object-cover" />
       <div className="absolute mt-4 flex justify-center">
