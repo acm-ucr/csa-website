@@ -32,7 +32,7 @@ const Navigation = () => {
               tag.name === "Join"
                 ? "rounded-md bg-csa-yellow-100 px-6 py-2"
                 : ""
-            }`}
+            }`} dev
           >
             {tag.name}
             {pathname === tag.link && (
