@@ -28,10 +28,10 @@ const Navigation = () => {
             href={tag.link}
             key={index}
             onClick={handleMobile}
-            className={`font-lora inline-flex items-center text-xl hover:cursor-pointer ${
+            className={`font-lora inline-flex items-center text-xl hover:cursor-pointer text-white ${
               tag.name === "Join"
-                ? "rounded-md bg-csa-yellow-100 px-6 py-2 text-white"
-                : "text-white"
+                ? "rounded-md bg-csa-yellow-100 px-6 py-2"
+                : ""
             }`}
           >
             {tag.name}
