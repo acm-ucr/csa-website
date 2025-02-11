@@ -11,6 +11,7 @@ module.exports = {
           "yellow-100": "#D0AD6B",
           "yellow-200": "#E0C799",
           "yellow-300": "#E9A545",
+          "yellow-400": "#E4CFA9",
           "tan-100": "#F9EDD7",
           "tan-200": "#CBAD95",
           "tan-300": "#AD9B85",
