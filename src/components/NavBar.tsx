@@ -23,7 +23,11 @@ const Navigation = () => {
         }}
         href="/"
       >
-        <Image src={CsaLogo} alt="CSA_Logo" className="left-0 mx-5 my-3 w-20" />
+        <Image
+          src={CsaLogo}
+          alt="CSA_Logo"
+          className="left-0 mx-5 my-3 w-20 hover:opacity-70"
+        />
       </Link>
 
       <div className="absolute right-0 hidden w-[45%] justify-evenly px-1 md:flex">
@@ -34,7 +38,7 @@ const Navigation = () => {
             onClick={() => {
               setClicked(tag.name);
             }}
-            className={`font-lora inline-flex items-center text-xl hover:cursor-pointer ${tag.name == "Join" ? "rounded-md bg-csa-yellow-100 px-6 py-2 text-white" : "text-white"}`}
+            className={`font-lora inline-flex items-center text-xl hover:cursor-pointer hover:text-csa-yellow-300 ${tag.name == "Join" ? "rounded-md bg-csa-yellow-100 px-6 py-2 text-white hover:text-white hover:opacity-70" : "text-white"}`}
           >
             {tag.name}
             {clicked == tag.name && (
