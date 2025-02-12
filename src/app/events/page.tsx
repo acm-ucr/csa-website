@@ -6,6 +6,7 @@ const Page = () => {
     <div className="bg-csa-tan-100">
       <FruitBranch />
       <Title text="events" />
+      <Title text="calendar" />
     </div>
   );
 };
