@@ -22,7 +22,7 @@ const Landing = () => {
           <Image
             src={RightCloud}
             alt="right cloud"
-            className="absolute right-0 mb-20 w-1/2 pb-20"
+            className="absolute right-0 mb-20 pb-20"
           />
           <p className="text-left text-5xl font-bold text-csa-red-100">
             Mission statement
