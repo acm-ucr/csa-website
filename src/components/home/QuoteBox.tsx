@@ -8,7 +8,7 @@ const QuoteBox = ({ quote, name }: { quote: string; name: string }) => {
             <p className="text-8xl font-bold leading-4 text-csa-yellow-100">
               “
             </p>
-            <p className="text-right text-sm font-semibold text-csa-gray-100">
+            <p className="text-right text-sm font-semibold text-csa-gray-100 md:text-base">
               {quote}
             </p>
           </div>
