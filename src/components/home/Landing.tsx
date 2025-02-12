@@ -4,7 +4,7 @@ const Landing = () => {
   return (
     <div>
       <div className="relative mr-[10vw] border-r-8 border-csa-red-100 pr-[2vw] text-right">
-        <div className="font-lora mb-8 flex flex-col border-csa-red-100 text-6xl font-semibold text-csa-red-100">
+        <div className="font-lora mb-8 flex flex-col border-csa-red-100 text-4xl font-semibold text-csa-red-100 sm:text-6xl">
           <p className="font-bold">Chinese Student</p>
           <p>Association</p>
         </div>
@@ -15,9 +15,9 @@ const Landing = () => {
           <p>Riverside communities</p>
         </div>
       </div>
-      <div className="px-8 py-4">
+      <div className="px-8 py-4 pt-20 sm:py-10">
         <div className="ml-[25vw] border-l-8 border-csa-tan-300 pl-6">
-          <p className="text-left text-5xl font-bold text-csa-red-100">
+          <p className="text-left text-4xl font-bold text-csa-red-100 sm:text-6xl">
             Mission statement
           </p>
           <p className="mt-4 text-left text-2xl font-semibold leading-9 text-csa-gray-100">
@@ -35,10 +35,9 @@ const Landing = () => {
         <Image
           src={Dragon}
           alt="dragon"
-          className="absolute left-0 top-12 w-1/4 pt-7"
+          className="absolute left-0 top-12 w-1/4 pt-12 sm:py-11"
         />
       </div>
-      ;
     </div>
   );
 };
