@@ -1,4 +1,5 @@
 import Dragon from "@/public/home/Dragon.webp";
+import RightCloud from "@/public/home/RightCloud.svg";
 import Image from "next/image";
 const Landing = () => {
   return (
@@ -15,11 +16,15 @@ const Landing = () => {
           <p>Riverside communities</p>
         </div>
       </div>
-      <div className="px-8 py-4 pt-20 sm:py-10">
-        <div className="ml-[25vw] border-l-8 border-csa-tan-300 pl-6">
+        <div className="relative my-4 sm:py-10 px-8 ml-[25vw] border-l-8 border-csa-tan-300 pl-6">
           <p className="text-left text-4xl font-bold text-csa-red-100 sm:text-6xl">
             Mission statement
           </p>
+          <Image
+            src={RightCloud}
+            alt="right cloud"
+            className="absolute right-0 bottom-20"
+          />
           <p className="mt-4 text-left text-2xl font-semibold leading-9 text-csa-gray-100">
             Social, cultural, and service orientated
             <br />
@@ -30,7 +35,6 @@ const Landing = () => {
             Riverside communities.
           </p>
         </div>
-      </div>
       <div>
         <Image
           src={Dragon}
