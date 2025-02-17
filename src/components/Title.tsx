@@ -1,17 +1,34 @@
-import React from "react";
 import Image from "next/image";
-import banner from "@/public/home/banner.svg";
-
+import * as motion from "motion/react-client";
+import banner1 from "@/public/banner.webp";
 interface TitleNameProps {
   text: string;
 }
 
 const Title: React.FC<TitleNameProps> = ({ text }) => {
   return (
-    <div className="relative flex items-center justify-center">
-      <div className="mr-4 mt-4 h-[.8vh] w-[20vw] bg-csa-green-100" />
-      <Image src={banner} alt="Banner" className="h-1/3 w-1/3 object-cover" />
-      <div className="absolute mt-4 flex justify-center">
+    <div className="relative hidden items-center justify-center md:flex">
+      <motion.div
+        initial={{ x: -20, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <div className="mr-4 mt-4 h-[.8vh] w-[20vw] bg-csa-green-100" />
+      </motion.div>
+      <motion.div
+        initial={{ y: -15, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="h-1/3 w-1/3 object-cover"
+      >
+        <Image src={banner1} alt="Banner" />
+      </motion.div>
+      <motion.div
+        initial={{ y: -15, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="absolute mt-4 flex justify-center"
+      >
         <svg
           width="3/4vw"
           height="3/4vw"
@@ -24,7 +41,6 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
             fill="transparent"
             stroke="none"
           />
-
           <text
             fill="#7C2413"
             font-size="6.5vw"
@@ -32,13 +48,27 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
             font-family="serif"
           >
             <textPath href="#curve" startOffset="50%" text-anchor="middle">
-              {text}
+              {text.split("").map((characters, index) => (
+                <motion.tspan
+                  key={characters}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1, delay: index * 0.1 }}
+                >
+                  {characters}
+                </motion.tspan>
+              ))}
             </textPath>
           </text>
-        </svg>{" "}
-      </div>
-
-      <div className="ml-4 mt-4 h-[.8vh] w-[20vw] bg-csa-green-100" />
+        </svg>
+      </motion.div>
+      <motion.div
+        initial={{ x: 15, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <div className="ml-4 mt-4 h-[.8vh] w-[20vw] bg-csa-green-100" />
+      </motion.div>
     </div>
   );
 };
