@@ -1,6 +1,6 @@
 import Image from "next/image";
-import banner from "@/public/home/banner.svg";
 import * as motion from "motion/react-client";
+import banner1 from "@/public/banner.png";
 interface TitleNameProps {
   text: string;
 }
@@ -9,14 +9,26 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
   return (
     <div className="relative hidden items-center justify-center md:flex">
       <motion.div
-        initial={{ x: -500, opacity: 0 }}
+        initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="mr-4 mt-4 h-[.8vh] w-[20vw] bg-csa-green-100" />
       </motion.div>
-      <Image src={banner} alt="Banner" className="h-1/3 w-1/3 object-cover" />
-      <div className="absolute mt-4 flex justify-center">
+      <motion.div
+        initial={{ y: -15, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="h-1/3 w-1/3 object-cover"
+      >
+        <Image src={banner1} alt="Banner" />
+      </motion.div>
+      <motion.div
+        initial={{ y: -15, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="absolute mt-4 flex justify-center"
+      >
         <svg
           width="3/4vw"
           height="3/4vw"
@@ -39,19 +51,19 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
               {text.split("").map((characters, index) => (
                 <motion.tspan
                   key={characters}
-                  initial={{ y: -500, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.3 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1, delay: index * 0.1 }}
                 >
                   {characters}
                 </motion.tspan>
               ))}
             </textPath>
           </text>
-        </svg>{" "}
-      </div>
+        </svg>
+      </motion.div>
       <motion.div
-        initial={{ x: 500, opacity: 0 }}
+        initial={{ x: 15, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >

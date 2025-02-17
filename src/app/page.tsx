@@ -4,7 +4,7 @@ import EHTitle from "@/components/events/EventHighlightsTitle";
 import Landing from "@/components/home/Landing";
 import Quotes from "@/components/home/Quote";
 
-const Home = () => {
+const Page = () => {
   return (
     <div className="bg-csa-tan-400 pt-[12.2vh] md:pt-[14.4vh]">
       <Landing />
@@ -15,4 +15,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Page;
