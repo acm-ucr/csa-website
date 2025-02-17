@@ -1,6 +1,6 @@
 import Image from "next/image";
 import * as motion from "motion/react-client";
-import banner1 from "@/public/banner.png";
+import banner1 from "@/public/banner.webp";
 interface TitleNameProps {
   text: string;
 }
