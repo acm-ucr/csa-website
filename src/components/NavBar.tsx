@@ -19,7 +19,11 @@ const Navigation = () => {
   return (
     <div className="top-0 flex w-full items-center justify-between border-b-8 border-csa-yellow-100 bg-csa-red-200">
       <Link href="/" onClick={handleMobile}>
-        <Image src={CsaLogo} alt="CSA_Logo" className="left-0 mx-5 my-3 w-20" />
+        <Image
+          src={CsaLogo}
+          alt="CSA_Logo"
+          className="left-0 mx-5 my-3 w-20 hover:opacity-70"
+        />
       </Link>
 
       <div className="absolute right-0 hidden w-[45%] justify-evenly px-1 md:flex">
@@ -28,9 +32,9 @@ const Navigation = () => {
             href={tag.link}
             key={index}
             onClick={handleMobile}
-            className={`font-lora inline-flex items-center text-xl text-white hover:cursor-pointer ${
+            className={`font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300 ${
               tag.name === "Join"
-                ? "rounded-md bg-csa-yellow-100 px-6 py-2"
+                ? "rounded-md bg-csa-yellow-100 px-6 py-2 hover:text-white hover:opacity-70"
                 : ""
             }`}
           >
