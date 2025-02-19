@@ -1,9 +1,25 @@
+"use client";
 import Dragon from "@/public/home/Dragon.webp";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
+const SlideInFromLeft = {
+  initial: { opacity: 0, x: -50 },
+  animate: (custom: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1, delay: custom, ease: "backInOut" },
+  }),
+};
+
 const Landing = () => {
   return (
     <div>
-      <div className="relative mr-[10vw] border-r-8 border-csa-red-100 pr-[2vw] text-right">
+      <div
+        className={
+          "relative mr-[10vw] border-r-8 border-csa-red-100 pr-[2vw] text-right"
+        }
+      >
         <div className="font-lora mb-8 flex flex-col border-csa-red-100 text-6xl font-semibold text-csa-red-100">
           <p className="font-bold">Chinese Student</p>
           <p>Association</p>
@@ -17,10 +33,24 @@ const Landing = () => {
       </div>
       <div className="px-8 py-4">
         <div className="ml-[25vw] border-l-8 border-csa-tan-300 pl-6">
-          <p className="text-left text-5xl font-bold text-csa-red-100">
+          <motion.p
+            variants={SlideInFromLeft}
+            viewport={{ once: false, amount: 0 }}
+            initial="initial"
+            whileInView={"animate"}
+            custom={0.3}
+            className="text-left text-5xl font-bold text-csa-red-100"
+          >
             Mission statement
-          </p>
-          <p className="mt-4 text-left text-2xl font-semibold leading-9 text-csa-gray-100">
+          </motion.p>
+          <motion.p
+            variants={SlideInFromLeft}
+            viewport={{ once: false, amount: 0 }}
+            initial="initial"
+            whileInView={"animate"}
+            custom={0.1}
+            className="mt-4 text-left text-2xl font-semibold leading-9 text-csa-gray-100"
+          >
             Social, cultural, and service orientated
             <br />
             organization that strives to promote the Chinese
@@ -28,7 +58,7 @@ const Landing = () => {
             American culture throughout the UCR and
             <br />
             Riverside communities.
-          </p>
+          </motion.p>
         </div>
       </div>
       <div>
