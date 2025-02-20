@@ -1,7 +1,7 @@
 "use client";
 import Dragon from "@/public/home/Dragon.webp";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import * as motion from "motion/react-client";
 
 const SlideInFromLeft = {
   initial: { opacity: 0, x: -50 },
@@ -35,7 +35,7 @@ const Landing = () => {
         <div className="ml-[25vw] border-l-8 border-csa-tan-300 pl-6">
           <motion.p
             variants={SlideInFromLeft}
-            viewport={{ once: false, amount: 0 }}
+            viewport={{ once: true, amount: 0 }}
             initial="initial"
             whileInView={"animate"}
             custom={0.3}
@@ -45,7 +45,7 @@ const Landing = () => {
           </motion.p>
           <motion.p
             variants={SlideInFromLeft}
-            viewport={{ once: false, amount: 0 }}
+            viewport={{ once: true, amount: 0 }}
             initial="initial"
             whileInView={"animate"}
             custom={0.1}
