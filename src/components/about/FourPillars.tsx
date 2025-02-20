@@ -23,7 +23,7 @@ const FourPillars = () => {
           <Image
             src={HeartImage}
             alt="heartImage"
-            className="absolute right-[-10%] top-[-100%] w-[18vw] sm:right-[-20%] sm:top-[-130%] sm:w-[18vw] md:right-[-20%] md:top-[-60%] md:w-[18vw] lg:top-[-120%] lg:w-[14vw]"
+            className="absolute right-[-10%] top-[-80%] w-[18vw] sm:right-[-20%] sm:top-[-130%] sm:w-[18vw] md:right-[-20%] md:top-[-60%] md:w-[18vw] lg:top-[-120%] lg:w-[14vw]"
           />
         </div>
         <div className="relative row-start-2 ml-40 flex h-[8vh] w-[53vw] items-center rounded-3xl border-8 border-csa-gray-100 bg-white sm:ml-80 sm:w-[42vw] md:col-start-2 md:ml-2 md:h-[12vh] md:w-[42vw]">
