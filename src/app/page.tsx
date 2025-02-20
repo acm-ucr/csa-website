@@ -4,8 +4,7 @@ import QuoteBox from "@/components/home/QuoteBox";
 import quotes from "@/data/quote-data";
 import EHTitle from "@/components/events/EventHighlightsTitle";
 import MissionStatement from "@/components/home/MissionStatement";
-import Carousel from "@/components/home/Carousel";
-import { photos } from "@/data/photos";
+import CarouselOne from "@/components/home/CarouselOne";
 
 const Home = () => {
   return (
@@ -13,10 +12,10 @@ const Home = () => {
       <MissionStatement />
       <EHTitle />
       <XinDescription />
+      <CarouselOne/>
       {quotes.map(({ quote, person }, index) => (
         <QuoteBox quote={quote} name={person} key={index} />
       ))}
-      <Carousel photos={photos}/>
     </div>
   );
 };
