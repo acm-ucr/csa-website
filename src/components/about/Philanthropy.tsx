@@ -5,8 +5,8 @@ import HeartImage from "@/public/about/heart.svg";
 const Philanthropy = () => {
   return (
     <div className="m-6 flex">
-      <div className="relative flex h-[12vh] w-[25vw] items-center rounded-3xl border-8 border-csa-green-100">
-        <p className="font-lora p-4 text-3xl font-bold text-csa-gray-200">
+      <div className="relative flex h-[12vh] w-[50vw] items-center rounded-3xl border-8 border-csa-green-100 md:w-[25vw]">
+        <p className="font-lora p-4 text-2xl font-bold text-csa-gray-200 md:text-3xl">
           Philanthropy
         </p>
         <Image
