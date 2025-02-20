@@ -12,7 +12,7 @@ const Home = () => {
       <MissionStatement />
       <EHTitle />
       <XinDescription />
-      <CarouselOne/>
+      <CarouselOne />
       {quotes.map(({ quote, person }, index) => (
         <QuoteBox quote={quote} name={person} key={index} />
       ))}

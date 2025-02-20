@@ -14,7 +14,7 @@ interface CarouselProps {
 
 const transition = {
   duration: 0.6,
-  ease: [0.42, 0, 0.58, 1]
+  ease: [0.42, 0, 0.58, 1],
 };
 
 const Carousel = ({ photos }: CarouselProps) => {
@@ -85,7 +85,7 @@ const Carousel = ({ photos }: CarouselProps) => {
         </motion.div>
       </div>
 
-      {/* dots we might need them on mobile or something
+      {/* dots we might need them on mobile or something */}
       <div className="mt-4 flex space-x-2">
         {photos.map((_, index) => (
           <motion.div
@@ -98,7 +98,7 @@ const Carousel = ({ photos }: CarouselProps) => {
             transition={transition}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };
