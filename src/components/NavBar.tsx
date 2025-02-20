@@ -51,7 +51,7 @@ const Navigation = () => {
       </div>
 
       <div
-        className={`fixed top-24 z-10 w-full flex-col items-center justify-evenly bg-csa-red-200 md:hidden ${
+        className={`absolute top-24 z-10 w-full flex-col items-center justify-evenly bg-csa-red-200 md:hidden ${
           mobileScreen ? "flex" : "hidden"
         }`}
       >
