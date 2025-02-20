@@ -16,6 +16,7 @@ module.exports = {
           "tan-200": "#CBAD95",
           "tan-300": "#AD9B85",
           "tan-400": "#FFF4E4",
+          "tan-500": "#F9F2E7",
           "gray-100": "#535353",
           "gray-200": "#534C4A",
         },

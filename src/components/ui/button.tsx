@@ -20,6 +20,7 @@ const buttonVariants = cva(
         ghost:
           "hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         link: "text-neutral-900 underline-offset-4 hover:underline dark:text-neutral-50",
+        monthNavigation: "text-white bg-csa-green-100"
       },
       size: {
         default: "h-10 px-4 py-2",
