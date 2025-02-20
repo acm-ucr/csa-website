@@ -1,7 +1,14 @@
-import React from "react";
+import Board from "@/components/board/Board";
+import GroupPhoto from "@/components/board/GroupPhoto";
+import Title from "@/components/Title";
 
-const page = () => {
-  return <div className="bg-csa-tan-100"></div>;
+const Page = () => {
+  return (
+    <div className="bg-csa-tan-100">
+      <Title text="board" />
+      <Board />
+      <GroupPhoto />
+    </div>
+  );
 };
-
-export default page;
+export default Page;
