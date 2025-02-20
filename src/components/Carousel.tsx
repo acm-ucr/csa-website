@@ -1,7 +1,7 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import { useState, RefObject, useEffect } from "react";
-import { motion, AnimatePresence, Variant } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface Photo {
   src: StaticImageData;
