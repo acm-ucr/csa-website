@@ -7,7 +7,7 @@ interface TitleNameProps {
 
 const Title: React.FC<TitleNameProps> = ({ text }) => {
   return (
-    <div className="relative hidden items-center justify-center md:flex">
+    <div className="relative flex items-center justify-center">
       <motion.div
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -32,7 +32,7 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         <svg
           width="3/4vw"
           height="3/4vw"
-          viewBox="0 0 400 200"
+          viewBox="0 -15 400 200"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
