@@ -1,6 +1,7 @@
 "use client";
 
 import Dragon from "@/public/home/Dragon.webp";
+import RightCloud from "@/public/home/RightCloud.svg";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 
@@ -88,14 +89,46 @@ const Landing = () => {
           </motion.p>
         </div>
       </div>
+      <Image
+        src={RightCloud}
+        alt="right cloud"
+        className="absolute bottom-10 right-0 sm:bottom-[30%]"
+      />
+      <div className="realaive ml-[25vw] mt-8 border-l-8 border-csa-tan-300 pl-6">
+        <motion.p
+          variants={SlideInFromLeft}
+          viewport={{ once: true, amount: 0 }}
+          initial="initial"
+          whileInView={"animate"}
+          custom={0.3}
+          className="text-left text-5xl font-bold text-csa-red-100 sm:text-4xl"
+        >
+          Mission statement
+        </motion.p>
+        <motion.p
+          variants={SlideInFromLeft}
+          viewport={{ once: true, amount: 0 }}
+          initial="initial"
+          whileInView={"animate"}
+          custom={0.1}
+          className="font-lora mt-4 pr-[17vw] text-left text-xl font-semibold leading-relaxed text-csa-gray-100 sm:text-2xl"
+        >
+          Social, cultural, and service orientated
+          <br />
+          organization that strives to promote the Chinese
+          <br />
+          American culture throughout the UCR and
+          <br />
+          Riverside communities.
+        </motion.p>
+      </div>
       <div>
         <Image
           src={Dragon}
           alt="dragon"
-          className="absolute left-0 top-12 w-1/4 pt-7"
+          className="absolute left-0 top-[12%] w-[27%] sm:w-[20%] md:top-[18%]"
         />
       </div>
-      ;
     </div>
   );
 };
