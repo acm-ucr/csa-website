@@ -16,8 +16,12 @@ const SlideInFromLeft = {
 const Landing = () => {
   return (
     <div>
-      <Image src = {clouds_home} alt = "clouds on home page" className = "absolute left-0 top-[13.7%] w-[900px] h-[263]"/>
-      <div className="relative mr-[10vw] container border-r-8 border-csa-red-100 pr-[2vw] text-right"> 
+      <Image
+        src={clouds_home}
+        alt="clouds on home page"
+        className="absolute left-0 top-[13.7%] h-[263] w-[900px]"
+      />
+      <div className="container relative mr-[10vw] border-r-8 border-csa-red-100 pr-[2vw] text-right">
         <div className="font-lora mb-8 flex flex-col border-csa-red-100 text-6xl font-semibold text-csa-red-100">
           <p className="font-bold">Chinese Student</p>
           <p>Association</p>
