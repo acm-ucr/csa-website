@@ -38,7 +38,7 @@ const Landing = () => {
         alt="right cloud"
         className="absolute bottom-10 right-0 sm:bottom-[30%]"
       />
-      <div className="realaive ml-[25vw] border-l-8 border-csa-tan-300 pl-6">
+      <div className="realaive ml-[25vw] mt-8 border-l-8 border-csa-tan-300 pl-6">
         <motion.p
           variants={SlideInFromLeft}
           viewport={{ once: true, amount: 0 }}
@@ -70,7 +70,7 @@ const Landing = () => {
         <Image
           src={Dragon}
           alt="dragon"
-          className="absolute left-0 top-[12%] w-[27%] sm:w-[20%]"
+          className="absolute left-0 top-[12%] w-[27%] sm:w-[20%] md:top-[18%]"
         />
       </div>
     </div>
