@@ -16,10 +16,10 @@ const SlideInFromRight = {
 
 const SlideInFromLeft = {
   initial: { opacity: 0, x: -50 },
-  animate: (custom: number) => ({
+  animate: () => ({
     opacity: 1,
     x: 0,
-    transition: { duration: 1, delay: custom, ease: "backInOut" },
+    transition: { duration: 1, delay: 0.5, ease: "backInOut" },
   }),
 };
 
@@ -94,34 +94,7 @@ const Landing = () => {
         alt="right cloud"
         className="absolute bottom-10 right-0 sm:bottom-[30%]"
       />
-      <div className="realaive ml-[25vw] mt-8 border-l-8 border-csa-tan-300 pl-6">
-        <motion.p
-          variants={SlideInFromLeft}
-          viewport={{ once: true, amount: 0 }}
-          initial="initial"
-          whileInView={"animate"}
-          custom={0.3}
-          className="text-left text-5xl font-bold text-csa-red-100 sm:text-4xl"
-        >
-          Mission statement
-        </motion.p>
-        <motion.p
-          variants={SlideInFromLeft}
-          viewport={{ once: true, amount: 0 }}
-          initial="initial"
-          whileInView={"animate"}
-          custom={0.1}
-          className="font-lora mt-4 pr-[17vw] text-left text-xl font-semibold leading-relaxed text-csa-gray-100 sm:text-2xl"
-        >
-          Social, cultural, and service orientated
-          <br />
-          organization that strives to promote the Chinese
-          <br />
-          American culture throughout the UCR and
-          <br />
-          Riverside communities.
-        </motion.p>
-      </div>
+
       <div>
         <Image
           src={Dragon}
