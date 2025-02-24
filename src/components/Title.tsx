@@ -32,8 +32,9 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         <svg
           width="3/4vw"
           height="3/4vw"
-          viewBox="0 -15 400 200"
+          viewBox="0 0 400 200"
           xmlns="http://www.w3.org/2000/svg"
+          className="hidden md:flex"
         >
           <path
             id="curve"
@@ -48,6 +49,39 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
             font-family="serif"
           >
             <textPath href="#curve" startOffset="50%" text-anchor="middle">
+              {text.split("").map((characters, index) => (
+                <motion.tspan
+                  key={characters}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1, delay: index * 0.1 }}
+                >
+                  {characters}
+                </motion.tspan>
+              ))}
+            </textPath>
+          </text>
+        </svg>
+        <svg
+          width="3/4vw"
+          height="3/4vw"
+          viewBox="0 0 400 170"
+          xmlns="http://www.w3.org/2000/svg"
+          className="md:hidden"
+        >
+          <path
+            id="curvy"
+            d="M45,140 Q210,0 360,145"
+            fill="transparent"
+            stroke="none"
+          />
+          <text
+            fill="#7C2413"
+            font-size="6.5vw"
+            font-weight="bold"
+            font-family="serif"
+          >
+            <textPath href="#curvy" startOffset="50%" text-anchor="middle">
               {text.split("").map((characters, index) => (
                 <motion.tspan
                   key={characters}
