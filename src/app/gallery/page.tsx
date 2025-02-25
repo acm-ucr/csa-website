@@ -5,7 +5,7 @@ import Gallery from "@/components/gallery/Gallery";
 const Page = () => {
   return (
     <div className="bg-csa-tan-100">
-      <Title text="gallery" />
+      <Title>Gallery</Title>
       <Events />
       <Gallery />
     </div>
