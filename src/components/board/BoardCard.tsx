@@ -24,7 +24,12 @@ const BoardCard: React.FC<BoardCardProps> = ({ image, name, title, index }) => {
         <Image
           src={image}
           alt="picture of person"
-          className="diamond xs:w-[35vw] absolute bottom-[19%] right-[18.2%] w-[20vw] rotate-[.5deg] sm:w-[30vw] md:w-[24vw] 2xl:bottom-[19.2%] 2xl:right-[21.5%] 2xl:w-[18vw]"
+          className="diamond rotate-15 absolute bottom-[18%] right-[21.5%] aspect-square w-[55%] object-cover md:hidden"
+        />
+        <Image
+          src={image}
+          alt="picture of person"
+          className="diamond absolute bottom-[19%] right-[18.2%] hidden w-[20vw] rotate-[.5deg] sm:w-[30vw] md:block md:w-[24vw] 2xl:bottom-[19.2%] 2xl:right-[21.5%] 2xl:w-[18vw]"
         />
       </div>
       <p className="relative bottom-7 flex justify-center text-3xl text-csa-red-100 md:text-4xl lg:text-5xl">
