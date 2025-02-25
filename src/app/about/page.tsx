@@ -8,7 +8,7 @@ const Page = () => {
   return (
     <div className="bg-csa-tan-100">
       <RightLantern />
-      <Title>About</Title>
+      <Title>about</Title>
       <WhoWeAre />
       <CherryTree />
       <FourPillars />
