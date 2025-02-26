@@ -33,7 +33,11 @@ const Navigation = () => {
         >
           Home
           {pathname === "/" && (
-            <Image src={WebMarker} alt="WebMarker" className="absolute mx-5 mt-12 w-4" />
+            <Image
+              src={WebMarker}
+              alt="WebMarker"
+              className="absolute mx-5 mt-12 w-4"
+            />
           )}
         </Link>
 
@@ -44,7 +48,11 @@ const Navigation = () => {
         >
           About
           {pathname === "/about" && (
-            <Image src={WebMarker} alt="WebMarker" className="absolute mx-5 mt-12 w-4" />
+            <Image
+              src={WebMarker}
+              alt="WebMarker"
+              className="absolute mx-5 mt-12 w-4"
+            />
           )}
         </Link>
 
@@ -55,7 +63,11 @@ const Navigation = () => {
         >
           Board
           {pathname === "/board" && (
-            <Image src={WebMarker} alt="WebMarker" className="absolute mx-5 mt-12 w-4" />
+            <Image
+              src={WebMarker}
+              alt="WebMarker"
+              className="absolute mx-5 mt-12 w-4"
+            />
           )}
         </Link>
 
@@ -66,7 +78,11 @@ const Navigation = () => {
         >
           Events
           {pathname === "/events" && (
-            <Image src={WebMarker} alt="WebMarker" className="absolute mx-5 mt-12 w-4" />
+            <Image
+              src={WebMarker}
+              alt="WebMarker"
+              className="absolute mx-5 mt-12 w-4"
+            />
           )}
         </Link>
 
@@ -77,14 +93,18 @@ const Navigation = () => {
         >
           Gallery
           {pathname === "/gallery" && (
-            <Image src={WebMarker} alt="WebMarker" className="absolute mx-5 mt-12 w-4" />
+            <Image
+              src={WebMarker}
+              alt="WebMarker"
+              className="absolute mx-5 mt-12 w-4"
+            />
           )}
         </Link>
 
         <Link
           href="https://docs.google.com/forms/d/e/1FAIpQLSc1Pg6_e3kE0Z6R51IhcxjtpPt-KWFnyKupL6Rsbr5oV56mxQ/viewform?fbclid=IwY2xjawHziIVleHRuA2FlbQIxMAABHdhqO6Ha7G-89kHFZcMLQhj6lfUZpnaG9T7KXk9S2JyAbfVVOTArq1nFBw_aem_FBe8BJ3j--WGCERMAWHsHQ"
           onClick={handleMobile}
-          className="font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300 rounded-md bg-csa-yellow-100 px-6 py-2 hover:text-white hover:opacity-70"
+          className="font-lora inline-flex items-center rounded-md bg-csa-yellow-100 px-6 py-2 text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300 hover:text-white hover:opacity-70"
         >
           Join
         </Link>
@@ -138,7 +158,7 @@ const Navigation = () => {
         <Link
           href="https://docs.google.com/forms/d/e/1FAIpQLSc1Pg6_e3kE0Z6R51IhcxjtpPt-KWFnyKupL6Rsbr5oV56mxQ/viewform?fbclid=IwY2xjawHziIVleHRuA2FlbQIxMAABHdhqO6Ha7G-89kHFZcMLQhj6lfUZpnaG9T7KXk9S2JyAbfVVOTArq1nFBw_aem_FBe8BJ3j--WGCERMAWHsHQ"
           onClick={handleMobile}
-          className="font-lora mb-4 inline-flex items-center text-xl text-white hover:cursor-pointer rounded-md bg-csa-yellow-100 px-6 py-2"
+          className="font-lora mb-4 inline-flex items-center rounded-md bg-csa-yellow-100 px-6 py-2 text-xl text-white hover:cursor-pointer"
         >
           Join
         </Link>
