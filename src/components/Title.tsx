@@ -13,7 +13,7 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="mr-5 mt-4 h-2.5 w-[20vw] bg-csa-green-100 md:mr-4 md:mt-4" />
+        <div className="mr-5 mt-4 h-2 w-[20vw] bg-csa-green-100 md:mr-4 md:mt-4" />
       </motion.div>
       <motion.div
         initial={{ y: -15, opacity: 0 }}
@@ -109,7 +109,7 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="ml-10 mt-4 h-2.5 w-[20vw] bg-csa-green-100 md:ml-4 md:mt-4" />
+        <div className="ml-10 mt-4 h-2 w-[20vw] bg-csa-green-100 md:ml-4 md:mt-4" />
       </motion.div>
     </div>
   );
