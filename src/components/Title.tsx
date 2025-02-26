@@ -13,7 +13,7 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="mr-4 mt-4 h-1.5 w-[20vw] bg-csa-green-100" />
+        <div className="mr-5 mt-4 h-2.5 w-[20vw] bg-csa-green-100 md:mr-4 md:mt-4" />
       </motion.div>
       <motion.div
         initial={{ y: -15, opacity: 0 }}
@@ -21,7 +21,11 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="h-1/3 w-1/3 object-cover"
       >
-        <Image src={banner1} alt="Banner" />
+        <Image
+          className="ml-4 mt-4 scale-125 md:ml-0 md:mt-0 md:scale-100"
+          src={banner1}
+          alt="Banner"
+        />
       </motion.div>
       <motion.div
         initial={{ y: -15, opacity: 0 }}
@@ -35,7 +39,6 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
           viewBox="0 0 400 200"
           xmlns="http://www.w3.org/2000/svg"
           className="hidden md:flex"
-
         >
           <path
             id="curve"
@@ -72,13 +75,13 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         >
           <path
             id="curvy"
-            d="M45,140 Q210,0 360,145"
+            d="M70,140 Q210,10 360,145"
             fill="transparent"
             stroke="none"
           />
           <text
             fill="#7C2413"
-            font-size="6.5vw"
+            font-size="10vw"
             font-weight="bold"
             font-family="serif"
           >
@@ -102,7 +105,7 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="ml-4 mt-4 h-1.5 w-[20vw] bg-csa-green-100" />
+        <div className="ml-10 mt-4 h-2.5 w-[20vw] bg-csa-green-100 md:ml-4 md:mt-4" />
       </motion.div>
     </div>
   );
