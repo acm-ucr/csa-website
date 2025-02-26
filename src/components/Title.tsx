@@ -75,13 +75,17 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
         >
           <path
             id="curvy"
+
             d="M70,140 Q210,10 360,145"
+
             fill="transparent"
             stroke="none"
           />
           <text
             fill="#7C2413"
+
             font-size="10vw"
+
             font-weight="bold"
             font-family="serif"
           >
