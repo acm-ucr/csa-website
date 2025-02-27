@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import CsaLogo from "@/public/home/csalogo.svg";
 import WebMarker from "@/public/home/webpageMarker.svg";
+import { tags } from "@/data/navBarData";
 import { AlignJustify } from "lucide-react";
 
 const Navigation = () => {
@@ -26,88 +27,27 @@ const Navigation = () => {
       </Link>
 
       <div className="absolute right-0 hidden w-[45%] justify-evenly px-1 md:flex">
-        <Link
-          href="/"
-          onClick={handleMobile}
-          className="font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300"
-        >
-          Home
-          {pathname === "/" && (
-            <Image
-              src={WebMarker}
-              alt="WebMarker"
-              className="absolute mx-5 mt-12 w-4"
-            />
-          )}
-        </Link>
-
-        <Link
-          href="/about"
-          onClick={handleMobile}
-          className="font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300"
-        >
-          About
-          {pathname === "/about" && (
-            <Image
-              src={WebMarker}
-              alt="WebMarker"
-              className="absolute mx-5 mt-12 w-4"
-            />
-          )}
-        </Link>
-
-        <Link
-          href="/board"
-          onClick={handleMobile}
-          className="font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300"
-        >
-          Board
-          {pathname === "/board" && (
-            <Image
-              src={WebMarker}
-              alt="WebMarker"
-              className="absolute mx-5 mt-12 w-4"
-            />
-          )}
-        </Link>
-
-        <Link
-          href="/events"
-          onClick={handleMobile}
-          className="font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300"
-        >
-          Events
-          {pathname === "/events" && (
-            <Image
-              src={WebMarker}
-              alt="WebMarker"
-              className="absolute mx-5 mt-12 w-4"
-            />
-          )}
-        </Link>
-
-        <Link
-          href="/gallery"
-          onClick={handleMobile}
-          className="font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300"
-        >
-          Gallery
-          {pathname === "/gallery" && (
-            <Image
-              src={WebMarker}
-              alt="WebMarker"
-              className="absolute mx-5 mt-12 w-4"
-            />
-          )}
-        </Link>
-
-        <Link
-          href="https://docs.google.com/forms/d/e/1FAIpQLSc1Pg6_e3kE0Z6R51IhcxjtpPt-KWFnyKupL6Rsbr5oV56mxQ/viewform?fbclid=IwY2xjawHziIVleHRuA2FlbQIxMAABHdhqO6Ha7G-89kHFZcMLQhj6lfUZpnaG9T7KXk9S2JyAbfVVOTArq1nFBw_aem_FBe8BJ3j--WGCERMAWHsHQ"
-          onClick={handleMobile}
-          className="font-lora inline-flex items-center rounded-md bg-csa-yellow-100 px-6 py-2 text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300 hover:text-white hover:opacity-70"
-        >
-          Join
-        </Link>
+        {tags.map(({ link, name }, index) => (
+          <Link
+            href={link}
+            key={index}
+            onClick={handleMobile}
+            className={`font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300 ${
+              name === "Join"
+                ? "rounded-md bg-csa-yellow-100 px-6 py-2 hover:text-white hover:opacity-70"
+                : ""
+            }`}
+          >
+            {name}
+            {pathname === link && (
+              <Image
+                src={WebMarker}
+                alt="WebMarker"
+                className="absolute mx-5 mt-12 w-4"
+              />
+            )}
+          </Link>
+        ))}
       </div>
 
       <div
@@ -115,53 +55,18 @@ const Navigation = () => {
           mobileScreen ? "flex" : "hidden"
         }`}
       >
-        <Link
-          href="/"
-          onClick={handleMobile}
-          className="font-lora mb-4 inline-flex items-center text-xl text-white hover:cursor-pointer"
-        >
-          Home
-        </Link>
-
-        <Link
-          href="/about"
-          onClick={handleMobile}
-          className="font-lora mb-4 inline-flex items-center text-xl text-white hover:cursor-pointer"
-        >
-          About
-        </Link>
-
-        <Link
-          href="/board"
-          onClick={handleMobile}
-          className="font-lora mb-4 inline-flex items-center text-xl text-white hover:cursor-pointer"
-        >
-          Board
-        </Link>
-
-        <Link
-          href="/events"
-          onClick={handleMobile}
-          className="font-lora mb-4 inline-flex items-center text-xl text-white hover:cursor-pointer"
-        >
-          Events
-        </Link>
-
-        <Link
-          href="/gallery"
-          onClick={handleMobile}
-          className="font-lora mb-4 inline-flex items-center text-xl text-white hover:cursor-pointer"
-        >
-          Gallery
-        </Link>
-
-        <Link
-          href="https://docs.google.com/forms/d/e/1FAIpQLSc1Pg6_e3kE0Z6R51IhcxjtpPt-KWFnyKupL6Rsbr5oV56mxQ/viewform?fbclid=IwY2xjawHziIVleHRuA2FlbQIxMAABHdhqO6Ha7G-89kHFZcMLQhj6lfUZpnaG9T7KXk9S2JyAbfVVOTArq1nFBw_aem_FBe8BJ3j--WGCERMAWHsHQ"
-          onClick={handleMobile}
-          className="font-lora mb-4 inline-flex items-center rounded-md bg-csa-yellow-100 px-6 py-2 text-xl text-white hover:cursor-pointer"
-        >
-          Join
-        </Link>
+        {tags.map(({ link, name }, index) => (
+          <Link
+            href={link}
+            key={index}
+            onClick={handleMobile}
+            className={`font-lora mb-4 inline-flex items-center text-xl text-white hover:cursor-pointer ${
+              name === "Join" ? "rounded-md bg-csa-yellow-100 px-6 py-2" : ""
+            }`}
+          >
+            {name}
+          </Link>
+        ))}
       </div>
 
       <div onClick={handleMobile}>
