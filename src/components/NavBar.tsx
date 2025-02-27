@@ -3,7 +3,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import CsaLogo from "@/public/home/csalogo.svg";
+import CsaLogo from "@/public/home/csalogo.webp";
 import WebMarker from "@/public/home/webpageMarker.svg";
 import { tags } from "@/data/navBarData";
 import { AlignJustify } from "lucide-react";
