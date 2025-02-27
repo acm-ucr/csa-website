@@ -1,13 +1,13 @@
 import Image from "next/image";
-import clubbing from "@/public/gallery/Clubbing.webp";
-import CHF from "@/public/gallery/CHF.webp";
+import Clubbing from "@/public/gallery/Clubbing.webp";
+import CHF from "@/public/gallery/chf.webp";
 import WinterRetreat from "@/public/gallery/WinterRetreat.webp";
 import Banquet from "@/public/gallery/Banquet.webp";
 
 export const events = [
   {
     name: "Clubbing",
-    info: <Image src={clubbing} alt="Clubbing" />,
+    info: <Image src={Clubbing} alt="Clubbing" />,
     border: "border-csa-green-100",
     text: "text-csa-green-100",
   },
