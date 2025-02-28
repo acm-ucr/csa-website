@@ -3,7 +3,7 @@ import CryingPanda from "@/public/not-found/cryingPanda.webp";
 import PandaWithFlower from "@/public/not-found/pandaWithFlower.webp";
 import Po from "@/public/not-found/teletubby_po.webp";
 import PandaWithWok from "@/public/not-found/pandaWithWok.webp";
-import Lantern from "@/public/not-found/lantern404.svg";
+import Lantern from "@/public/not-found/lantern404.webp";
 
 const NotFoundPage = () => {
   return (
