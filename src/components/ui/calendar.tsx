@@ -14,7 +14,7 @@ import lanterns from "@/public/events/lanterns.webp";
 import cloud from "@/public/events/cloud.webp";
 import string from "@/public/events/hoop.svg";
 import fu from "@/public/events/fu.webp";
-import spirals from "@/public/events/spirals.png";
+import spirals from "@/public/events/spirals.webp";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
