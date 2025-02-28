@@ -10,7 +10,7 @@ import Image from "next/image";
 import dateOutlineImage from "@/public/events/dateOutline.webp";
 import branches from "@/public/events/pinkAndBluebranches.webp";
 import lanterns from "@/public/events/lanterns.webp";
-import snake from "@/public/events/snake.webp";
+/* import snake from "@/public/events/snake.webp"; */
 import cloud from "@/public/events/cloud.webp";
 import string from "@/public/events/hoop.svg";
 import fu from "@/public/events/fu.webp";
