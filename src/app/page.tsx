@@ -1,4 +1,3 @@
-import React from "react";
 import XinDescription from "@/components/home/XinDescription";
 import EHTitle from "@/components/events/EventHighlightsTitle";
 import Landing from "@/components/home/Landing";
