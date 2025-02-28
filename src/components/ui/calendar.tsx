@@ -39,20 +39,20 @@ function Calendar({
   ...props
 }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
-  // const monthNames = [
-  //   "JANUARY",
-  //   "FEBRUARY",
-  //   "MARCH",
-  //   "APRIL",
-  //   "MAY",
-  //   "JUNE",
-  //   "JULY",
-  //   "AUGUST",
-  //   "SEPTEMBER",
-  //   "OCTOBER",
-  //   "NOVEMBER",
-  //   "DECEMBER",
-  // ];
+  const monthNames = [
+    "JANUARY",
+    "FEBRUARY",
+    "MARCH",
+    "APRIL",
+    "MAY",
+    "JUNE",
+    "JULY",
+    "AUGUST",
+    "SEPTEMBER",
+    "OCTOBER",
+    "NOVEMBER",
+    "DECEMBER",
+  ];
 
   const nextMonth = () => {
     const today = new Date();
@@ -81,95 +81,49 @@ function Calendar({
 
   return (
     <div>
-      <div className="z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 outline lg:mx-[15%] lg:w-[70%]">
-        {/* <div className="w-[14%]">
-          <Image
-            src={branches}
-            alt="branches image"
-          />
+      <div className="relative z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 lg:mx-[15%] lg:w-[70%]">
+        <div className="w-[14%]">
+          <Image src={branches} alt="branches image" />
         </div>
-        <div className="flex flex-col lg:gap-y-2 w-[22%] ml-[3%] pb-2 text-center">
-          <p className="text-lg sm:text-2xl lg:text-4xl font-bold text-csa-green-100">{currentDate.getFullYear()}</p>
-          <p className="text-[8px] sm:text-xs lg:text-sm px-2 text-csa-green-100 border-csa-yellow-400 border-l border-r">滴水之恩定当涌泉相报: "We should return small favors with much larger ones"</p>
-        </div>
-        <div className="w-[22%] text-center">
-          <p className="text-xs text-csa-green-100 font-medium">{monthNames[currentDate.getMonth()]}</p>
-        </div> */}
-        {/* <div className="relative outline flex flex-col gap-y-1 items-center w-[22lvw] lg:w-[16lvw] pb-1 text-center">
-          <p className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 pl-0.5 pt-0.5 md:pt-1.5 text-csa-green-100 text-base sm:text-xl md:text-3xl font-bold">{currentDate.getDate()}</p>
-          <Image
-            src={dateOutlineImage}
-            alt="date outline image"
-            className="max-h-[10lvh] px-[4lvw] sm:px-[6lvw] lg:px-[4lvw]"
-          />
-          <p className="text-sm sm:text-base lg:text-lg text-csa-green-100 font-medium">{monthNames[currentDate.getMonth()]}</p>
-        </div>
-        <div className="w-[14lvw] lg:w-[10lvw] pb-2 text-center outline">
-          <p className="text-[8px] sm:text-xs px-2 text-csa-green-100 border-csa-yellow-400 border-l border-r">滴水之恩定当涌泉相报: "We should return small favors with much larger ones"</p>
-        </div>
-        <div className="outline">
-          <Image
-            src={snake}
-            alt="snake image"
-            className="max-h-[20lvh] max-w-[10lvw]"
-          />
-        </div>
-        <div className="outline">
-          <Image
-            src={lanterns}
-            alt="lanterns image"
-            className="max-h-[20lvh] max-w-[7lvw]"
-          />
-        </div> */}
-        <div className="h-full max-h-[10lvh] w-full max-w-full">
-          <Image src={branches} alt="branches image" className="scale-125" />
-        </div>
-        <p>2</p>
-        <div className="col-span-2 flex flex-col justify-center text-center">
-          <p className="text-xl text-csa-green-100 lg:text-4xl">
+        <div className="ml-[3%] flex w-[22%] flex-col pb-2 text-center lg:gap-y-2">
+          <p className="text-lg font-bold text-csa-green-100 sm:text-2xl lg:text-4xl">
             {currentDate.getFullYear()}
           </p>
-          <p className="border-l border-r border-csa-yellow-400 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
+          <p className="border-l border-r border-csa-yellow-400 px-2 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
             滴水之恩定当涌泉相报: "We should return small favors with much
             larger ones"
           </p>
         </div>
-        <p>5</p>
-        <div className="relative flex items-center">
-          <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pl-0.5 pt-1.5 text-base font-bold text-csa-green-100 lg:text-4xl">
+        <div className="relative flex h-full w-[22%] flex-col items-center gap-y-1 text-center">
+          <p className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 pt-1 text-base font-bold text-csa-green-100 sm:pl-0.5 sm:pt-4 sm:text-3xl md:pt-1.5">
             {currentDate.getDate()}
           </p>
           <Image
             src={dateOutlineImage}
             alt="date outline image"
-            className="scale-[1.3]"
+            className="h-12 w-14 sm:h-20 sm:w-24"
           />
-        </div>
-        <p>7</p>
-        <div className="col-span-2 flex flex-col justify-center text-center">
-          <p className="collapse text-xl text-csa-green-100 lg:text-4xl">
-            {currentDate.getFullYear()}
+          <p className="text-xs font-medium text-csa-green-100 md:text-lg">
+            {monthNames[currentDate.getMonth()]}
           </p>
-          <p className="border-l border-r border-csa-yellow-400 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
+        </div>
+        <div className="flex w-[15%] flex-col pb-2 text-center lg:gap-y-2">
+          <p className="z-10 border-l border-r border-csa-yellow-400 px-2 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
             滴水之恩定当涌泉相报: "We should return small favors with much
             larger ones"
           </p>
         </div>
-        <div className="relative max-h-[20lvh] w-full max-w-full">
-          <Image
-            src={snake}
-            alt="snake image"
-            className="absolute right-0 z-50"
-          />
-          <Image src={cloud} alt="cloud image" className="absolute right-0" />
+        <div className="z-10 w-[13%]">
+          <Image src={snake} alt="snake image" />
         </div>
-        <div className="relative max-h-[20lvh] w-full max-w-full">
-          <Image
-            src={lanterns}
-            alt="laterns image"
-            className="absolute right-0 scale-150"
-          />
+        <div className="w-[11%]">
+          <Image src={lanterns} alt="lanterns image" />
         </div>
+        <Image
+          src={cloud}
+          alt="cloud image"
+          className="absolute top-0 z-0 ml-[61%]"
+        />
       </div>
 
       <DayPicker
@@ -183,9 +137,9 @@ function Calendar({
           months:
             "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
           month: "w-full",
-          caption: "flex justify-center relative items-center",
+          caption: "relative",
           caption_label: "",
-          nav: "space-x-1 flex items-center",
+          nav: "space-x-1 flex items-center z-50",
           nav_button: cn(
             buttonVariants({ variant: "monthNavigation" }),
             "h-7 w-7 p-0 hover:opacity-75",
