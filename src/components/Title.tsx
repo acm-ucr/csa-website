@@ -86,7 +86,7 @@ const Title: React.FC<TitleNameProps> = ({ children }) => {
             font-family="serif"
           >
             <textPath href="#curvy" startOffset="50%" text-anchor="middle">
-              {text.split("").map((characters, index) => (
+              {children.split("").map((characters, index) => (
                 <motion.tspan
                   key={characters}
                   initial={{ opacity: 0 }}
