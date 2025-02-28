@@ -15,14 +15,14 @@ const Footer = () => {
       </Link>
 
       <div className="flex gap-4 md:absolute md:right-0 md:mr-6">
-        {icons.map((icon, index) => (
+        {icons.map(({ link, image }, index) => (
           <Link
-            href={icon.link}
+            href={link}
             key={index}
             className="text-3xl text-white hover:scale-110 hover:text-csa-yellow-300 md:text-5xl"
             target="_blank"
           >
-            {icon.image}
+            {image}
           </Link>
         ))}
       </div>
