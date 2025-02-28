@@ -14,6 +14,7 @@ import snake from "@/public/events/snake.webp";
 import cloud from "@/public/events/cloud.webp";
 import string from "@/public/events/hoop.svg";
 import fu from "@/public/events/fu.webp";
+import spirals from "@/public/events/spirals.png";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
@@ -84,16 +85,28 @@ function Calendar({
   return (
     <div>
       <div className="flex justify-center">
-      <div className="relative w-[55%] border-4 border-black">
-        <Image src={string} alt="string" className="absolute top-[-9%] left-[50%]"/>
-        <div className="bg-csa-red-200 flex justify-center py-[10vh]">
-          <Image src={fu} alt="fu"/>
+        <div className="relative w-[70%]">
+          <div className="flex justify-center bg-csa-red-200 py-[10vh]">
+            <Image src={fu} alt="fu" />
+          </div>
+          <Image
+            src={string}
+            alt="string"
+            className="absolute left-[50%] top-[-9.3%]"
+          />
+          <Image
+            src={spirals}
+            alt="spirals"
+            className="absolute top-[65%] w-full"
+          />
         </div>
-        <Image src={branches} alt="branches image" className="scale-125" />
       </div>
+      <div className="flex justify-center">
+        <div className="flex w-[70%] flex-row border-4 border-orange-300 bg-csa-tan-500 pt-[10vh]">
+          <Image src={branches} alt="branches image" />
+        </div>
       </div>
       <div className="z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 outline lg:mx-[15%] lg:w-[70%]">
-       
         <div className="h-full max-h-[10lvh] w-full max-w-full">
           <Image src={branches} alt="branches image" className="scale-125" />
         </div>

@@ -7,12 +7,12 @@ const CalendarCall = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (
-      <Calendar
-        mode="single"
-        selected={date}
-        onSelect={setDate}
-        className="mx-[5%] bg-white lg:mx-[15%]"
-      />
+    <Calendar
+      mode="single"
+      selected={date}
+      onSelect={setDate}
+      className="mx-[5%] bg-white lg:mx-[15%]"
+    />
   );
 };
 
