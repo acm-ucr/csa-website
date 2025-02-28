@@ -2,10 +2,10 @@ import Image from "next/image";
 import * as motion from "motion/react-client";
 import banner1 from "@/public/banner.webp";
 interface TitleNameProps {
-  text: string;
+  children: string;
 }
 
-const Title: React.FC<TitleNameProps> = ({ text }) => {
+const Title: React.FC<TitleNameProps> = ({ children }) => {
   return (
     <div className="relative flex items-center justify-center">
       <motion.div
@@ -53,7 +53,7 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
             font-family="serif"
           >
             <textPath href="#curve" startOffset="50%" text-anchor="middle">
-              {text.split("").map((characters, index) => (
+              {children.split("").map((characters, index) => (
                 <motion.tspan
                   key={characters}
                   initial={{ opacity: 0 }}
@@ -86,7 +86,7 @@ const Title: React.FC<TitleNameProps> = ({ text }) => {
             font-family="serif"
           >
             <textPath href="#curvy" startOffset="50%" text-anchor="middle">
-              {text.split("").map((characters, index) => (
+              {children.split("").map((characters, index) => (
                 <motion.tspan
                   key={characters}
                   initial={{ opacity: 0 }}
