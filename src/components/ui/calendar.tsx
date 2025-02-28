@@ -97,54 +97,52 @@ function Calendar({
           <Image
             src={spirals}
             alt="spirals"
-            className="absolute top-[65%] w-full"
+            className="absolute top-[65%] w-full 2xl:top-[53.5%]"
           />
         </div>
       </div>
       <div className="flex justify-center">
-        <div className="flex w-[70%] flex-row border-4 border-orange-300 bg-csa-tan-500 pt-[10vh]">
-          <Image src={branches} alt="branches image" />
+        <div className="flex w-[70%] flex-row border-2 border-black bg-csa-tan-500 pt-[10vh]">
+          <Image
+            src={branches}
+            alt="branches image"
+            className="pb-1 pl-[1vw]"
+          />
+          <div className="col-span-2 flex w-3/12 flex-col justify-center pl-[4vw] text-center">
+            <p className="pb-2 text-xl text-csa-green-100 lg:text-4xl">
+              {currentDate.getFullYear()}
+            </p>
+            <p className="border-x border-csa-yellow-400 px-2 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
+              滴水之恩定当涌泉相报: "We should return small favors with much
+              larger ones"
+            </p>
+          </div>
+          <div className="relative flex flex-col items-center">
+            <p className="absolute top-[28%] text-5xl font-bold text-csa-green-100">
+              {currentDate.getDate()}
+            </p>
+            <Image
+              src={dateOutlineImage}
+              alt="date outline image"
+              className="w-9/12"
+            />
+            <p className="font-bold text-csa-green-100 md:text-lg">
+              {monthNames[currentDate.getMonth()]}
+            </p>
+          </div>
+          <div className="flex w-2/12 items-center">
+            <div className="flex flex-col text-center">
+              <p className="border-x border-csa-yellow-400 px-2 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
+                滴水之恩定当涌泉相报: "We should return small favors with much
+                larger ones"
+              </p>
+            </div>
+          </div>
+          {/*           <Image src={snake} alt="snake image" className="w-1/12 h-auto " /> */}
+          <Image src={lanterns} alt="lanterns image" className="w-2/12" />
         </div>
       </div>
       <div className="z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 outline lg:mx-[15%] lg:w-[70%]">
-        <div className="h-full max-h-[10lvh] w-full max-w-full">
-          <Image src={branches} alt="branches image" className="scale-125" />
-        </div>
-        <p>2</p>
-        <div className="col-span-2 flex flex-col justify-center text-center">
-          <p className="text-xl text-csa-green-100 lg:text-4xl">
-            {currentDate.getFullYear()}
-          </p>
-          <p className="border-l border-r border-csa-yellow-400 px-2 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
-            滴水之恩定当涌泉相报: "We should return small favors with much
-            larger ones"
-          </p>
-        </div>
-        <div className="relative flex h-full w-[22%] flex-col items-center gap-y-1 text-center">
-          <p className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 pt-1 text-base font-bold text-csa-green-100 sm:pl-0.5 sm:pt-4 sm:text-3xl md:pt-1.5">
-            {currentDate.getDate()}
-          </p>
-          <Image
-            src={dateOutlineImage}
-            alt="date outline image"
-            className="h-12 w-14 sm:h-20 sm:w-24"
-          />
-          <p className="text-xs font-medium text-csa-green-100 md:text-lg">
-            {monthNames[currentDate.getMonth()]}
-          </p>
-        </div>
-        <div className="flex w-[15%] flex-col pb-2 text-center lg:gap-y-2">
-          <p className="z-10 border-l border-r border-csa-yellow-400 px-2 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
-            滴水之恩定当涌泉相报: "We should return small favors with much
-            larger ones"
-          </p>
-        </div>
-        <div className="z-10 w-[13%]">
-          <Image src={snake} alt="snake image" />
-        </div>
-        <div className="w-[11%]">
-          <Image src={lanterns} alt="lanterns image" />
-        </div>
         <Image
           src={cloud}
           alt="cloud image"
