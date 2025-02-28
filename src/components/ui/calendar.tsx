@@ -28,21 +28,7 @@ function captionWeek(date: Date) {
   return week[date.getDay()];
 }
 
-function captionMonth(date: Date) {
-  const month = [
-    "JANUARY",
-    "FEBRUARY",
-    "MARCH",
-    "APRIL",
-    "MAY",
-    "JUNE",
-    "JULY",
-    "AUGUST",
-    "SEPTEMBER",
-    "OCTOBER",
-    "NOVEMBER",
-    "DECEMBER",
-  ];
+function captionMonth() {
   return "";
 }
 
@@ -53,20 +39,20 @@ function Calendar({
   ...props
 }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
-  const monthNames = [
-    "JANUARY",
-    "FEBRUARY",
-    "MARCH",
-    "APRIL",
-    "MAY",
-    "JUNE",
-    "JULY",
-    "AUGUST",
-    "SEPTEMBER",
-    "OCTOBER",
-    "NOVEMBER",
-    "DECEMBER",
-  ];
+  // const monthNames = [
+  //   "JANUARY",
+  //   "FEBRUARY",
+  //   "MARCH",
+  //   "APRIL",
+  //   "MAY",
+  //   "JUNE",
+  //   "JULY",
+  //   "AUGUST",
+  //   "SEPTEMBER",
+  //   "OCTOBER",
+  //   "NOVEMBER",
+  //   "DECEMBER",
+  // ];
 
   const nextMonth = () => {
     const today = new Date();
