@@ -47,8 +47,8 @@ const FourPillars = () => {
             className="absolute ml-5 w-[30vw] translate-x-[-34%] translate-y-[5%] sm:w-[24vw] sm:translate-x-[-20%] md:ml-3 md:w-[24vw] lg:w-[14vw]"
           />
         </div>
-        <div className="relative col-start-1 ml-40 flex h-[8vh] w-[54vw] items-center rounded-3xl border-8 border-csa-yellow-100 bg-white sm:ml-80 sm:w-[42vw] md:col-start-2 md:ml-3 md:h-[12vh] md:w-[42vw]">
-          <p className="ml-4 text-3xl font-bold text-csa-gray-200 md:ml-8 lg:text-4xl">
+        <div className="relative col-start-1 ml-72 flex h-[8vh] w-[50vw] items-center rounded-3xl border-8 border-csa-yellow-100 bg-white sm:ml-80 sm:w-[42vw] md:col-start-2 md:ml-3 md:h-[12vh] md:w-[42vw]">
+          <p className="ml-6 text-3xl font-bold text-csa-gray-200 md:ml-8 lg:text-4xl">
             Academic
           </p>
           <Image
