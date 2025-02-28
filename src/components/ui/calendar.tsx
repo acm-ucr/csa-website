@@ -7,17 +7,24 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { useState } from "react";
 import Image from "next/image";
-import dateOutlineImage from "@/public/events/dateOutline.webp"
-import branches from "@/public/events/pinkAndBluebranches.webp"
-import lanterns from "@/public/events/lanterns.webp"
-import snake from "@/public/events/snake.webp"
-import cloud from "@/public/events/cloud.webp"
-
+import dateOutlineImage from "@/public/events/dateOutline.webp";
+import branches from "@/public/events/pinkAndBluebranches.webp";
+import lanterns from "@/public/events/lanterns.webp";
+import snake from "@/public/events/snake.webp";
+import cloud from "@/public/events/cloud.webp";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
 function captionWeek(date: Date) {
-  const week = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+  const week = [
+    "SUNDAY",
+    "MONDAY",
+    "TUESDAY",
+    "WEDNESDAY",
+    "THURSDAY",
+    "FRIDAY",
+    "SATURDAY",
+  ];
   return week[date.getDay()];
 }
 
@@ -39,35 +46,56 @@ function captionMonth(date: Date) {
   return "";
 }
 
-
 function Calendar({
   className,
   classNames,
   showOutsideDays = false,
   ...props
 }: CalendarProps) {
-
   const [currentDate, setCurrentDate] = useState(new Date());
-  const monthNames = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+  const monthNames = [
+    "JANUARY",
+    "FEBRUARY",
+    "MARCH",
+    "APRIL",
+    "MAY",
+    "JUNE",
+    "JULY",
+    "AUGUST",
+    "SEPTEMBER",
+    "OCTOBER",
+    "NOVEMBER",
+    "DECEMBER",
+  ];
 
   const nextMonth = () => {
     const today = new Date();
     const newDate = new Date(currentDate);
     newDate.setMonth(newDate.getMonth() + 1);
-    newDate.setDate(today.getMonth() === newDate.getMonth() && today.getFullYear() == newDate.getFullYear() ? today.getDate() : 1);
+    newDate.setDate(
+      today.getMonth() === newDate.getMonth() &&
+        today.getFullYear() == newDate.getFullYear()
+        ? today.getDate()
+        : 1,
+    );
     setCurrentDate(newDate);
   };
   const prevMonth = () => {
     const today = new Date();
     const newDate = new Date(currentDate);
     newDate.setMonth(newDate.getMonth() - 1);
-    newDate.setDate(today.getMonth() === newDate.getMonth() && today.getFullYear() == newDate.getFullYear() ? today.getDate() : 1);
+    newDate.setDate(
+      today.getMonth() === newDate.getMonth() &&
+        today.getFullYear() == newDate.getFullYear()
+        ? today.getDate()
+        : 1,
+    );
     setCurrentDate(newDate);
   };
 
   return (
     <div>
-      <div className="flex items-end w-[90%] lg:w-[70%] mx-[5%] lg:mx-[15%] z-40 bg-csa-tan-500 outline">
+      <div className="z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 outline lg:mx-[15%] lg:w-[70%]">
         {/* <div className="w-[14%]">
           <Image
             src={branches}
@@ -107,21 +135,24 @@ function Calendar({
             className="max-h-[20lvh] max-w-[7lvw]"
           />
         </div> */}
-        <div className="h-full w-full max-h-[10lvh] max-w-full">
-          <Image
-            src={branches}
-            alt="branches image"
-            className="scale-125"
-          />
+        <div className="h-full max-h-[10lvh] w-full max-w-full">
+          <Image src={branches} alt="branches image" className="scale-125" />
         </div>
         <p>2</p>
-        <div className="col-span-2 text-center flex flex-col justify-center">
-          <p className="text-xl lg:text-4xl text-csa-green-100">{currentDate.getFullYear()}</p>
-          <p className="text-[8px] sm:text-xs lg:text-sm text-csa-green-100 border-csa-yellow-400 border-l border-r">滴水之恩定当涌泉相报: "We should return small favors with much larger ones"</p>
+        <div className="col-span-2 flex flex-col justify-center text-center">
+          <p className="text-xl text-csa-green-100 lg:text-4xl">
+            {currentDate.getFullYear()}
+          </p>
+          <p className="border-l border-r border-csa-yellow-400 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
+            滴水之恩定当涌泉相报: "We should return small favors with much
+            larger ones"
+          </p>
         </div>
         <p>5</p>
         <div className="relative flex items-center">
-          <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pl-0.5 pt-1.5 text-csa-green-100 text-base lg:text-4xl font-bold">{currentDate.getDate()}</p>
+          <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pl-0.5 pt-1.5 text-base font-bold text-csa-green-100 lg:text-4xl">
+            {currentDate.getDate()}
+          </p>
           <Image
             src={dateOutlineImage}
             alt="date outline image"
@@ -129,21 +160,22 @@ function Calendar({
           />
         </div>
         <p>7</p>
-        <div className="col-span-2 text-center flex flex-col justify-center">
-          <p className="collapse text-xl lg:text-4xl text-csa-green-100">{currentDate.getFullYear()}</p>
-          <p className="text-[8px] sm:text-xs lg:text-sm text-csa-green-100 border-csa-yellow-400 border-l border-r">滴水之恩定当涌泉相报: "We should return small favors with much larger ones"</p>
+        <div className="col-span-2 flex flex-col justify-center text-center">
+          <p className="collapse text-xl text-csa-green-100 lg:text-4xl">
+            {currentDate.getFullYear()}
+          </p>
+          <p className="border-l border-r border-csa-yellow-400 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
+            滴水之恩定当涌泉相报: "We should return small favors with much
+            larger ones"
+          </p>
         </div>
         <div className="relative max-h-[20lvh] w-full max-w-full">
           <Image
             src={snake}
             alt="snake image"
-            className="absolute z-50 right-0"
+            className="absolute right-0 z-50"
           />
-          <Image
-            src={cloud}
-            alt="cloud image"
-            className="absolute right-0"
-          />
+          <Image src={cloud} alt="cloud image" className="absolute right-0" />
         </div>
         <div className="relative max-h-[20lvh] w-full max-w-full">
           <Image
@@ -153,61 +185,59 @@ function Calendar({
           />
         </div>
       </div>
-      
-    <DayPicker
-      showOutsideDays={showOutsideDays}
-      formatters={{
-        formatWeekdayName: captionWeek,
-        formatCaption: captionMonth,
-      }}
-      className={className}
-      classNames={{
-        months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
-        month: "w-full",
-        caption: "flex justify-center relative items-center",
-        caption_label: "",
-        nav: "space-x-1 flex items-center",
-        nav_button: cn(
-          buttonVariants({ variant: "monthNavigation" }),
-          "h-7 w-7 p-0 hover:opacity-75",
-        ),
-        nav_button_previous: "absolute left-[37lvw] z-50 lg:left-[28lvw]",
-        nav_button_next: "absolute right-[37lvw] z-50 lg:right-[28lvw]",
-        table: "w-full border-collapse space-y-1",
-        head_row: "flex",
-        head_cell:
-          "text-csa-gray-200 text-[8px] md:text-xs lg:text-sm rounded-xl border border-csa-gray-100 w-full font-normal",
-        row: "grid grid-cols-7",
-        cell: "text-csa-gray-200 border rounded-xl border-csa-gray-100 p-0 relative focus-within:relative focus-within:z-20",
-        day: cn(
-          buttonVariants({ variant: "ghost" }),
-          "w-full h-[10lvh] text-2xl rounded-xl p-0 font-normal",
-        ),
-        day_range_end: "day-range-end",
-        day_selected:
-          "bg-csa-red-200 text-csa-yellow-400",
-        day_outside:
-          "",
-        day_disabled: "text-neutral-500 opacity-50",
-        day_range_middle:
-          "",
-        day_hidden: "invisible",
-        ...classNames,
-      }}
-      components={{
-        IconLeft: ({ className, ...props }) => (
-          <div className="p-2" onClick={prevMonth}>
-            <ChevronLeft className={cn("", className)} {...props} />
-          </div>
-        ),
-        IconRight: ({ className, ...props }) => (
-          <div className="p-2" onClick={nextMonth}>
-            <ChevronRight className={cn("", className)} {...props} />
-          </div>
-        ),
-      }}
-      {...props}
-    />
+
+      <DayPicker
+        showOutsideDays={showOutsideDays}
+        formatters={{
+          formatWeekdayName: captionWeek,
+          formatCaption: captionMonth,
+        }}
+        className={className}
+        classNames={{
+          months:
+            "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0",
+          month: "w-full",
+          caption: "flex justify-center relative items-center",
+          caption_label: "",
+          nav: "space-x-1 flex items-center",
+          nav_button: cn(
+            buttonVariants({ variant: "monthNavigation" }),
+            "h-7 w-7 p-0 hover:opacity-75",
+          ),
+          nav_button_previous: "absolute left-[37lvw] z-50 lg:left-[28lvw]",
+          nav_button_next: "absolute right-[37lvw] z-50 lg:right-[28lvw]",
+          table: "w-full border-collapse space-y-1",
+          head_row: "flex",
+          head_cell:
+            "text-csa-gray-200 text-[8px] md:text-xs lg:text-sm rounded-xl border border-csa-gray-100 w-full font-normal",
+          row: "grid grid-cols-7",
+          cell: "text-csa-gray-200 border rounded-xl border-csa-gray-100 p-0 relative focus-within:relative focus-within:z-20",
+          day: cn(
+            buttonVariants({ variant: "ghost" }),
+            "w-full h-[10lvh] text-2xl rounded-xl p-0 font-normal",
+          ),
+          day_range_end: "day-range-end",
+          day_selected: "bg-csa-red-200 text-csa-yellow-400",
+          day_outside: "",
+          day_disabled: "text-neutral-500 opacity-50",
+          day_range_middle: "",
+          day_hidden: "invisible",
+          ...classNames,
+        }}
+        components={{
+          IconLeft: ({ className, ...props }) => (
+            <div className="p-2" onClick={prevMonth}>
+              <ChevronLeft className={cn("", className)} {...props} />
+            </div>
+          ),
+          IconRight: ({ className, ...props }) => (
+            <div className="p-2" onClick={nextMonth}>
+              <ChevronRight className={cn("", className)} {...props} />
+            </div>
+          ),
+        }}
+        {...props}
+      />
     </div>
   );
 }

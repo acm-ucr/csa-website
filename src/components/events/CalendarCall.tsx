@@ -12,7 +12,7 @@ const CalendarCall = () => {
         mode="single"
         selected={date}
         onSelect={setDate}
-        className="bg-white mx-[5%] lg:mx-[15%]"
+        className="mx-[5%] bg-white lg:mx-[15%]"
       />
     </div>
   );
