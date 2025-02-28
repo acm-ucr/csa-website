@@ -13,18 +13,21 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
+    "date-fns": "^3.6.0",
+    "@radix-ui/react-accordion": "^1.2.2",
     "@tanstack/react-query": "~5.53.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "date-fns": "^3.6.0",
     "icons": "^1.0.0",
-    "lucide-react": "^0.417.0",
+    "lucide-react": "~0.417.0",
+    "motion": "^12.4.5",
     "next": "~14.2.10",
     "react": "~18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "~18.3.1",
     "react-icons": "^5.4.0",
     "tailwind-merge": "^3.0.1",
+    "sharp": "^0.33.5",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
