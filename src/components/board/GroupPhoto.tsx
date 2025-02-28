@@ -2,7 +2,6 @@ import Image from "next/image";
 import GroupImage from "@/public/board/Group-Photo-CSA.webp";
 import WhiteFlower from "@/public/board/whiteflowers.svg";
 import Boar from "@/public/board/boar.svg";
-/* import BoarShadow from "@/public/board/boarshadow.svg"; */
 
 const GroupPhoto = () => {
   return (
