@@ -12,6 +12,8 @@ import branches from "@/public/events/pinkAndBluebranches.webp";
 import lanterns from "@/public/events/lanterns.webp";
 import snake from "@/public/events/snake.webp";
 import cloud from "@/public/events/cloud.webp";
+import string from "@/public/events/hoop.svg";
+import fu from "@/public/events/fu.webp";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
@@ -81,12 +83,23 @@ function Calendar({
 
   return (
     <div>
-      <div className="relative z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 lg:mx-[15%] lg:w-[70%]">
-        <div className="w-[14%]">
-          <Image src={branches} alt="branches image" />
+      <div className="flex justify-center">
+      <div className="relative w-[55%] border-4 border-black">
+        <Image src={string} alt="string" className="absolute top-[-9%] left-[50%]"/>
+        <div className="bg-csa-red-200 flex justify-center py-[10vh]">
+          <Image src={fu} alt="fu"/>
         </div>
-        <div className="ml-[3%] flex w-[22%] flex-col pb-2 text-center lg:gap-y-2">
-          <p className="text-lg font-bold text-csa-green-100 sm:text-2xl lg:text-4xl">
+        <Image src={branches} alt="branches image" className="scale-125" />
+      </div>
+      </div>
+      <div className="z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 outline lg:mx-[15%] lg:w-[70%]">
+       
+        <div className="h-full max-h-[10lvh] w-full max-w-full">
+          <Image src={branches} alt="branches image" className="scale-125" />
+        </div>
+        <p>2</p>
+        <div className="col-span-2 flex flex-col justify-center text-center">
+          <p className="text-xl text-csa-green-100 lg:text-4xl">
             {currentDate.getFullYear()}
           </p>
           <p className="border-l border-r border-csa-yellow-400 px-2 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
