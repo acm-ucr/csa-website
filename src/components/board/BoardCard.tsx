@@ -18,7 +18,7 @@ const BoardCard: React.FC<BoardCardProps> = ({ image, name, title, index }) => {
     diamondImages[Math.floor(index / 3) % diamondImages.length];
 
   return (
-    <div className="flex flex-col text-center">
+    <div className="text-center">
       <div className="relative flex justify-center">
         <Image src={diamondColor} alt="redDiamond" className="w-auto" />
         <Image
