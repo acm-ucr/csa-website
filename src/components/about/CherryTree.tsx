@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Tree from "@/public/about/cherryTree.webp";
-import Tiger from "@/public/about/tiger.svg";
+import Tiger from "@/public/about/tiger.webp";
 
 const CherryTree = () => {
   return (
@@ -11,10 +11,10 @@ const CherryTree = () => {
         <Image src={Tree} alt="Tree" className="scale-[100%] transform" />
       </div>
       <div className="absolute right-0 overflow-hidden">
-        <div className="relative -bottom-[14vh] -right-[14vw]">
-          <Image src={Tiger} alt="Tiger" className="scale-[90%] transform" />
+        <div className="relative -bottom-[15vh] -right-[17vw]">
+          <Image src={Tiger} alt="Tiger" className="scale-[60%] transform" />
         </div>
-        <div className="h-[1vh] w-[60vw] bg-csa-tan-300" />
+        <div className="relative -right-[12vw] h-[1vh] w-[60vw] bg-csa-tan-300" />
       </div>
     </div>
   );
