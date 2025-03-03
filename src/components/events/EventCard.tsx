@@ -2,12 +2,10 @@ const EventCard = () => {
   return (
     <div className="relative left-[28%] flex">
       <div className="relative h-[17vw] w-[50vw] bg-white">
-        <p className="pl-[30%] pt-[9%] text-[5vw] font-bold text-csa-yellow-100 leading-[75%]">
+        <p className="pl-[30%] pt-[9%] text-[5vw] font-bold leading-[75%] text-csa-yellow-100">
           Name
         </p>
-        <p className="pl-[30%] text-[3vw] text-csa-gray-100">
-          location
-        </p>
+        <p className="pl-[30%] text-[3vw] text-csa-gray-100">location</p>
       </div>
 
       <div className="relative right-[60%] h-[18vw] w-[18vw] rotate-45 bg-csa-red-200 text-center">
