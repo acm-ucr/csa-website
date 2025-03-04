@@ -99,7 +99,7 @@ const Landing = () => {
         <Image
           src={Dragon}
           alt="dragon"
-          className="absolute left-0 top-[12%] w-[27%] sm:w-[20%] md:top-[18%]"
+          className="absolute left-0 top-[12%] w-[27%] sm:w-[20%] md:top-[18%] 2xl:top-[11%]"
         />
       </div>
     </div>
