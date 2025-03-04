@@ -16,10 +16,10 @@ const SlideInFromRight = {
 
 const SlideInFromLeft = {
   initial: { opacity: 0, x: -50 },
-  animate: () => ({
+  animate: (custom: number) => ({
     opacity: 1,
     x: 0,
-    transition: { duration: 1, delay: 0.5, ease: "backInOut" },
+    transition: { duration: 1, delay: custom, ease: "backInOut" },
   }),
 };
 
@@ -66,7 +66,7 @@ const Landing = () => {
             viewport={{ once: true, amount: 0 }}
             initial="initial"
             whileInView={"animate"}
-            custom={0.3}
+            custom={0.4}
             className="text-left text-5xl font-bold text-csa-red-100"
           >
             Mission statement
@@ -76,7 +76,7 @@ const Landing = () => {
             viewport={{ once: true, amount: 0 }}
             initial="initial"
             whileInView={"animate"}
-            custom={0.1}
+            custom={0.5}
             className="mt-4 text-left text-2xl font-semibold leading-9 text-csa-gray-100"
           >
             Social, cultural, and service orientated
@@ -99,7 +99,7 @@ const Landing = () => {
         <Image
           src={Dragon}
           alt="dragon"
-          className="absolute left-0 top-[12%] w-[27%] sm:w-[20%] md:top-[18%]"
+          className="absolute left-0 top-[12%] w-[27%] sm:w-[20%] md:top-[18%] 2xl:top-[11%]"
         />
       </div>
     </div>
