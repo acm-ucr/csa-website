@@ -21,7 +21,7 @@ const Board = () => {
         initial={"initial"}
         whileInView={"animate"}
       >
-        <div className="grid grid-cols-3 gap-2 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
           {boardInfo.map((CARD, index) => (
             <BoardCard
               key={index}

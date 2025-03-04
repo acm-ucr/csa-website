@@ -39,11 +39,28 @@ const Navigation = () => {
             }`}
           >
             {name}
-            {pathname === link && (
+            {pathname === link &&
+              name !== "Gallery" &&
+              name !== "Join" &&
+              name !== "Events" && (
+                <Image
+                  src={WebMarker}
+                  alt="WebMarker"
+                  className="absolute mx-5 mt-12 w-4"
+                />
+              )}
+            {pathname === link && name === "Gallery" && (
               <Image
                 src={WebMarker}
                 alt="WebMarker"
-                className="absolute mx-5 mt-12 w-4"
+                className="absolute mx-7 mt-12 w-4"
+              />
+            )}
+            {pathname === link && name === "Events" && (
+              <Image
+                src={WebMarker}
+                alt="WebMarker"
+                className="absolute mx-6 mt-12 w-4"
               />
             )}
           </Link>
@@ -68,7 +85,6 @@ const Navigation = () => {
           </Link>
         ))}
       </div>
-
       <div onClick={handleMobile}>
         <AlignJustify className="mr-3 flex text-3xl text-white hover:cursor-pointer md:hidden" />
       </div>
