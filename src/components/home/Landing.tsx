@@ -28,10 +28,10 @@ const Landing = () => {
     <div>
       <div
         className={
-          "relative mr-[10vw] border-r-8 border-csa-red-100 pr-[2vw] text-right"
+          "relative mr-[8vw] border-r-8 border-csa-red-100 pr-6 text-right"
         }
       >
-        <div className="font-lora mb-8 flex flex-col border-csa-red-100 text-6xl font-semibold text-csa-red-100">
+        <div className="mb-8 flex flex-col border-csa-red-100 text-5xl font-semibold text-csa-red-100">
           <motion.p
             variants={SlideInFromRight}
             viewport={{ once: true, amount: 0 }}
@@ -60,7 +60,7 @@ const Landing = () => {
         </div>
       </div>
       <div className="px-8 py-4">
-        <div className="ml-[25vw] border-l-8 border-csa-tan-300 pl-6">
+        <div className="mt-6 border-l-8 border-csa-tan-300 pl-6 md:ml-[25vw] md:mt-0">
           <motion.p
             variants={SlideInFromLeft}
             viewport={{ once: true, amount: 0 }}
@@ -77,7 +77,7 @@ const Landing = () => {
             initial="initial"
             whileInView={"animate"}
             custom={0.5}
-            className="mt-4 text-left text-2xl font-semibold leading-9 text-csa-gray-100"
+            className="font-lora mt-4 text-left text-2xl font-semibold leading-9 text-csa-gray-100"
           >
             Social, cultural, and service orientated
             <br />
@@ -92,14 +92,14 @@ const Landing = () => {
       <Image
         src={RightCloud}
         alt="right cloud"
-        className="absolute bottom-10 right-0 sm:bottom-[30%]"
+        className="absolute bottom-10 right-0 md:bottom-[10%]"
       />
 
       <div>
         <Image
           src={Dragon}
           alt="dragon"
-          className="absolute left-0 top-[12%] w-[27%] sm:w-[20%] md:top-[18%] 2xl:top-[11%]"
+          className="absolute left-0 top-[14vh] w-[25vw] md:top-[18%] md:w-[25vw] 2xl:top-[11%] 2xl:w-[20vw]"
         />
       </div>
     </div>

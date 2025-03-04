@@ -32,7 +32,6 @@ const Navigation = () => {
             href={link}
             key={index}
             onClick={handleMobile}
-            target="_blank"
             className={`font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300 ${
               name === "Join"
                 ? "rounded-md bg-csa-yellow-100 px-6 py-2 hover:text-white hover:opacity-70"
@@ -86,7 +85,6 @@ const Navigation = () => {
           </Link>
         ))}
       </div>
-
       <div onClick={handleMobile}>
         <AlignJustify className="mr-3 flex text-3xl text-white hover:cursor-pointer md:hidden" />
       </div>
