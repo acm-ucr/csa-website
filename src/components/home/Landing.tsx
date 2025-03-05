@@ -1,6 +1,7 @@
 "use client";
 
 import Dragon from "@/public/home/Dragon.webp";
+import TopCloud from "@/public/home/TopCloud.webp";
 import RightCloud from "@/public/home/RightCloud.svg";
 import Image from "next/image";
 import * as motion from "motion/react-client";
@@ -25,12 +26,13 @@ const SlideInFromLeft = {
 
 const Landing = () => {
   return (
-    <div>
-      <div
-        className={
-          "relative mr-[8vw] border-r-8 border-csa-red-100 pr-6 text-right"
-        }
-      >
+    <div className="pt-[12.2vh] md:pt-[14.4vh]">
+      <Image
+        src={TopCloud}
+        alt="TopCloud"
+        className="absolute left-0 top-[12.5vh] md:top-[14.5vh] md:w-7/12"
+      />
+      <div className="relative mr-[8vw] border-r-8 border-csa-red-100 pr-6 text-right">
         <div className="mb-8 flex flex-col border-csa-red-100 text-5xl font-semibold text-csa-red-100">
           <motion.p
             variants={SlideInFromRight}
@@ -92,7 +94,7 @@ const Landing = () => {
       <Image
         src={RightCloud}
         alt="right cloud"
-        className="absolute bottom-10 right-0 md:bottom-[10%]"
+        className="absolute bottom-[15%] right-0 opacity-70 md:bottom-[10%] md:opacity-100"
       />
 
       <div>
