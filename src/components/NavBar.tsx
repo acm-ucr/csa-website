@@ -2,7 +2,7 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import CsaLogo from "@/public/home/csalogo.webp";
 import WebMarker from "@/public/home/webpageMarker.svg";
 import { tags } from "@/data/navBarData";
@@ -10,15 +10,10 @@ import { AlignJustify } from "lucide-react";
 
 const Navigation = () => {
   const pathname = usePathname();
-  const [mobileScreen, setMobile] = useState(false);
-
-  const handleMobile = () => {
-    setMobile(!mobileScreen);
-  };
 
   return (
     <div className="top-0 flex w-full items-center justify-between border-b-8 border-csa-yellow-100 bg-csa-red-200">
-      <Link href="/" onClick={handleMobile}>
+      <Link href="/">
         <Image
           src={CsaLogo}
           alt="CSA_Logo"
@@ -31,7 +26,6 @@ const Navigation = () => {
           <Link
             href={link}
             key={index}
-            onClick={handleMobile}
             className={`font-lora inline-flex items-center text-xl text-white hover:cursor-pointer hover:text-csa-yellow-300 ${
               name === "Join"
                 ? "rounded-md bg-csa-yellow-100 px-6 py-2 hover:text-white hover:opacity-70"
@@ -66,17 +60,11 @@ const Navigation = () => {
           </Link>
         ))}
       </div>
-
-      <div
-        className={`absolute top-24 z-10 w-full flex-col items-center justify-evenly bg-csa-red-200 md:hidden ${
-          mobileScreen ? "flex" : "hidden"
-        }`}
-      >
+      <div className="absolute top-24 z-10 w-full flex-col items-center justify-evenly bg-csa-red-200 md:hidden">
         {tags.map(({ link, name }, index) => (
           <Link
             href={link}
             key={index}
-            onClick={handleMobile}
             className={`font-lora mb-4 inline-flex items-center text-xl text-white hover:cursor-pointer ${
               name === "Join" ? "rounded-md bg-csa-yellow-100 px-6 py-2" : ""
             }`}
@@ -85,7 +73,8 @@ const Navigation = () => {
           </Link>
         ))}
       </div>
-      <div onClick={handleMobile}>
+
+      <div>
         <AlignJustify className="mr-3 flex text-3xl text-white hover:cursor-pointer md:hidden" />
       </div>
     </div>
