@@ -5,7 +5,7 @@ import Quotes from "@/components/home/Quote";
 
 const Page = () => {
   return (
-    <div className="bg-csa-tan-400 pt-[12.2vh] md:pt-[14.4vh]">
+    <div className="bg-csa-tan-400">
       <Landing />
       <XinDescription />
       <EHTitle />
