@@ -15,7 +15,7 @@ const FourPillars = () => {
         <div className="ml-auto mr-4 h-[1vh] w-[11vw] bg-csa-tan-300"></div>
       </div>
 
-      <div className="mt-12 grid grid-cols-2 justify-items-start gap-7 sm:gap-6 md:gap-20">
+      <div className="mt-12 grid grid-cols-2 justify-items-start gap-7 overflow-x-clip sm:gap-6 md:gap-20 lg:overflow-visible">
         <div className="relative col-span-2 ml-5 flex h-[8vh] w-[64vw] items-center rounded-3xl border-8 border-csa-green-100 bg-white sm:w-[48vw] md:ml-20 md:h-[12vh] md:w-[42vw]">
           <p className="font-lora p-4 text-3xl font-bold text-csa-gray-200 lg:text-4xl">
             Philanthropy
@@ -47,8 +47,8 @@ const FourPillars = () => {
             className="absolute ml-5 w-[30vw] translate-x-[-34%] translate-y-[5%] sm:w-[24vw] sm:translate-x-[-20%] md:ml-3 md:w-[24vw] lg:w-[14vw]"
           />
         </div>
-        <div className="relative col-start-1 ml-40 flex h-[8vh] w-[54vw] items-center rounded-3xl border-8 border-csa-yellow-100 bg-white sm:ml-80 sm:w-[42vw] md:col-start-2 md:ml-3 md:h-[12vh] md:w-[42vw]">
-          <p className="ml-4 text-3xl font-bold text-csa-gray-200 md:ml-8 lg:text-4xl">
+        <div className="relative col-start-1 ml-44 flex h-[8vh] w-[50vw] items-center rounded-3xl border-8 border-csa-yellow-100 bg-white sm:ml-80 sm:w-[42vw] md:col-start-2 md:ml-3 md:h-[12vh] md:w-[42vw]">
+          <p className="ml-6 text-3xl font-bold text-csa-gray-200 md:ml-8 lg:text-4xl">
             Academic
           </p>
           <Image
