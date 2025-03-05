@@ -60,7 +60,14 @@ const Navigation = () => {
           </Link>
         ))}
       </div>
-      <div className="absolute top-24 z-10 w-full flex-col items-center justify-evenly bg-csa-red-200 md:hidden">
+      <input type="checkbox" id="mobile-menu" className="peer hidden" />
+      <label
+        htmlFor="mobile-menu"
+        className="mr-3 text-3xl text-white hover:cursor-pointer md:hidden"
+      >
+        <AlignJustify />
+      </label>
+      <div className="absolute top-24 z-10 hidden w-full flex-col items-center justify-evenly bg-csa-red-200 peer-checked:flex md:hidden">
         {tags.map(({ link, name }, index) => (
           <Link
             href={link}
@@ -72,10 +79,6 @@ const Navigation = () => {
             {name}
           </Link>
         ))}
-      </div>
-
-      <div>
-        <AlignJustify className="mr-3 flex text-3xl text-white hover:cursor-pointer md:hidden" />
       </div>
     </div>
   );
