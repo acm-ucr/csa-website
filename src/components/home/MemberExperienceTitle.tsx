@@ -3,17 +3,17 @@ import Ram from "@/public/home/ram.webp";
 
 const MemberTitle = () => {
   return (
-    <div className="relative py-[14vh]">
-      <p className="relative top-20 mr-2 flex justify-end pr-4 text-right text-5xl font-semibold text-csa-red-100 md:top-4">
-        Member Experiences
-      </p>
-      <div className="relative top-[15vh] flex justify-center">
+    <div className="relative md:pt-[20vh] py-[15vh]">
+      <div className="absolute my-[6vh] left-[4vw] md:top-[-15vh] top-[-12vh]">
         <Image
           src={Ram}
           alt="Chinese Ram"
-          className="absolute bottom-[8vh] left-0 w-2/3 md:bottom-[-5vh] md:left-24 md:w-1/4"
+          className="w-1/2 md:w-1/4"
         />
       </div>
+      <p className="absolute md:right-8 md:left-auto md:top-[8vh] left-[28vw] text-5xl font-semibold text-csa-red-100">
+        Member Experiences
+      </p>
     </div>
   );
 };
