@@ -1,15 +1,15 @@
 import XinDescription from "@/components/home/XinDescription";
-import EHTitle from "@/components/events/EventHighlightsTitle";
+import EHTitle from "@/components/home/EventHighlightsTitle";
 import Landing from "@/components/home/Landing";
-import Quotes from "@/components/home/Quote";
+import MemberExperiences from "@/components/home/MemberExperiences";
 
 const Page = () => {
   return (
-    <div className="bg-csa-tan-400 pt-[12.2vh] md:pt-[14.4vh]">
+    <div className="bg-csa-tan-400">
       <Landing />
       <XinDescription />
       <EHTitle />
-      <Quotes />
+      <MemberExperiences />
     </div>
   );
 };
