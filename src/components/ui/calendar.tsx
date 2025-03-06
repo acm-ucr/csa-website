@@ -84,66 +84,61 @@ function Calendar({
 
   return (
     <div className="pt-[5vh] md:pt-[10vh]">
-      <div className="flex justify-center">
-        <div className="relative w-[90%] lg:w-[70%]">
-          <div className="flex justify-center bg-csa-red-200 py-[10vh]">
-            <Image src={fu} alt="fu" />
-          </div>
-          <Image
-            src={string}
-            alt="string"
-            className="absolute left-[50%] top-[-9.3%]"
-          />
-          <Image
-            src={spirals}
-            alt="spirals"
-            className="absolute top-[65%] w-full 2xl:top-[53.5%]"
-          />
-        </div>
+      <div className="relative flex flex-col items-center">
+        <Image src={string} alt="string image" />
+        <Image
+          src={fu}
+          alt="fu image"
+          className="mx-[5%] w-[90%] bg-csa-red-200 px-[11%] py-[9vh] lg:mx-[15%] lg:w-[70%]"
+        />
+        <Image
+          src={spirals}
+          alt="spirals image"
+          className="absolute -bottom-6 left-[5.5%] z-50 w-[45%] sm:-bottom-10 md:-bottom-12 lg:left-[15.5%] lg:w-[35%] 2xl:-bottom-16"
+        />
+        <Image
+          src={spirals}
+          alt="spirals image"
+          className="absolute -bottom-6 left-[49.5%] z-50 w-[45%] sm:-bottom-10 md:-bottom-12 lg:w-[35%] 2xl:-bottom-16"
+        />
       </div>
-      <div className="relative z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 lg:mx-[15%] lg:w-[70%]">
-        <div className="w-[14%]">
-          <Image src={branches} alt="branches image" />
-        </div>
+      <div className="relative z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 pt-1 sm:pt-5 lg:mx-[15%] lg:w-[70%] 2xl:-mt-4">
+        <Image src={branches} alt="branches image" className="w-[14%]" />
         <div className="ml-[3%] flex w-[22%] flex-col pb-2 text-center lg:gap-y-2">
-          <p className="text-lg font-bold text-csa-green-100 sm:text-2xl lg:text-4xl">
+          <p className="text-lg font-bold text-csa-green-100 sm:text-2xl lg:text-4xl 2xl:text-6xl">
             {currentDate.getFullYear()}
           </p>
-          <p className="border-l border-r border-csa-yellow-400 px-2 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
+          <p className="border-l border-r border-csa-yellow-400 px-2 text-[6px] text-csa-green-100 sm:text-xs lg:text-sm 2xl:text-xl">
             滴水之恩定当涌泉相报: "We should return small favors with much
             larger ones"
           </p>
         </div>
-        <div className="relative flex h-full w-[22%] flex-col items-center gap-y-1 text-center">
-          <p className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 pt-1 text-base font-bold text-csa-green-100 sm:pl-0.5 sm:pt-4 sm:text-3xl md:pt-1.5">
+        <div className="relative flex h-full w-[22%] flex-col items-center gap-y-1 text-center 2xl:gap-y-4 2xl:pb-2">
+          <p className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 pt-6 text-base font-bold text-csa-green-100 sm:pl-0.5 sm:pt-9 sm:text-3xl md:pt-8 2xl:pt-10 2xl:text-6xl">
             {currentDate.getDate()}
           </p>
           <Image
             src={dateOutlineImage}
             alt="date outline image"
-            className="h-12 w-14 sm:h-20 sm:w-24"
+            className="mt-4 h-11 w-12 sm:h-20 sm:w-24 2xl:h-40 2xl:w-48"
           />
-          <p className="text-xs font-medium text-csa-green-100 md:text-lg">
+          <p className="text-[8px] font-medium text-csa-green-100 sm:text-xs md:text-sm lg:text-base 2xl:text-2xl">
             {monthNames[currentDate.getMonth()]}
           </p>
         </div>
         <div className="flex w-[15%] flex-col pb-2 text-center lg:gap-y-2">
-          <p className="z-10 border-l border-r border-csa-yellow-400 px-2 text-[8px] text-csa-green-100 sm:text-xs lg:text-sm">
+          <Image src={cloud} alt="cloud image" className="z-0 -mb-8 w-full" />
+          <p className="z-10 border-l border-r border-csa-yellow-400 text-[6px] text-csa-green-100 sm:px-2 sm:text-xs lg:text-sm 2xl:text-xl">
             滴水之恩定当涌泉相报: "We should return small favors with much
             larger ones"
           </p>
         </div>
-        <div className="z-10 w-[13%]">
-          <Image src={snake} alt="snake image" />
-        </div>
-        <div className="w-[11%]">
-          <Image src={lanterns} alt="lanterns image" />
-        </div>
         <Image
-          src={cloud}
-          alt="cloud image"
-          className="absolute top-0 z-0 ml-[61%]"
+          src={snake}
+          alt="snake image"
+          className="z-10 w-[11%] pl-1 md:pl-4"
         />
+        <Image src={lanterns} alt="lanterns image" className="w-[13%]" />
       </div>
       <DayPicker
         showOutsideDays={showOutsideDays}
@@ -158,17 +153,19 @@ function Calendar({
           month: "w-full",
           caption: "relative",
           caption_label: "",
-          nav: "space-x-1 flex items-center z-50",
+          nav: "z-50",
           nav_button: cn(
             buttonVariants({ variant: "monthNavigation" }),
-            "h-7 w-7 p-0 hover:opacity-75",
+            "h-2 w-2 sm:h-4 sm:w-4 2xl:h-7 2xl:w-7 p-0 hover:opacity-75",
           ),
-          nav_button_previous: "absolute left-[37lvw] z-50 lg:left-[28lvw]",
-          nav_button_next: "absolute right-[37lvw] z-50 lg:right-[28lvw]",
+          nav_button_previous:
+            "absolute left-[39.5%] sm:left-[40%] bottom-0.5 md:bottom-1 lg:bottom-1.5 2xl:bottom-3 z-50",
+          nav_button_next:
+            "absolute right-[39.5%] sm:right-[40%] bottom-0.5 md:bottom-1 lg:bottom-1.5 2xl:bottom-3 z-50",
           table: "w-full border-collapse space-y-1",
           head_row: "flex",
           head_cell:
-            "text-csa-gray-200 text-[8px] md:text-xs lg:text-sm rounded-xl border border-csa-gray-100 w-full font-normal",
+            "text-csa-gray-200 text-[8px] md:text-xs lg:text-sm 2xl:text-xl rounded-xl border border-csa-gray-100 w-full font-normal",
           row: "grid grid-cols-7",
           cell: "text-csa-gray-200 border rounded-xl border-csa-gray-100 p-0 relative focus-within:relative focus-within:z-20",
           day: cn(
@@ -184,14 +181,14 @@ function Calendar({
           ...classNames,
         }}
         components={{
-          IconLeft: ({ className, ...props }) => (
-            <div className="p-2" onClick={prevMonth}>
-              <ChevronLeft className={cn("", className)} {...props} />
+          IconLeft: () => (
+            <div className="p-0 sm:p-2" onClick={prevMonth}>
+              <ChevronLeft className="p-1 sm:p-0" />
             </div>
           ),
-          IconRight: ({ className, ...props }) => (
-            <div className="p-2" onClick={nextMonth}>
-              <ChevronRight className={cn("", className)} {...props} />
+          IconRight: () => (
+            <div className="p-0 sm:p-2" onClick={nextMonth}>
+              <ChevronRight className="ml-[1px] p-1 sm:p-0" />
             </div>
           ),
         }}
