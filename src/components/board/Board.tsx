@@ -17,7 +17,7 @@ const Board = () => {
     <motion.div
       variants={fadeInFromTop}
       viewport={{ once: true }}
-      initial={"initial"}
+      initial="initial"
       whileInView={"animate"}
     >
       <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
