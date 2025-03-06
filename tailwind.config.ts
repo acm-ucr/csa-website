@@ -21,7 +21,6 @@ module.exports = {
           "tan-400": "#FFF4E4",
           "gray-100": "#535353",
           "gray-200": "#534C4A",
-          tiffany: "#534C4A",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
