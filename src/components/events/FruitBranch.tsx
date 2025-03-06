@@ -5,7 +5,7 @@ const FruitBranch = () => {
     <Image
       src={fruitBranch}
       alt="Fruit Branch"
-      className="absolute right-0 z-50 w-1/4 -translate-y-[1vh]"
+      className="absolute right-0 w-2/12 -translate-y-[1.5vh]"
     />
   );
 };

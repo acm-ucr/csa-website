@@ -1,23 +1,35 @@
-import Image from "next/image";
-import pinkFlower from "@/public/gallery/pinkFlower.webp";
-import blueFlower from "@/public/gallery/blueFlower.webp";
+import { events } from "@/data/eventData";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
-const Gallery = () => {
+const Events = () => {
   return (
-    <div>
-      <Image
-        src={pinkFlower}
-        alt="pinkFlower"
-        className="absolute bottom-0 left-0 w-2/12"
-      />
-
-      <Image
-        src={blueFlower}
-        alt="blueFlower"
-        className="absolute bottom-0 right-0 w-2/12"
-      />
+    <div className="flex flex-col items-center gap-y-8 py-5">
+      {events.map((event, index) => (
+        <Accordion
+          type="single"
+          collapsible
+          className={`rounded-md border-4 bg-white ${event.border}`}
+          key={index}
+        >
+          <AccordionItem value={`item-${index}`} className="text-center">
+            <AccordionTrigger
+              className={`w-[70vw] justify-center text-4xl underline md:w-[44vw] ${event.text}`}
+            >
+              {event.name}
+            </AccordionTrigger>
+            <AccordionContent className="w-[52vw] justify-self-center md:w-[40vw]">
+              {event.info}
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      ))}
     </div>
   );
 };
 
-export default Gallery;
+export default Events;
