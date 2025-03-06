@@ -36,7 +36,7 @@ const CalendarCall = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (
-    <div>
+    <>
       <EventCard events={data} />
       <Title>calendar</Title>
       <Calendar
@@ -46,7 +46,7 @@ const CalendarCall = () => {
         className="mx-[5%] bg-white lg:mx-[15%]"
         events={data}
       />
-    </div>
+    </>
   );
 };
 

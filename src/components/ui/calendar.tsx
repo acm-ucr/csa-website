@@ -276,7 +276,7 @@ function Calendar({
           ),
         }}
         {...props}
-      />{" "}
+      />
     </div>
   );
 }
