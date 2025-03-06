@@ -1,21 +1,34 @@
-const EventCard = () => {
-  return (
-    <div className="relative left-[28%] flex">
-      <div className="relative h-[17vw] w-[50vw] bg-white">
-        <p className="pl-[30%] pt-[9%] text-[5vw] font-bold leading-[75%] text-csa-yellow-100">
-          Name
-        </p>
-        <p className="pl-[30%] text-[3vw] text-csa-gray-100">location</p>
-      </div>
+interface EventCardProps {
+  name: string;
+  location: string;
+  month: string;
+  day: number;
+  time: string;
+}
 
-      <div className="relative right-[60%] h-[18vw] w-[18vw] rotate-45 bg-csa-red-200 text-center">
-        <p className="-rotate-45 pr-[27%] pt-[10%] text-[4.5vw] font-bold leading-[100%] text-csa-yellow-100">
-          Oct
-          <br /> 17
+const EventCard: React.FC<EventCardProps> = ({
+  name,
+  location,
+  month,
+  day,
+  time,
+}) => {
+  return (
+    <div className="flex justify-center">
+      <div className="relative h-[17vw] w-[50vw] bg-white">
+        <p className="pl-[35%] pt-[9%] text-[5vw] font-bold leading-none text-csa-yellow-100">
+          {name}
         </p>
-        <p className="-rotate-45 whitespace-nowrap pl-[43%] pt-[12%] text-[2.3vw] font-bold text-white">
-          12:00 pm
-        </p>
+        <p className="pl-[35%] text-[3vw] text-csa-gray-100">{location}</p>
+        <div className="absolute left-[-10%] top-0 h-[18vw] w-[18vw] rotate-45 bg-csa-red-200 text-center">
+          <p className="-rotate-45 pr-[27%] pt-[10%] text-[4.5vw] font-bold leading-none text-csa-yellow-100">
+            {month}
+            <br /> {day}
+          </p>
+          <p className="-rotate-45 whitespace-nowrap pl-[43%] pt-[12%] text-[2.3vw] font-bold text-white">
+            {time}
+          </p>
+        </div>
       </div>
     </div>
   );
