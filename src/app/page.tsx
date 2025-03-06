@@ -1,7 +1,7 @@
 import XinDescription from "@/components/home/XinDescription";
 import EHTitle from "@/components/home/EventHighlightsTitle";
 import Landing from "@/components/home/Landing";
-import CarouselHome from "@/components/CarouselHome";
+import CarouselHome from "@/components/home/CarouselHome";
 import MemberExperiences from "@/components/home/MemberExperiences";
 
 const Page = () => {

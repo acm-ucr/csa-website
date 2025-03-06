@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CarouselCSA from "@/components/CarouselCSA";
+import CarouselCSA from "@/components/home/CarouselCSA";
 import { carouselData } from "@/data/carouselData";
 import branch from "@/public/home/Cherry_blossom.svg";
 import pendant from "@/public/home/Jade_pendent.svg";

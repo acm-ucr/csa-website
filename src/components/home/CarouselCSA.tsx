@@ -25,7 +25,6 @@ const CarouselCSA = ({ photos }: CarouselProps) => {
   const [currIndex, setCurrentIndex] = useState(0);
   const [api, setApi] = useState<CarouselApi | null>(null);
 
-  // the carousel should depend on the embla api
   useEffect(() => {
     if (!api) {
       console.log("API is not initialized yet.");
