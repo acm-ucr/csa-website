@@ -1,21 +1,17 @@
-import React from "react";
 import XinDescription from "@/components/home/XinDescription";
-import QuoteBox from "@/components/home/QuoteBox";
-import quotes from "@/data/quote-data";
-import EHTitle from "@/components/events/EventHighlightsTitle";
-import MissionStatement from "@/components/home/MissionStatement";
+import EHTitle from "@/components/home/EventHighlightsTitle";
+import Landing from "@/components/home/Landing";
+import MemberExperiences from "@/components/home/MemberExperiences";
 
-const Home = () => {
+const Page = () => {
   return (
-    <div className="bg-csa-tan-100 pt-[12.2vh] md:pt-[14.4vh]">
-      <MissionStatement />
-      <EHTitle />
+    <div className="bg-csa-tan-400">
+      <Landing />
       <XinDescription />
-      {quotes.map(({ quote, person }, index) => (
-        <QuoteBox quote={quote} name={person} key={index} />
-      ))}
+      <EHTitle />
+      <MemberExperiences />
     </div>
   );
 };
 
-export default Home;
+export default Page;
