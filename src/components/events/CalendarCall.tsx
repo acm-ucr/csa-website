@@ -2,6 +2,8 @@
 import React from "react";
 import { Calendar, GoogleEventProps } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
+import Title from "@/components/Title";
+import EventCard from "@/components/events/EventCard";
 
 const CalendarCall = () => {
   const { data } = useQuery({
@@ -34,13 +36,17 @@ const CalendarCall = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
 
   return (
-    <Calendar
-      mode="single"
-      selected={date}
-      onSelect={setDate}
-      className="mx-[5%] bg-white lg:mx-[15%]"
-      events={data}
-    />
+    <div>
+      <EventCard events={data} />
+      <Title>calendar</Title>
+      <Calendar
+        mode="single"
+        selected={date}
+        onSelect={setDate}
+        className="mx-[5%] bg-white lg:mx-[15%]"
+        events={data}
+      />
+    </div>
   );
 };
 

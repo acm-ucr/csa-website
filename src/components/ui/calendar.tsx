@@ -65,15 +65,15 @@ const Day = ({ date, displayMonth, events }: DayProps) => {
         ) {
           return (
             <HoverCard key={index}>
-              <HoverCardTrigger className="w-full cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap bg-csa-yellow-400 text-center text-[8px] text-csa-gray-200 sm:text-xs md:text-base 2xl:text-2xl">
+              <HoverCardTrigger className="w-full cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap bg-csa-yellow-400 text-center text-[8px] text-csa-gray-200 sm:text-xs md:text-base 2xl:text-lg">
                 {title}
               </HoverCardTrigger>
               <HoverCardContent className="w-[30vw] md:w-[20vw]">
-                <p className="bg-csa-green-100 py-[1vh] pl-[1vw] text-xs text-csa-yellow-100 sm:text-base md:text-lg 2xl:text-4xl">
+                <p className="bg-csa-green-100 py-[1vh] pl-[1vw] text-xs text-csa-yellow-100 sm:text-base md:text-lg 2xl:text-xl">
                   {startDate.getMonth() + 1}/{startDate.getDate()}/
                   {startDate.getFullYear()} - {title}
                 </p>
-                <div className="flex flex-col gap-y-[1vh] bg-csa-tan-500 py-[1vh] pl-[2vw] text-xs text-csa-gray-100 sm:text-base md:text-lg 2xl:text-4xl">
+                <div className="flex flex-col gap-y-[1vh] bg-csa-tan-500 py-[1vh] pl-[2vw] text-xs text-csa-gray-100 sm:text-base md:text-lg 2xl:text-xl">
                   <p>{location}</p>
                   <p>
                     {startDate.getHours() < 12

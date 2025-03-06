@@ -1,14 +1,14 @@
 export const testEvents = [
   {
-    start: { dateTime: new Date("2025-03-10T09:00:00Z") },
-    end: { dateTime: new Date("2025-03-10T10:00:00Z") },
+    start: { dateTime: new Date("2025-03-02T09:00:00Z") },
+    end: { dateTime: new Date("2025-03-02T10:00:00Z") },
     location: "Online",
     description: "Team stand-up meeting on March 10th",
     title: "Daily Stand-up on March 10th",
   },
   {
-    start: { dateTime: new Date("2025-03-12T14:00:00Z") },
-    end: { dateTime: new Date("2025-03-12T15:30:00Z") },
+    start: { dateTime: new Date("2025-03-06T14:00:00Z") },
+    end: { dateTime: new Date("2025-03-06T15:30:00Z") },
     location: "Conference Room A",
     description: "Project review meeting",
     title: "Project Sync",
