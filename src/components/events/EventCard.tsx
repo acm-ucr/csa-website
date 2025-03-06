@@ -6,7 +6,7 @@ interface EventCardProps {
   time: string;
   index: number;
 }
-const colors = ["csa-red-200", "csa-green-100", "csa-gray-100"];
+const colors = ["csa-red-200", "csa-green-100", "csa-gray-200"];
 
 const EventCard: React.FC<EventCardProps> = ({
   name,
