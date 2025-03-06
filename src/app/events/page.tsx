@@ -14,6 +14,7 @@ const Page = () => {
         month={"Mar"}
         day={5}
         time={"8:00 PM"}
+        index={2}
       />
       <Title>calendar</Title>
       <CalendarCall />
