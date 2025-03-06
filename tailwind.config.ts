@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      boxShadow: {
+        quote: "-15px 15px 0px 0px #a8a49c",
+      },
       colors: {
         csa: {
           "red-100": "#7C2413",

@@ -1,8 +1,7 @@
 import XinDescription from "@/components/home/XinDescription";
-import EHTitle from "@/components/events/EventHighlightsTitle";
+import EHTitle from "@/components/home/EventHighlightsTitle";
 import Landing from "@/components/home/Landing";
-import Quotes from "@/components/home/Quote";
-import MemberExp from "@/components/home/MemberExperienceTitle";
+import MemberExperiences from "@/components/home/MemberExperiences";
 
 const Page = () => {
   return (
@@ -10,8 +9,7 @@ const Page = () => {
       <Landing />
       <XinDescription />
       <EHTitle />
-      <Quotes />
-      <MemberExp />
+      <MemberExperiences />
     </div>
   );
 };
