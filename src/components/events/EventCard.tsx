@@ -14,7 +14,7 @@ const EventCard: React.FC<EventCardProps> = ({
   month,
   day,
   time,
-  index
+  index,
 }) => {
   const diamondColor = colors[index % colors.length];
   return (
