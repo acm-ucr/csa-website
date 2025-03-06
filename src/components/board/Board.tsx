@@ -14,7 +14,6 @@ const fadeInFromTop = {
 
 const Board = () => {
   return (
-    <>
       <motion.div
         variants={fadeInFromTop}
         viewport={{ once: true }}
