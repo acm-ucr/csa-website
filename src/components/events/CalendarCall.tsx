@@ -11,8 +11,8 @@ const CalendarCall = () => {
     queryFn: async () => {
       const response =
         await fetch(`https://www.googleapis.com/calendar/v3/calendars/${
-          process.env.NEXT_PUBLIC_GOOGLE_CALENDAR
-        }/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY}
+          process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_API_KEY
+        }/events?key=${process.env.NEXT_PUBLIC_GOOGLE_CALENDAR}
           &singleEvents=true&orderBy=startTime&timeMin=${new Date(
             new Date().getTime() - 60 * 60 * 24 * 7 * 10 * 1000,
           ).toISOString()}&timeMax=${new Date(
