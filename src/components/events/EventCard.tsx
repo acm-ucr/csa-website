@@ -23,7 +23,7 @@ const EventCard = ({ events }: EventCardProps) => {
 
         return (
           <div className="flex justify-center">
-            <div className="relative w-[50vw] flex-row bg-white outline">
+            <div className="relative w-[50vw] bg-white outline">
               <p className="pl-[35%] pt-[9%] text-[5vw] font-bold leading-none text-csa-yellow-100">
                 {title}
               </p>
