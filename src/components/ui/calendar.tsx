@@ -15,8 +15,84 @@ import cloud from "@/public/events/cloud.webp";
 import string from "@/public/events/hoop.svg";
 import fu from "@/public/events/fu.webp";
 import spirals from "@/public/events/spirals.webp";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
-export type CalendarProps = React.ComponentProps<typeof DayPicker>;
+export type GoogleEventProps = {
+  start: {
+    dateTime: Date;
+  };
+  end: {
+    dateTime: Date;
+  };
+  location: string;
+  description: string;
+  title: string;
+};
+
+export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
+  events: GoogleEventProps[];
+};
+
+interface DayProps {
+  date: Date;
+  displayMonth: Date;
+  events: GoogleEventProps[];
+}
+
+const Day = ({ date, displayMonth, events }: DayProps) => {
+  const currentMonth = displayMonth.getMonth() === date.getMonth();
+  const isWeekend = date.getDay() === 0 || date.getDay() === 6;
+
+  return (
+    <div
+      className={`flex h-[10vh] flex-col items-center justify-start hover:bg-csa-red-200 hover:text-csa-yellow-400 ${currentMonth ? "" : "collapse"} ${isWeekend ? "text-csa-red-200" : "text-csa-gray-200"} rounded-lg md:rounded-xl`}
+    >
+      <p className="mt-[1vh] text-base sm:text-lg md:text-2xl 2xl:text-4xl">
+        {date.getDate()}
+      </p>
+      {events?.map(({ title, start, end, location }, index) => {
+        const startDate = new Date(start.dateTime);
+        const endDate = new Date(end.dateTime);
+
+        if (
+          startDate.getDate() === date.getDate() &&
+          startDate.getMonth() === date.getMonth() &&
+          startDate.getFullYear() === date.getFullYear()
+        ) {
+          return (
+            <HoverCard key={index}>
+              <HoverCardTrigger className="w-full cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap bg-csa-yellow-400 text-center text-[8px] text-csa-gray-200 sm:text-xs md:text-base 2xl:text-2xl">
+                {title}
+              </HoverCardTrigger>
+              <HoverCardContent className="w-[30vw] md:w-[20vw]">
+                <p className="bg-csa-green-100 py-[1vh] pl-[1vw] text-xs text-csa-yellow-100 sm:text-base md:text-lg 2xl:text-4xl">
+                  {startDate.getMonth() + 1}/{startDate.getDate()}/
+                  {startDate.getFullYear()} - {title}
+                </p>
+                <div className="flex flex-col gap-y-[1vh] bg-csa-tan-500 py-[1vh] pl-[2vw] text-xs text-csa-gray-100 sm:text-base md:text-lg 2xl:text-4xl">
+                  <p>{location}</p>
+                  <p>
+                    {startDate.getHours() < 12
+                      ? (startDate.getHours() % 12) + " AM"
+                      : (startDate.getHours() % 12) + " PM"}{" "}
+                    -{" "}
+                    {endDate.getHours() < 12
+                      ? (endDate.getHours() % 12) + " AM"
+                      : (endDate.getHours() % 12) + " PM"}{" "}
+                  </p>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
+          );
+        }
+      })}
+    </div>
+  );
+};
 
 function captionWeek(date: Date) {
   const week = [
@@ -39,9 +115,11 @@ function Calendar({
   className,
   classNames,
   showOutsideDays = false,
+  events,
   ...props
 }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
+
   const monthNames = [
     "JANUARY",
     "FEBRUARY",
@@ -69,6 +147,7 @@ function Calendar({
     );
     setCurrentDate(newDate);
   };
+
   const prevMonth = () => {
     const today = new Date();
     const newDate = new Date(currentDate);
@@ -165,19 +244,16 @@ function Calendar({
           table: "w-full border-collapse space-y-1",
           head_row: "flex",
           head_cell:
-            "text-csa-gray-200 text-[8px] md:text-xs lg:text-sm 2xl:text-xl rounded-xl border border-csa-gray-100 w-full font-normal",
+            "text-csa-gray-200 text-[8px] md:text-xs lg:text-sm 2xl:text-xl rounded-lg md:rounded-xl border border-csa-gray-100 w-full font-normal",
           row: "grid grid-cols-7",
-          cell: "text-csa-gray-200 border rounded-xl border-csa-gray-100 p-0 relative focus-within:relative focus-within:z-20",
-          day: cn(
-            buttonVariants({ variant: "ghost" }),
-            "w-full h-[10lvh] text-2xl rounded-xl p-0 font-normal",
-          ),
-          day_range_end: "day-range-end",
-          day_selected: "bg-csa-red-200 text-csa-yellow-400",
+          cell: "border rounded-lg md:rounded-xl border-csa-gray-100 p-0",
+          day: "rounded-lg md:rounded-xl p-0",
+          day_range_end: "",
+          day_selected: "",
           day_outside: "",
-          day_disabled: "text-neutral-500 opacity-50",
+          day_disabled: "50",
           day_range_middle: "",
-          day_hidden: "invisible",
+          day_hidden: "",
           ...classNames,
         }}
         components={{
@@ -190,6 +266,9 @@ function Calendar({
             <div className="p-0 sm:p-2" onClick={nextMonth}>
               <ChevronRight className="ml-[1px] p-1 sm:p-0" />
             </div>
+          ),
+          Day: ({ displayMonth, date }) => (
+            <Day date={date} displayMonth={displayMonth} events={events} />
           ),
         }}
         {...props}
