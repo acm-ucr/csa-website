@@ -7,7 +7,13 @@ const Page = () => {
     <div className="bg-csa-tan-100">
       <FruitBranch />
       <Title>events</Title>
-      <EventCard />
+      <EventCard
+        name={"GM #4"}
+        location={"SSC"}
+        month={"Mar"}
+        day={5}
+        time={"8:00 PM"}
+      />
       <Title>calendar</Title>
     </div>
   );
