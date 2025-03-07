@@ -6,7 +6,7 @@ import bamboo from "@/public/gallery/Bamboo.webp";
 
 const CarouselGallery = () => {
   return (
-    <div className="relative my-[10%] flex flex-row">
+    <div className="relative mb-[5%] mt-[2%] flex flex-row">
       <Image
         src={rabbit}
         alt="rabbit"
