@@ -6,7 +6,7 @@ interface EventCardProps {
   time: string;
   index: number;
 }
-const colors = ["csa-red-200", "csa-green-100", "csa-gray-200"];
+const colors = ["bg-csa-red-200", "bg-csa-green-100", "bg-csa-gray-200"];
 
 const EventCard: React.FC<EventCardProps> = ({
   name,
@@ -25,7 +25,7 @@ const EventCard: React.FC<EventCardProps> = ({
         </p>
         <p className="pl-[35%] text-[3vw] text-csa-gray-100">{location}</p>
         <div
-          className={`absolute left-[-10%] top-0 h-[18vw] w-[18vw] rotate-45 bg-${diamondColor} border text-center`}
+          className={`absolute left-[-10%] top-0 h-[18vw] w-[18vw] rotate-45 ${diamondColor} border text-center`}
         >
           <p className="-rotate-45 pr-[27%] pt-[10%] text-[4.5vw] font-bold leading-none text-csa-yellow-100">
             {month}
