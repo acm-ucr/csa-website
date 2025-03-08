@@ -42,7 +42,7 @@ function Calendar({
     newDate.setMonth(newDate.getMonth() + 1);
     newDate.setDate(
       today.getMonth() === newDate.getMonth() &&
-        today.getFullYear() == newDate.getFullYear()
+        today.getFullYear() === newDate.getFullYear()
         ? today.getDate()
         : 1,
     );
@@ -55,7 +55,7 @@ function Calendar({
     newDate.setMonth(newDate.getMonth() - 1);
     newDate.setDate(
       today.getMonth() === newDate.getMonth() &&
-        today.getFullYear() == newDate.getFullYear()
+        today.getFullYear() === newDate.getFullYear()
         ? today.getDate()
         : 1,
     );
@@ -90,9 +90,9 @@ function Calendar({
           table: "w-full border-collapse space-y-1",
           head_row: "flex",
           head_cell:
-            "text-csa-gray-200 text-[8px] md:text-xs lg:text-sm 2xl:text-xl rounded-lg md:rounded-xl border border-csa-gray-100 w-full font-normal",
+            "text-csa-gray-200 text-[8px] md:text-xs lg:text-sm 2xl:text-xl rounded-lg md:rounded-xl border border-csa-gray-100 w-full font-normal bg-white",
           row: "grid grid-cols-7",
-          cell: "border rounded-lg md:rounded-xl border-csa-gray-100 p-0",
+          cell: "border rounded-lg md:rounded-xl border-csa-gray-100 p-0 bg-white",
           day: "rounded-lg md:rounded-xl p-0",
           day_range_end: "",
           day_selected: "",

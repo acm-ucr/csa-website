@@ -57,13 +57,13 @@ const CalendarCall = () => {
 
   return (
     <>
-      <EventCard events={data} />
+      {/* <EventCard events={data} /> */}
       <Title>calendar</Title>
       <Calendar
         mode="single"
         selected={date}
         onSelect={setDate}
-        className="mx-[5%] bg-white lg:mx-[15%]"
+        className="mx-[5%] bg-csa-tan-500 lg:mx-[15%]"
         events={data}
       />
     </>
