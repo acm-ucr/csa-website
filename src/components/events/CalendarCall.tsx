@@ -1,9 +1,23 @@
 "use client";
 import React from "react";
-import { Calendar, GoogleEventProps } from "@/components/ui/calendar";
+import { Calendar } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
 import Title from "@/components/Title";
 import EventCard from "@/components/events/EventCard";
+
+export type GoogleEventProps = {
+  start: {
+    dateTime: Date;
+    date: string;
+  };
+  end: {
+    dateTime: Date;
+    date: string;
+  };
+  location: string;
+  description: string;
+  summary: string;
+};
 
 const CalendarCall = () => {
   const { data } = useQuery({
@@ -20,15 +34,21 @@ const CalendarCall = () => {
           ).toISOString()}`).then((res) => res.json());
 
       const events = response.items.map(
-        ({ start, end, location, description, title }: GoogleEventProps) => ({
-          start: start.dateTime,
-          end: end.dateTime,
+        ({ start, end, location, description, summary }: GoogleEventProps) => ({
+          start: {
+            dateTime: start.dateTime,
+            date: start.date,
+          },
+          end: {
+            dateTime: end.dateTime,
+            date: end.date,
+          },
           location,
           description,
-          title,
+          summary,
         }),
       );
-
+      console.log(events);
       return events;
     },
   });

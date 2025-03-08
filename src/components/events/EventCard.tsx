@@ -1,51 +1,75 @@
-import { GoogleEventProps } from "@/components/ui/calendar";
+import { GoogleEventProps } from "@/components/events/CalendarCall";
 
-const colors = ["csa-red-200", "csa-green-100", "csa-gray-200"];
+const colors = ["bg-csa-red-200", "bg-csa-green-100", "bg-csa-gray-200"];
 
 interface EventCardProps {
   events: GoogleEventProps[];
 }
 
 const EventCard = ({ events }: EventCardProps) => {
-  const filteredEvents = events?.filter(({ start }) => {
-    const startDate = new Date(start.dateTime);
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    return startDate >= today;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const filteredEvents = events.filter((event) => {
+    let eventStartDate: Date | null = null;
+
+    if (event.start.dateTime) {
+      eventStartDate = new Date(event.start.dateTime);
+    } else if (event.start.date) {
+      eventStartDate = new Date(event.start.date);
+    }
+
+    return eventStartDate && eventStartDate >= today;
   });
 
   const displayedEvents = filteredEvents?.slice(0, 3);
 
   return (
     <>
-      {displayedEvents?.map(({ start, location, title }, index) => {
-        const startDate = new Date(start.dateTime);
+      {displayedEvents?.map(({ start, location, summary }, index) => {
+        let eventStartDate: Date | null = null;
+        let hasTime = false;
 
-        return (
-          <div className="flex justify-center">
-            <div className="relative w-[50vw] bg-white outline">
-              <p className="pl-[35%] pt-[9%] text-[5vw] font-bold leading-none text-csa-yellow-100">
-                {title}
-              </p>
-              <p className="pl-[35%] text-[3vw] text-csa-gray-100">
-                {location}
-              </p>
-              <div
-                className={`absolute left-[-10%] top-0 h-[18vw] w-[18vw] rotate-45 bg-${colors[index % colors.length]} border text-center`}
-              >
-                <p className="-rotate-45 pr-[27%] pt-[10%] text-[4.5vw] font-bold leading-none text-csa-yellow-100">
-                  {startDate.toLocaleString("default", { month: "short" })}
-                  <br /> {startDate.getDate()}
+        if (start.dateTime) {
+          eventStartDate = new Date(start.dateTime);
+          hasTime = true;
+        } else if (start.date) {
+          eventStartDate = new Date(start.date);
+        }
+
+        if (eventStartDate) {
+          const hour = eventStartDate.getHours();
+          const formattedHour = hour % 12 || 12;
+          const suffix = hour < 12 ? "AM" : "PM";
+          return (
+            <div className="my-[20vh] flex justify-center">
+              <div className="relative w-[50vw] bg-white outline">
+                <p className="pl-[35%] pt-[9%] text-[5vw] font-bold leading-none text-csa-yellow-100">
+                  {summary}
                 </p>
-                <p className="-rotate-45 whitespace-nowrap pl-[43%] pt-[12%] text-[2.3vw] font-bold text-white">
-                  {startDate.getHours() < 12
-                    ? (startDate.getHours() % 12) + " AM"
-                    : (startDate.getHours() % 12) + " PM"}
+                <p className="pl-[35%] text-[3vw] text-csa-gray-100">
+                  {location}
                 </p>
+                <div
+                  className={`absolute left-[-10%] top-0 h-[18vw] w-[18vw] rotate-45 ${colors[index % colors.length]} border text-center`}
+                >
+                  <p className="-rotate-45 pr-[27%] pt-[10%] text-[4.5vw] font-bold leading-none text-csa-yellow-100">
+                    {eventStartDate.toLocaleString("default", {
+                      month: "short",
+                    })}
+                    <br /> {eventStartDate.getDate()}
+                  </p>
+                  {hasTime && (
+                    <p
+                      className={`-rotate-45 whitespace-nowrap pl-[43%] pt-[12%] text-[2.3vw] font-bold text-white ${hasTime ? "" : "collapse"}`}
+                    >
+                      {formattedHour} {suffix}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        );
+          );
+        }
       })}
     </>
   );

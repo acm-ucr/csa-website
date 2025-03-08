@@ -6,96 +6,12 @@ import { DayPicker } from "react-day-picker";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { useState } from "react";
-import Image from "next/image";
-import dateOutlineImage from "@/public/events/dateOutline.webp";
-import branches from "@/public/events/pinkAndBluebranches.webp";
-import lanterns from "@/public/events/lanterns.webp";
-import snake from "@/public/events/snake.webp";
-import cloud from "@/public/events/cloud.webp";
-import string from "@/public/events/hoop.svg";
-import fu from "@/public/events/fu.webp";
-import spirals from "@/public/events/spirals.webp";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-
-export type GoogleEventProps = {
-  start: {
-    dateTime: Date;
-  };
-  end: {
-    dateTime: Date;
-  };
-  location: string;
-  description: string;
-  title: string;
-};
+import { GoogleEventProps } from "@/components/events/CalendarCall";
+import CalendarTop from "@/components/events/CalendarTop";
+import CalendarDay from "@/components/events/CalendarDay";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   events: GoogleEventProps[];
-};
-
-interface DayProps {
-  date: Date;
-  displayMonth: Date;
-  events: GoogleEventProps[];
-}
-
-const Day = ({ date, displayMonth, events }: DayProps) => {
-  const currentMonth = displayMonth.getMonth() === date.getMonth();
-  const isWeekend = date.getDay() === 0 || date.getDay() === 6;
-
-  return (
-    <div
-      className={`flex h-[10vh] flex-col items-center justify-start hover:bg-csa-red-200 hover:text-csa-yellow-400 ${currentMonth ? "" : "collapse"} ${isWeekend ? "text-csa-red-200" : "text-csa-gray-200"} rounded-lg md:rounded-xl`}
-    >
-      <p className="mt-[1vh] text-base sm:text-lg md:text-2xl 2xl:text-4xl">
-        {date.getDate()}
-      </p>
-      {events?.map(({ title, start, end, location }, index) => {
-        const startDate = new Date(start.dateTime);
-        const endDate = new Date(end.dateTime);
-
-        if (
-          startDate.getDate() === date.getDate() &&
-          startDate.getMonth() === date.getMonth() &&
-          startDate.getFullYear() === date.getFullYear()
-        ) {
-          return (
-            <Popover key={index}>
-              <PopoverTrigger className="w-full cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap bg-csa-yellow-400 text-center text-[8px] text-csa-gray-200 sm:text-xs md:text-base 2xl:text-lg">
-                {title}
-              </PopoverTrigger>
-              <PopoverContent className="w-[30vw] md:w-[20vw]">
-                <p className="bg-csa-green-100 px-[1vw] py-[1vh] text-xs text-csa-yellow-100 sm:text-base md:text-lg 2xl:text-xl">
-                  {startDate.toLocaleString("default", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}{" "}
-                  - {title}
-                </p>
-                <div className="flex flex-col gap-y-[1vh] bg-csa-tan-500 py-[1vh] pl-[2vw] text-xs text-csa-gray-100 sm:text-base md:text-lg 2xl:text-xl">
-                  <p>{location}</p>
-                  <p>
-                    {startDate.getHours() < 12
-                      ? (startDate.getHours() % 12) + " AM"
-                      : (startDate.getHours() % 12) + " PM"}{" "}
-                    -{" "}
-                    {endDate.getHours() < 12
-                      ? (endDate.getHours() % 12) + " AM"
-                      : (endDate.getHours() % 12) + " PM"}{" "}
-                  </p>
-                </div>
-              </PopoverContent>
-            </Popover>
-          );
-        }
-      })}
-    </div>
-  );
 };
 
 function captionWeek(date: Date) {
@@ -111,10 +27,6 @@ function captionWeek(date: Date) {
   return week[date.getDay()];
 }
 
-function captionMonth() {
-  return "";
-}
-
 function Calendar({
   className,
   classNames,
@@ -123,21 +35,6 @@ function Calendar({
   ...props
 }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
-
-  const monthNames = [
-    "JANUARY",
-    "FEBRUARY",
-    "MARCH",
-    "APRIL",
-    "MAY",
-    "JUNE",
-    "JULY",
-    "AUGUST",
-    "SEPTEMBER",
-    "OCTOBER",
-    "NOVEMBER",
-    "DECEMBER",
-  ];
 
   const nextMonth = () => {
     const today = new Date();
@@ -167,67 +64,12 @@ function Calendar({
 
   return (
     <div className="pt-[5vh] md:pt-[10vh]">
-      <div className="relative flex flex-col items-center">
-        <Image src={string} alt="string image" />
-        <Image
-          src={fu}
-          alt="fu image"
-          className="mx-[5%] w-[90%] bg-csa-red-200 px-[11%] py-[9vh] lg:mx-[15%] lg:w-[70%]"
-        />
-        <Image
-          src={spirals}
-          alt="spirals image"
-          className="absolute -bottom-6 left-[5.5%] z-50 w-[45%] sm:-bottom-10 md:-bottom-12 lg:left-[15.5%] lg:w-[35%] 2xl:-bottom-16"
-        />
-        <Image
-          src={spirals}
-          alt="spirals image"
-          className="absolute -bottom-6 left-[49.5%] z-50 w-[45%] sm:-bottom-10 md:-bottom-12 lg:w-[35%] 2xl:-bottom-16"
-        />
-      </div>
-      <div className="relative z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 pt-1 sm:pt-5 lg:mx-[15%] lg:w-[70%] 2xl:-mt-4">
-        <Image src={branches} alt="branches image" className="w-[14%]" />
-        <div className="ml-[3%] flex w-[22%] flex-col pb-2 text-center lg:gap-y-2">
-          <p className="text-lg font-bold text-csa-green-100 sm:text-2xl lg:text-4xl 2xl:text-6xl">
-            {currentDate.getFullYear()}
-          </p>
-          <p className="border-l border-r border-csa-yellow-400 px-2 text-[6px] text-csa-green-100 sm:text-xs lg:text-sm 2xl:text-xl">
-            滴水之恩定当涌泉相报: "We should return small favors with much
-            larger ones"
-          </p>
-        </div>
-        <div className="relative flex h-full w-[22%] flex-col items-center gap-y-1 text-center 2xl:gap-y-4 2xl:pb-2">
-          <p className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 pt-6 text-base font-bold text-csa-green-100 sm:pl-0.5 sm:pt-9 sm:text-3xl md:pt-8 2xl:pt-10 2xl:text-6xl">
-            {currentDate.getDate()}
-          </p>
-          <Image
-            src={dateOutlineImage}
-            alt="date outline image"
-            className="mt-4 h-11 w-12 sm:h-20 sm:w-24 2xl:h-40 2xl:w-48"
-          />
-          <p className="text-[8px] font-medium text-csa-green-100 sm:text-xs md:text-sm lg:text-base 2xl:text-2xl">
-            {monthNames[currentDate.getMonth()]}
-          </p>
-        </div>
-        <div className="flex w-[15%] flex-col pb-2 text-center lg:gap-y-2">
-          <Image src={cloud} alt="cloud image" className="z-0 -mb-8 w-full" />
-          <p className="z-10 border-l border-r border-csa-yellow-400 text-[6px] text-csa-green-100 sm:px-2 sm:text-xs lg:text-sm 2xl:text-xl">
-            滴水之恩定当涌泉相报: "We should return small favors with much
-            larger ones"
-          </p>
-        </div>
-        <Image
-          src={snake}
-          alt="snake image"
-          className="z-10 w-[11%] pl-1 md:pl-4"
-        />
-        <Image src={lanterns} alt="lanterns image" className="w-[13%]" />
-      </div>
+      <CalendarTop currentDate={currentDate} />
       <DayPicker
         showOutsideDays={showOutsideDays}
         formatters={{
           formatWeekdayName: captionWeek,
-          formatCaption: captionMonth,
+          formatCaption: () => "",
         }}
         className={className}
         classNames={{
@@ -255,7 +97,7 @@ function Calendar({
           day_range_end: "",
           day_selected: "",
           day_outside: "",
-          day_disabled: "50",
+          day_disabled: "",
           day_range_middle: "",
           day_hidden: "",
           ...classNames,
@@ -272,7 +114,11 @@ function Calendar({
             </div>
           ),
           Day: ({ displayMonth, date }) => (
-            <Day date={date} displayMonth={displayMonth} events={events} />
+            <CalendarDay
+              date={date}
+              displayMonth={displayMonth}
+              events={events}
+            />
           ),
         }}
         {...props}
