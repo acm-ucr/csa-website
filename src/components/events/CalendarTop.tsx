@@ -32,11 +32,11 @@ const CalendarTop = ({ currentDate }: CalendarTopProps) => {
     <>
       <div className="relative flex flex-col items-center">
         <Image src={string} alt="string image" />
-        {/* <Image
+        <Image
           src={fu}
           alt="fu image"
           className="mx-[5%] w-[90%] bg-csa-red-200 px-[11%] py-[9vh] lg:mx-[15%] lg:w-[70%]"
-        /> */}
+        />
         <Image
           src={spirals}
           alt="spirals image"
