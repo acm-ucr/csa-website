@@ -3,7 +3,7 @@ import React from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
 import Title from "@/components/Title";
-import EventCard from "@/components/events/EventCard";
+// import EventCard from "@/components/events/EventCard";
 
 export type GoogleEventProps = {
   start: {
