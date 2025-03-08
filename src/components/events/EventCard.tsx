@@ -9,6 +9,7 @@ interface EventCardProps {
 const EventCard = ({ events }: EventCardProps) => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
+
   const filteredEvents = events.filter((event) => {
     let eventStartDate: Date | null = null;
 

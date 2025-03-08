@@ -3,7 +3,7 @@ import React from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
 import Title from "@/components/Title";
-// import EventCard from "@/components/events/EventCard";
+import EventCard from "@/components/events/EventCard";
 
 export type GoogleEventProps = {
   start: {
@@ -20,7 +20,9 @@ export type GoogleEventProps = {
 };
 
 const CalendarCall = () => {
-  const { data } = useQuery({
+  const [date, setDate] = React.useState<Date | undefined>(new Date());
+
+  const { data, isLoading } = useQuery({
     queryKey: ["repoData"],
     queryFn: async () => {
       const response =
@@ -48,24 +50,23 @@ const CalendarCall = () => {
           summary,
         }),
       );
-      console.log(events);
       return events;
     },
   });
 
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
-
   return (
     <>
-      {/* <EventCard events={data} /> */}
+      {!isLoading && <EventCard events={data} />}
       <Title>calendar</Title>
-      <Calendar
-        mode="single"
-        selected={date}
-        onSelect={setDate}
-        className="mx-[5%] bg-csa-tan-500 lg:mx-[15%]"
-        events={data}
-      />
+      {!isLoading && (
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          className="mx-[5%] bg-csa-tan-500 lg:mx-[15%]"
+          events={data}
+        />
+      )}
     </>
   );
 };

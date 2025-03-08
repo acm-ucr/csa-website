@@ -49,8 +49,8 @@ const Title: React.FC<TitleNameProps> = ({ children }) => {
           <text
             fill="#7C2413"
             font-size="6.5vw"
-            font-weight="bold"
-            font-family="serif"
+            fontWeight="bold"
+            fontFamily="serif"
           >
             <textPath href="#curve" startOffset="50%" text-anchor="middle">
               {children.split("").map((characters, index) => (
