@@ -51,7 +51,7 @@ const CalendarTop = ({ currentDate }: CalendarTopProps) => {
       <div className="relative z-40 mx-[5%] flex w-[90%] items-end bg-csa-tan-500 pt-1 sm:pt-5 lg:mx-[15%] lg:w-[70%] 2xl:-mt-4">
         <Image src={branches} alt="branches image" className="w-[14%]" />
         <div className="ml-[3%] flex w-[22%] flex-col pb-2 text-center lg:gap-y-2">
-          <p className="text-lg font-bold text-csa-green-100 sm:text-2xl lg:text-4xl 2xl:text-6xl pt-2 sm:pt-0">
+          <p className="pt-2 text-lg font-bold text-csa-green-100 sm:pt-0 sm:text-2xl lg:text-4xl 2xl:text-6xl">
             {currentDate.getFullYear()}
           </p>
           <p className="border-l border-r border-csa-yellow-400 px-2 text-[6px] text-csa-green-100 sm:text-xs lg:text-sm 2xl:text-xl">

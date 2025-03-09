@@ -7,7 +7,6 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-
 interface DayProps {
   date: Date;
   displayMonth: Date;
@@ -53,7 +52,10 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
   });
 
   const [visibleEventCount, setVisibleEventCount] = useState(2);
-  const displayEventCount = filteredEvents.length > visibleEventCount ? visibleEventCount - 1 : visibleEventCount;
+  const displayEventCount =
+    filteredEvents.length > visibleEventCount
+      ? visibleEventCount - 1
+      : visibleEventCount;
 
   useEffect(() => {
     const updateVisibleEventCount = () => {
@@ -66,7 +68,7 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
       }
     };
 
-    updateVisibleEventCount(); // Run on mount
+    updateVisibleEventCount();
 
     window.addEventListener("resize", updateVisibleEventCount);
     return () => window.removeEventListener("resize", updateVisibleEventCount);
@@ -79,30 +81,46 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
       <p className="mt-[1vh] text-base sm:text-lg md:text-2xl 2xl:text-4xl">
         {date.getDate()}
       </p>
-      {filteredEvents?.slice(0, displayEventCount).map(
-        ({ summary, start, end, location, description }, index) => {
+      {filteredEvents
+        ?.slice(0, displayEventCount)
+        .map(({ summary, start, end, location, description }, index) => {
           return (
-            <CalendarEventPopover startDate={start} endDate={end} title={summary} date={date} location={location} description={description} index={index}/>
+            <CalendarEventPopover
+              startDate={start}
+              endDate={end}
+              title={summary}
+              date={date}
+              location={location}
+              description={description}
+              index={index}
+            />
           );
-        }
-      )}
-      {filteredEvents.length > visibleEventCount && (              
-          <Popover>
-            <PopoverTrigger className="w-full cursor-pointer bg-csa-yellow-400 text-center text-[8px] text-csa-gray-200 hover:opacity-75 sm:text-xs 2xl:text-lg">
-              <p className="">{filteredEvents.length - displayEventCount} more</p>
-            </PopoverTrigger>
-            <PopoverContent>
-              {filteredEvents?.slice(displayEventCount).map(
-                ({ summary, start, end, location, description }, index) => {
-                  return (
-                    <div className="bg-csa-green-100 px-[10%] pt-[1vh]">
-                      <CalendarEventPopover startDate={start} endDate={end} title={summary} date={date} location={location} description={description} index={index}/>
-                    </div>
-                  );
-                }
-              )}
-            </PopoverContent>
-          </Popover>
+        })}
+      {filteredEvents.length > visibleEventCount && (
+        <Popover>
+          <PopoverTrigger className="w-full cursor-pointer bg-csa-yellow-400 text-center text-[8px] text-csa-gray-200 hover:opacity-75 sm:text-xs 2xl:text-lg">
+            <p className="">{filteredEvents.length - displayEventCount} more</p>
+          </PopoverTrigger>
+          <PopoverContent>
+            {filteredEvents
+              ?.slice(displayEventCount)
+              .map(({ summary, start, end, location, description }, index) => {
+                return (
+                  <div className="bg-csa-green-100 px-[10%] pt-[1vh]">
+                    <CalendarEventPopover
+                      startDate={start}
+                      endDate={end}
+                      title={summary}
+                      date={date}
+                      location={location}
+                      description={description}
+                      index={index}
+                    />
+                  </div>
+                );
+              })}
+          </PopoverContent>
+        </Popover>
       )}
     </div>
   );
