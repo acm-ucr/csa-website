@@ -8,7 +8,7 @@ import {
 
 const Events = () => {
   return (
-    <div className="flex flex-col items-center gap-y-8 pt-5">
+    <div className="flex flex-col items-center gap-y-8 py-5">
       {events.map((event, index) => (
         <Accordion
           type="single"
