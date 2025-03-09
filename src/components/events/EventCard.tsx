@@ -5,12 +5,12 @@ interface EventCardProps {
     dateTime: Date;
     date: string;
   };
-  index: number;
+  idx: number;
 }
 
 const colors = ["bg-csa-red-200", "bg-csa-green-100", "bg-csa-gray-200"];
 
-const EventCard = ({ title, location, startDate, index }: EventCardProps) => {
+const EventCard = ({ title, location, startDate, idx }: EventCardProps) => {
   let eventStartDate: Date = new Date();
   let hasTime = false;
 
@@ -32,7 +32,7 @@ const EventCard = ({ title, location, startDate, index }: EventCardProps) => {
         </p>
         <p className="pl-[35%] text-[3vw] text-csa-gray-100">{location}</p>
         <div
-          className={`absolute left-[-10%] top-0 h-[18vw] w-[18vw] rotate-45 ${colors[index % colors.length]} text-center`}
+          className={`absolute left-[-10%] top-0 h-[18vw] w-[18vw] rotate-45 ${colors[idx % colors.length]} text-center`}
         >
           <p className="-rotate-45 pr-[27%] pt-[10%] text-[4.5vw] font-bold leading-none text-csa-yellow-100">
             {eventStartDate.toLocaleString("default", {

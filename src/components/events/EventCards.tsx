@@ -31,7 +31,8 @@ const EventCards = ({ events }: EventCardsProps) => {
             title={summary}
             location={location}
             startDate={start}
-            index={index}
+            idx={index}
+            key={index}
           />
         );
       })}

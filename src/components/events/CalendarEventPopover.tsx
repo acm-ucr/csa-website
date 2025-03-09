@@ -17,7 +17,6 @@ interface CalendarEventPopoverProps {
   date: Date;
   location: string;
   description: string;
-  index: number;
 }
 
 const CalendarEventPopover = ({
@@ -27,7 +26,6 @@ const CalendarEventPopover = ({
   date,
   location,
   description,
-  index,
 }: CalendarEventPopoverProps) => {
   let eventStartDate = new Date();
   let eventEndDate = new Date();
@@ -60,7 +58,7 @@ const CalendarEventPopover = ({
   const startHourSuffix = startHour < 12 ? "AM" : "PM";
   const endHourSuffix = endHour < 12 ? "AM" : "PM";
   return (
-    <Popover key={index}>
+    <Popover>
       <PopoverTrigger className="w-full cursor-pointer bg-csa-yellow-400 text-center text-[8px] text-csa-gray-200 hover:opacity-75 sm:text-xs 2xl:text-lg">
         <p className="overflow-hidden text-ellipsis whitespace-nowrap px-1">
           {title}

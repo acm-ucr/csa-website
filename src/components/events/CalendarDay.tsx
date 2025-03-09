@@ -92,7 +92,7 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
               date={date}
               location={location}
               description={description}
-              index={index}
+              key={index}
             />
           );
         })}
@@ -104,7 +104,7 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
           <PopoverContent>
             {filteredEvents
               ?.slice(displayEventCount)
-              .map(({ summary, start, end, location, description }, index) => {
+              .map(({ summary, start, end, location, description }, idx) => {
                 return (
                   <div className="bg-csa-green-100 px-[10%] pt-[1vh]">
                     <CalendarEventPopover
@@ -114,7 +114,7 @@ const CalendarDay = ({ date, displayMonth, events }: DayProps) => {
                       date={date}
                       location={location}
                       description={description}
-                      index={index}
+                      key={idx}
                     />
                   </div>
                 );
