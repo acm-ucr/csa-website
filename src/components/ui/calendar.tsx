@@ -35,9 +35,9 @@ function Calendar({
   ...props
 }: CalendarProps) {
   const [currentDate, setCurrentDate] = useState(new Date());
+  const today = new Date();
 
   const nextMonth = () => {
-    const today = new Date();
     const newDate = new Date(currentDate);
     newDate.setMonth(newDate.getMonth() + 1);
     newDate.setDate(
@@ -50,7 +50,6 @@ function Calendar({
   };
 
   const prevMonth = () => {
-    const today = new Date();
     const newDate = new Date(currentDate);
     newDate.setMonth(newDate.getMonth() - 1);
     newDate.setDate(

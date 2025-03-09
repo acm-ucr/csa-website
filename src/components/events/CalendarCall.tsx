@@ -3,7 +3,7 @@ import React from "react";
 import { Calendar } from "@/components/ui/calendar";
 import { useQuery } from "@tanstack/react-query";
 import Title from "@/components/Title";
-import EventCard from "@/components/events/EventCard";
+import EventCards from "@/components/events/EventCards";
 
 export type GoogleEventProps = {
   start: {
@@ -56,7 +56,7 @@ const CalendarCall = () => {
 
   return (
     <>
-      {!isLoading && <EventCard events={data} />}
+      {!isLoading && <EventCards events={data} />}
       <Title>calendar</Title>
       {!isLoading && (
         <Calendar
