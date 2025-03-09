@@ -19,7 +19,7 @@ const CarouselGallery = () => {
       />
       <div className="top-50 absolute -left-2 z-20 hidden h-full w-[20%] bg-csa-tan-100 md:flex" />
       <CarouselCSA photos={carouselData} />
-      <div className="top-50 absolute -right-2 z-20 hidden h-full w-[20%] bg-csa-tan-100 md:flex" />
+      <div className="top-50 absolute z-20 hidden h-full w-[20%] bg-csa-tan-100 md:flex" />
     </div>
   );
 };
