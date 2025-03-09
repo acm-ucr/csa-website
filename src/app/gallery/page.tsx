@@ -3,10 +3,13 @@ import Gallery from "@/components/gallery/Gallery";
 import Image from "next/image";
 import pinkFlower from "@/public/gallery/pinkFlower.webp";
 import blueFlower from "@/public/gallery/blueFlower.webp";
+import CarouselGallery from "@/components/gallery/CarouselGallery";
+
 const Page = () => {
   return (
     <div className="relative min-h-screen bg-csa-tan-100">
       <Title>gallery</Title>
+      <CarouselGallery />
       <Gallery />
       <Image
         src={pinkFlower}

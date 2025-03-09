@@ -75,7 +75,27 @@
   }
 }
 
+@layer utilities {
+  .clip-left {
+    clip-path: polygon(90% 0, 100% 0, 100% 100%, 90% 100%);
+  }
+  .clip-right {
+    clip-path: polygon(0 0, 10% 0, 10% 100%, 0% 100%);
+  }
+}
+
 .diamond {
   -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.embla__container {
+  display: flex;
+  flex-direction: row;
+  height: 10px;
+}
+
+.embla__slide {
+  flex: 0 0 100%; /* Slide covers 50% of the viewport */
+  min-width: 0;
 }

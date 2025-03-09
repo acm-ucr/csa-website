@@ -34,8 +34,7 @@ const Title: React.FC<TitleNameProps> = ({ children }) => {
         className="absolute mt-4 flex justify-center"
       >
         <svg
-          width="3/4vw"
-          height="3/4vw"
+          width="22vw"
           viewBox="0 0 420 200"
           xmlns="http://www.w3.org/2000/svg"
           className="hidden overflow-visible md:flex"
@@ -48,14 +47,14 @@ const Title: React.FC<TitleNameProps> = ({ children }) => {
           />
           <text
             fill="#7C2413"
-            font-size="6.5vw"
-            font-weight="bold"
-            font-family="serif"
+            fontSize="6.5vw"
+            fontWeight="bold"
+            fontFamily="serif"
           >
-            <textPath href="#curve" startOffset="50%" text-anchor="middle">
+            <textPath href="#curve" startOffset="50%" textAnchor="middle">
               {children.split("").map((characters, index) => (
                 <motion.tspan
-                  key={characters}
+                  key={index}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.1, delay: index * 0.1 }}
@@ -67,8 +66,7 @@ const Title: React.FC<TitleNameProps> = ({ children }) => {
           </text>
         </svg>
         <svg
-          width="3/4vw"
-          height="3/4vw"
+          width="80vw"
           viewBox="0 0 400 170"
           xmlns="http://www.w3.org/2000/svg"
           className="md:hidden"
@@ -81,14 +79,14 @@ const Title: React.FC<TitleNameProps> = ({ children }) => {
           />
           <text
             fill="#7C2413"
-            font-size="9vw"
-            font-weight="bold"
-            font-family="serif"
+            fontSize="9vw"
+            fontWeight="bold"
+            fontFamily="serif"
           >
-            <textPath href="#curvy" startOffset="50%" text-anchor="middle">
+            <textPath href="#curvy" startOffset="50%" textAnchor="middle">
               {children.split("").map((characters, index) => (
                 <motion.tspan
-                  key={characters}
+                  key={index}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.1, delay: index * 0.1 }}

@@ -26,13 +26,13 @@ const SlideInFromLeft = {
 
 const Landing = () => {
   return (
-    <div className="pt-[12.2vh] md:pt-[14.4vh]">
+    <div>
       <Image
         src={TopCloud}
         alt="TopCloud"
-        className="absolute left-0 top-[12.5vh] md:top-[14.5vh] md:w-7/12"
+        className="absolute left-0 top-[22vh] md:top-[14.5vh] md:w-7/12"
       />
-      <div className="relative mr-[8vw] border-r-8 border-csa-red-100 pr-6 text-right">
+      <div className="relative z-50 mr-[8vw] border-r-8 border-csa-red-100 pr-6 text-right">
         <div className="mb-8 flex flex-col border-csa-red-100 text-5xl font-semibold text-csa-red-100">
           <motion.p
             variants={SlideInFromRight}
