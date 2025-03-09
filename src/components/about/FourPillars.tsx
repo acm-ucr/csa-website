@@ -15,7 +15,7 @@ const FourPillars = () => {
         <div className="ml-auto mr-4 h-[1vh] w-[11vw] bg-csa-tan-300"></div>
       </div>
 
-      <div className="mt-12 grid grid-cols-2 justify-items-start gap-7 overflow-x-clip sm:gap-6 md:gap-20 lg:overflow-visible">
+      <div className="mt-12 grid grid-cols-2 justify-items-start gap-7 overflow-x-clip pb-10 sm:gap-6 md:gap-20 lg:overflow-visible">
         <div className="relative col-span-2 ml-5 flex h-[8vh] w-[64vw] items-center rounded-3xl border-8 border-csa-green-100 bg-white sm:w-[48vw] md:ml-20 md:h-[12vh] md:w-[42vw]">
           <p className="font-lora p-4 text-3xl font-bold text-csa-gray-200 lg:text-4xl">
             Philanthropy
