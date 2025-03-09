@@ -5,7 +5,7 @@ import pinkFlower from "@/public/gallery/pinkFlower.webp";
 import blueFlower from "@/public/gallery/blueFlower.webp";
 const Page = () => {
   return (
-    <div className="relative min-h-screen bg-csa-tan-100 pb-1 md:pb-10">
+    <div className="relative min-h-screen bg-csa-tan-100">
       <Title>gallery</Title>
       <Gallery />
       <Image
