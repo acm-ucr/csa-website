@@ -1,6 +1,7 @@
 interface EventCardProps {
   title: string;
   location: string;
+  description: string;
   startDate: {
     dateTime: Date;
     date: string;
@@ -10,7 +11,13 @@ interface EventCardProps {
 
 const colors = ["bg-csa-red-200", "bg-csa-green-100", "bg-csa-gray-200"];
 
-const EventCard = ({ title, location, startDate, idx }: EventCardProps) => {
+const EventCard = ({
+  title,
+  location,
+  startDate,
+  idx,
+  description,
+}: EventCardProps) => {
   let eventStartDate: Date = new Date();
   let hasTime = false;
 
@@ -25,12 +32,17 @@ const EventCard = ({ title, location, startDate, idx }: EventCardProps) => {
   const formattedHour = hour % 12 || 12;
   const suffix = hour < 12 ? "AM" : "PM";
   return (
-    <div className="my-[20vh] flex justify-center">
-      <div className="relative w-[50vw] bg-white">
-        <p className="pl-[35%] pt-[9%] text-[5vw] font-bold leading-none text-csa-yellow-100">
+    <div className="my-[13vw] flex justify-center md:my-[14vw]">
+      <div className="relative w-[50vw] bg-white p-[4vw]">
+        <p className="pl-[35%] text-[2vw] font-bold leading-none text-csa-yellow-100">
           {title}
         </p>
-        <p className="pl-[35%] text-[3vw] text-csa-gray-100">{location}</p>
+        <p className="pl-[35%] text-[1vw] text-csa-gray-100">
+          {location ? location : "No location"}
+        </p>
+        <p className="z-50 pl-[35%] text-[1vw] text-csa-gray-100">
+          {description ? description : "No description"}
+        </p>
         <div
           className={`absolute left-[-10%] top-0 h-[18vw] w-[18vw] rotate-45 ${colors[idx % colors.length]} text-center`}
         >
