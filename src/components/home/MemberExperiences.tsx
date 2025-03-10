@@ -25,9 +25,9 @@ const MemberExperiences = () => {
       <Image
         src={Ram}
         alt="Chinese Ram"
-        className="absolute left-[3vw] w-6/12 translate-y-[-12vh] md:w-4/12 md:translate-y-[-16vh] lg:translate-y-[-13vh]"
+        className="absolute left-[3vw] w-6/12 translate-y-[-12vh] md:w-4/12 md:translate-y-[-16vh] lg:w-1/4 lg:translate-y-[-10vh] xl:w-1/4 xl:translate-y-[-2vh] 2xl:translate-y-[-4vh]"
       />
-      <p className="flex justify-end pb-[4vh] pr-4 pt-[10vh] text-4xl font-semibold text-csa-red-100 md:pr-[15vw] md:text-6xl lg:py-[5vh] xl:py-[15vh]">
+      <p className="flex justify-end pb-[4vh] pr-4 pt-[10vh] text-4xl font-semibold text-csa-red-100 md:text-5xl xl:py-[15vh]">
         Member Experiences
       </p>
     </div>

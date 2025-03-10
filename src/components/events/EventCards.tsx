@@ -25,17 +25,20 @@ const EventCards = ({ events }: EventCardsProps) => {
 
   return (
     <>
-      {displayedEvents?.map(({ start, location, summary }, index) => {
-        return (
-          <EventCard
-            title={summary}
-            location={location}
-            startDate={start}
-            idx={index}
-            key={index}
-          />
-        );
-      })}
+      {displayedEvents?.map(
+        ({ start, location, summary, description }, index) => {
+          return (
+            <EventCard
+              title={summary}
+              location={location}
+              startDate={start}
+              description={description}
+              idx={index}
+              key={index}
+            />
+          );
+        },
+      )}
     </>
   );
 };

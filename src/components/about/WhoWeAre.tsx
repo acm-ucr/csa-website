@@ -8,7 +8,7 @@ const WhoWeAre = () => {
         <div className="ml-7 mr-auto h-2 w-[9%] bg-csa-tan-300" />
       </div>
       <div className="flex justify-center">
-        <p className="font-lora mt-8 w-11/12 text-left text-4xl text-csa-gray-100">
+        <p className="font-lora mt-8 w-11/12 text-left text-xl text-csa-gray-100 md:text-4xl">
           The Chinese Student Association (CSA) at UC Riverside is a social,
           cultural, and service orientated organization that strives to promote
           the Chinese American culture throughout the UCR and Riverside
