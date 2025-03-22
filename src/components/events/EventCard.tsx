@@ -34,13 +34,13 @@ const EventCard = ({
   return (
     <div className="mb-[13vw] flex justify-center md:mb-[18vh]">
       <div className="relative h-[22vw] w-[65vw] bg-white pt-[2vh] md:h-[18vw] md:w-[50vw] md:pt-[8vh]">
-        <p className="pl-[35%] text-xl font-bold leading-none text-csa-yellow-100 md:text-[3.25vw]">
+        <p className="pl-[35%] text-lg font-bold leading-none text-csa-yellow-100 md:text-[3.25vw]">
           {title}
         </p>
-        <p className="text-md pl-[36%] pt-2 leading-none text-csa-gray-100 md:text-xl">
+        <p className="text-md pl-[36%] pt-1 leading-none text-csa-gray-100 md:text-xl">
           {location ? location : "No location"}
         </p>
-        <p className="z-50 pl-[36%] pt-2 text-xs leading-none text-csa-gray-100 md:text-[1vw]">
+        <p className="z-50 hidden pl-[36%] pt-2 text-xs leading-none text-csa-gray-100 md:flex md:text-[1vw]">
           {description ? description : "No description"}
         </p>
         <div
