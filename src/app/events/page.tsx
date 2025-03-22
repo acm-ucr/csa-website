@@ -4,7 +4,7 @@ import CalendarCall from "@/components/events/CalendarCall";
 
 const Page = () => {
   return (
-    <div className="bg-csa-tan-100">
+    <div className="bg-csa-tan-100 min-h-screen">
       <FruitBranch />
       <Title>events</Title>
       <CalendarCall />
