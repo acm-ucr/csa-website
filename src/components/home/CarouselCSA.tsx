@@ -82,6 +82,7 @@ const CarouselCSA = ({ photos }: CarouselProps) => {
             </CarouselItem>
           ))}
         </CarouselContent>
+
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
