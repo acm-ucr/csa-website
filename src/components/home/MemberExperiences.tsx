@@ -5,7 +5,7 @@ const MemberExperiences = () => {
   return (
     <div>
       <div className="flex justify-center">
-        <div className="font-lora mb-4 w-3/5 rounded-2xl bg-white shadow-quote">
+        <div className="font-lora mb-4 w-3/4 rounded-2xl bg-white shadow-quote md:w-3/5">
           <p className="pl-4 pt-4 text-8xl font-bold leading-none text-csa-yellow-100">
             “
           </p>
@@ -25,9 +25,9 @@ const MemberExperiences = () => {
       <Image
         src={Ram}
         alt="Chinese Ram"
-        className="absolute left-[3vw] w-6/12 translate-y-[-12vh] md:w-4/12 md:translate-y-[-16vh] lg:w-1/4 lg:translate-y-[-10vh] xl:w-1/4 xl:translate-y-[-2vh] 2xl:translate-y-[-4vh]"
+        className="absolute left-[3vw] w-6/12 translate-y-[-8vh] md:w-4/12 md:translate-y-[-16vh] lg:w-1/4 lg:translate-y-[-10vh] xl:w-1/4 xl:translate-y-[-2vh] 2xl:translate-y-[-4vh]"
       />
-      <p className="flex justify-end pb-[4vh] pr-4 pt-[10vh] text-4xl font-semibold text-csa-red-100 md:text-5xl xl:py-[15vh]">
+      <p className="flex justify-end pb-[4vh] pr-4 pt-[12vh] text-4xl font-semibold text-csa-red-100 md:text-5xl xl:py-[15vh]">
         Member Experiences
       </p>
     </div>

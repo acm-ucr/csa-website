@@ -12,7 +12,7 @@ const Navigation = () => {
   const pathname = usePathname();
 
   return (
-    <div className="top-0 flex w-full items-center justify-between border-b-8 border-csa-yellow-100 bg-csa-red-200">
+    <div className="top-0 z-50 flex w-full items-center justify-between border-b-8 border-csa-yellow-100 bg-csa-red-200">
       <Link href="/">
         <Image
           src={CsaLogo}
