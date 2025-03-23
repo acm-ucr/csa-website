@@ -6,7 +6,7 @@ import pendant from "@/public/home/Jade_pendent.webp";
 
 const CarouselHome = () => {
   return (
-    <div className="relative my-[10%] flex flex-row">
+    <div className="relative mb-[10%] mt-[10%] flex flex-row md:mb-0">
       <Image
         src={branch}
         alt="cherry blossom"
