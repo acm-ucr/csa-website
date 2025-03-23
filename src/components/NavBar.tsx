@@ -67,7 +67,7 @@ const Navigation = () => {
       >
         <AlignJustify />
       </label>
-      <div className="absolute top-24 z-10 hidden w-full flex-col items-center justify-evenly bg-csa-red-200 peer-checked:flex md:hidden">
+      <div className="absolute top-24 z-50 hidden w-full flex-col items-center justify-evenly bg-csa-red-200 peer-checked:flex md:hidden">
         {tags.map(({ link, name }, index) => (
           <Link
             href={link}
