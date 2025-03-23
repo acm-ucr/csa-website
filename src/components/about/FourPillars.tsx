@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import HeartImage from "@/public/about/heart.svg";
 import Pendant from "@/public/about/pendant.webp";

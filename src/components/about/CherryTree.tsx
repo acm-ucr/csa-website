@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Tree from "@/public/about/cherryTree.webp";
 import Tiger from "@/public/about/tiger.webp";
