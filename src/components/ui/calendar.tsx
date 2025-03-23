@@ -62,7 +62,7 @@ function Calendar({
   };
 
   return (
-    <div className="pt-[5vh] md:pt-[10vh]">
+    <div className="pb-8 pt-[5vh] md:pt-[10vh]">
       <CalendarTop currentDate={currentDate} />
       <DayPicker
         showOutsideDays={showOutsideDays}
