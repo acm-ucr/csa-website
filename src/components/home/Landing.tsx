@@ -94,7 +94,7 @@ const Landing = () => {
       <Image
         src={RightCloud}
         alt="right cloud"
-        className="absolute bottom-[15%] right-0 opacity-70 md:bottom-[10%] md:opacity-100"
+        className="absolute bottom-[15%] right-0 opacity-70 md:bottom-[10%] md:opacity-100 2xl:bottom-[20%]"
       />
 
       <div>
