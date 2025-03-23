@@ -2,7 +2,6 @@
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import CsaLogo from "@/public/home/csalogo.webp";
 import WebMarker from "@/public/home/webpageMarker.svg";
 import { tags } from "@/data/navBarData";
@@ -67,7 +66,7 @@ const Navigation = () => {
       >
         <AlignJustify />
       </label>
-      <div className="absolute top-24 z-10 hidden w-full flex-col items-center justify-evenly bg-csa-red-200 peer-checked:flex md:hidden">
+      <div className="absolute top-24 z-50 hidden w-full flex-col items-center justify-evenly bg-csa-red-200 peer-checked:flex md:hidden">
         {tags.map(({ link, name }, index) => (
           <Link
             href={link}
