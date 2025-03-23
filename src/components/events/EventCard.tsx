@@ -46,7 +46,7 @@ const EventCard = ({
         <div
           className={`absolute left-[-10%] top-0 h-[22vw] w-[22vw] rotate-45 md:h-[18vw] md:w-[18vw] ${colors[idx % colors.length]} text-center`}
         >
-          <p className="-rotate-45 pr-[30%] pt-[10%] text-[4.5vw] font-bold leading-none text-csa-yellow-100 md:pr-[27%]">
+          <p className="-rotate-45 pr-[23%] pt-[25%] text-[5vw] font-bold leading-none text-csa-yellow-100 md:pr-[18%] md:pt-[19%] md:text-[4.5vw] 2xl:pt-[22%]">
             {eventStartDate.toLocaleString("default", {
               month: "short",
             })}

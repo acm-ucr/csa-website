@@ -14,7 +14,6 @@ const Title: React.FC<TitleNameProps> = ({ children }) => {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="mr-5 mt-4 h-1 w-[20vw] bg-csa-green-100 md:mr-4 md:h-2"
       />
-
       <motion.div
         initial={{ y: -15, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -37,7 +36,39 @@ const Title: React.FC<TitleNameProps> = ({ children }) => {
           width="22vw"
           viewBox="0 0 420 200"
           xmlns="http://www.w3.org/2000/svg"
-          className="hidden overflow-visible md:flex"
+          className="hidden overflow-visible 2xl:flex"
+        >
+          <path
+            id="curved"
+            d="M0,160 Q210,0 460,160"
+            fill="transparent"
+            stroke="none"
+          />
+          <text
+            fill="#7C2413"
+            fontSize="5.5vw"
+            fontWeight="bold"
+            fontFamily="serif"
+          >
+            <textPath href="#curved" startOffset="50%" textAnchor="middle">
+              {children.split("").map((characters, index) => (
+                <motion.tspan
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.1, delay: index * 0.1 }}
+                >
+                  {characters}
+                </motion.tspan>
+              ))}
+            </textPath>
+          </text>
+        </svg>
+        <svg
+          width="22vw"
+          viewBox="0 0 420 200"
+          xmlns="http://www.w3.org/2000/svg"
+          className="hidden overflow-visible md:flex 2xl:hidden"
         >
           <path
             id="curve"
