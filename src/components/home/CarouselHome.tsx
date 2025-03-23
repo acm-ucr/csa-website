@@ -2,7 +2,7 @@ import Image from "next/image";
 import CarouselCSA from "@/components/home/CarouselCSA";
 import { carouselData } from "@/data/carouselData";
 import branch from "@/public/home/Cherry_blossom.svg";
-import pendant from "@/public/home/Jade_pendent.svg";
+import pendant from "@/public/home/Jade_pendent.webp";
 
 const CarouselHome = () => {
   return (
@@ -15,7 +15,7 @@ const CarouselHome = () => {
       <Image
         src={pendant}
         alt="jade pendant"
-        className="absolute left-[50%] top-[40%] z-40 h-[80%] w-[80%] md:left-[40%]"
+        className="absolute left-[72%] top-[40%] z-40 w-2/12 md:w-[12%]"
       />
       <div className="top-50 absolute -left-2 z-20 hidden h-full w-[20%] bg-csa-tan-400 md:flex" />
       <CarouselCSA photos={carouselData} />
