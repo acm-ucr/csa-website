@@ -1,6 +1,6 @@
 import Image from "next/image";
 import CarouselCSA from "@/components/home/CarouselCSA";
-import { carouselData } from "@/data/carouselDataGallery";
+import { carouselData } from "@/data/carouselGallery";
 import rabbit from "@/public/gallery/ChineseRabbit.webp";
 import bamboo from "@/public/gallery/Bamboo.webp";
 
