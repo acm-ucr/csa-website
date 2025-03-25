@@ -77,7 +77,7 @@ const CalendarEventPopover = ({
           <div className="flex flex-col gap-y-[1vh] bg-csa-tan-500 py-[1vh] pl-[2vw] text-[10px] text-csa-gray-100 sm:text-xs md:text-lg 2xl:text-xl">
             <p className="mr-[13%]">
               {location}
-              {hasStartTime && (
+              {hasStartTime ? (
                 <>
                   {formattedStartHour}:{formattedStartMinutes} {startHourSuffix}
                   {hasEndTime && (
@@ -87,9 +87,11 @@ const CalendarEventPopover = ({
                     </>
                   )}
                 </>
+              ) : (
+                <span> No Times Available</span>
               )}
               <br />
-              {description}
+              {description || "No Description Available"}
             </p>
           </div>
         )}
