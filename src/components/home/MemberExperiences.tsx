@@ -28,7 +28,7 @@ const MemberExperiences = () => {
       <Image
         src={Ram}
         alt="Chinese Ram"
-        className="absolute left-[3vw] w-6/12 translate-y-[-18vh] sm:w-1/3 sm:translate-y-[-19vh] md:w-4/12 md:translate-y-[-23vh] lg:w-1/4 lg:translate-y-[-10vh] xl:w-1/4 xl:translate-y-[-36vh] 2xl:translate-y-[-4vh]"
+        className="absolute left-[3vw] w-6/12 translate-y-[-18vh] sm:w-1/3 sm:translate-y-[-19vh] md:w-4/12 md:translate-y-[-28vh] lg:w-1/4 lg:translate-y-[-24vh] xl:w-1/4 xl:translate-y-[-28vh] 2xl:translate-y-[-34vh]"
       />
     </div>
   );
