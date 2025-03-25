@@ -1,5 +1,5 @@
 import Image from "next/image";
-import xinImage from "@/public/home/xinimage.svg";
+import xinImage from "@/public/home/xinimage.webp";
 
 const XinDescription = () => {
   return (
