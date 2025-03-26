@@ -3,7 +3,7 @@ import Ram from "@/public/home/ram.webp";
 
 const MemberExperiences = () => {
   return (
-    <div>
+    <>
       <div className="flex justify-center">
         <div className="font-lora mb-4 w-3/4 rounded-2xl bg-white shadow-quote md:w-3/5">
           <p className="pl-4 pt-4 text-8xl font-bold leading-none text-csa-yellow-100">
@@ -30,7 +30,7 @@ const MemberExperiences = () => {
       <p className="flex justify-end pb-[4vh] pr-4 pt-[12vh] text-4xl font-semibold text-csa-red-100 md:text-5xl xl:py-[15vh]">
         Member Experiences
       </p>
-    </div>
+    </>
   );
 };
 
