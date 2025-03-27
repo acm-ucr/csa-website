@@ -8,10 +8,10 @@ const FourPillars = () => {
   return (
     <div>
       <div className="mt-10 flex flex-col">
-        <p className="mr-2 pr-4 text-right text-5xl font-semibold text-csa-red-100">
+        <p className="ml-[7%] mr-[6%] text-right text-5xl font-semibold text-csa-red-100">
           Four Pillars
         </p>
-        <div className="ml-auto mr-4 h-[1vh] w-[11vw] bg-csa-tan-300"></div>
+        <div className="ml-auto mr-[6%] h-2 w-[9%] bg-csa-tan-300"></div>
       </div>
 
       <div className="mt-12 grid grid-cols-2 justify-items-start gap-7 overflow-x-clip pb-10 sm:gap-6 md:gap-20 lg:overflow-visible">

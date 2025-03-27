@@ -10,7 +10,7 @@ interface Photo {
   alt: string;
 }
 
-export const carouselData: Photo[] = [
+export const carouselGallery: Photo[] = [
   {
     src: One,
     alt: "photo 1",
