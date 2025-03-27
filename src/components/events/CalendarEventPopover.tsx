@@ -64,7 +64,7 @@ const CalendarEventPopover = ({
           {title}
         </p>
       </PopoverTrigger>
-      <PopoverContent className="w-[15vw] text-center 2xl:w-[20vw]">
+      <PopoverContent className="w-[15vw] 2xl:w-[20vw]">
         <p className="bg-csa-green-100 px-[1vw] py-[1vh] text-[10px] text-csa-yellow-100 sm:text-xs md:text-lg 2xl:text-xl">
           {date.toLocaleString("default", {
             year: "numeric",
@@ -74,7 +74,7 @@ const CalendarEventPopover = ({
           - {title}
         </p>
         {(location || hasStartTime || description) && (
-          <div className="flex flex-col gap-y-[1vh] bg-csa-tan-500 py-[1vh] pl-[2vw] text-[10px] text-csa-gray-100 sm:text-xs md:text-lg 2xl:text-xl">
+          <div className="flex flex-col gap-y-[1vh] bg-csa-tan-500 py-[1vh] pl-[1vw] text-[10px] text-csa-gray-100 sm:text-xs md:text-lg 2xl:text-xl">
             <p className="mr-[13%]">
               {location}
               {hasStartTime ? (
@@ -88,7 +88,7 @@ const CalendarEventPopover = ({
                   )}
                 </>
               ) : (
-                <span> No Times Available</span>
+                <p> No Times Available</p>
               )}
               <br />
               {description || "No Description Available"}
