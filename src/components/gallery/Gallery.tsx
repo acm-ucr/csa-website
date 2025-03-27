@@ -1,4 +1,4 @@
-import { events } from "@/data/eventData";
+import { events } from "@/data/event";
 import {
   Accordion,
   AccordionContent,

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CsaLogo from "@/public/home/csalogo.webp";
 import WebMarker from "@/public/home/webpageMarker.svg";
-import { tags } from "@/data/navBarData";
+import { tags } from "@/data/navBar";
 import { AlignJustify } from "lucide-react";
 
 const Navigation = () => {

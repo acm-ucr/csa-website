@@ -2,7 +2,7 @@
 
 import Dragon from "@/public/home/Dragon.webp";
 import TopCloud from "@/public/home/TopCloud.webp";
-import RightCloud from "@/public/home/RightCloud.svg";
+import RightCloud from "@/public/home/RightCloud.webp";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 
@@ -26,7 +26,7 @@ const SlideInFromLeft = {
 
 const Landing = () => {
   return (
-    <>
+    <div className="pt-[10%]">
       <Image
         src={TopCloud}
         alt="TopCloud"
@@ -104,7 +104,7 @@ const Landing = () => {
           className="absolute left-0 top-28 w-[25vw] md:top-24 md:w-[25vw] 2xl:top-28 2xl:w-[20vw]"
         />
       </div>
-    </>
+    </div>
   );
 };
 
