@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fruitBranch from "@/public/events/fruitBranch.svg";
+import fruitBranch from "@/public/events/fruitBranch.webp";
 const FruitBranch = () => {
   return (
     <Image

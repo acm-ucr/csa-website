@@ -2,7 +2,7 @@
 
 import Dragon from "@/public/home/Dragon.webp";
 import TopCloud from "@/public/home/TopCloud.webp";
-import RightCloud from "@/public/home/RightCloud.svg";
+import RightCloud from "@/public/home/RightCloud.webp";
 import Image from "next/image";
 import * as motion from "motion/react-client";
 
