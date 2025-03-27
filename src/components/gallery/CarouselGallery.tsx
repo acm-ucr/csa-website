@@ -1,6 +1,6 @@
 import Image from "next/image";
 import CarouselCSA from "@/components/home/CarouselCSA";
-import { carouselData } from "@/data/carouselGallery";
+import { carouselGallery } from "@/data/carouselGallery";
 import rabbit from "@/public/gallery/ChineseRabbit.webp";
 import bamboo from "@/public/gallery/Bamboo.webp";
 
@@ -18,7 +18,7 @@ const CarouselGallery = () => {
         className="absolute bottom-[13%] left-[54%] z-40 h-[87%] w-[40%] md:left-[46.5%]"
       />
       <div className="top-50 absolute -left-2 z-20 hidden h-full w-[20%] bg-csa-tan-100 md:flex" />
-      <CarouselCSA photos={carouselData} />
+      <CarouselCSA photos={carouselGallery} />
       <div className="top-50 absolute z-20 hidden h-full w-[20%] bg-csa-tan-100 md:flex" />
     </div>
   );
