@@ -6,7 +6,7 @@ import MemberExperiences from "@/components/home/MemberExperiences";
 
 const Page = () => {
   return (
-    <div className="overflow-hidden bg-csa-tan-400 pt-[12.2vh] md:pt-[14.4vh]">
+    <div className="overflow-hidden bg-csa-tan-400">
       <Landing />
       <XinDescription />
       <EHTitle />
