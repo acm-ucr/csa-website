@@ -9,8 +9,8 @@ const Page = () => {
     <div className="overflow-hidden bg-csa-tan-400 pt-20">
       <Landing />
       <XinDescription />
-      <CarouselHome />
       <EHTitle />
+      <CarouselHome />
       <MemberExperiences />
     </div>
   );
