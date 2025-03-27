@@ -1,6 +1,6 @@
 import { GoogleEventProps } from "@/components/events/CalendarCall";
 import { useState, useEffect } from "react";
-import CalendarEventPopover from "./CalendarEventPopover";
+import CalendarEventPopover from "./EventPopover";
 import {
   Popover,
   PopoverContent,
