@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CarouselCSA from "@/components/home/CarouselCSA";
 import { carouselData } from "@/data/carousel";
-import branch from "@/public/home/Cherry_blossom.svg";
+import branch from "@/public/home/Cherry_blossom.webp";
 import pendant from "@/public/home/Jade_pendent.webp";
 
 const CarouselHome = () => {
@@ -10,7 +10,7 @@ const CarouselHome = () => {
       <Image
         src={branch}
         alt="cherry blossom"
-        className="absolute bottom-[37%] right-[39.5%] z-40 h-[95%] w-[95%]"
+        className="absolute bottom-[65%] left-0 z-40 h-[60%] w-[30%] md:bottom-[62%] lg:bottom-[37%] lg:h-[95%] lg:w-[40%]"
       />
       <Image
         src={pendant}

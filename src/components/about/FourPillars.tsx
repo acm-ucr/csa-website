@@ -1,5 +1,5 @@
 import Image from "next/image";
-import HeartImage from "@/public/about/heart.svg";
+import HeartImage from "@/public/about/heart.webp";
 import Pendant from "@/public/about/pendant.webp";
 import redenvelope from "@/public/about/envelope.webp";
 import gradCap from "@/public/about/gradCap.webp";
