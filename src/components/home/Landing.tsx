@@ -26,7 +26,7 @@ const SlideInFromLeft = {
 
 const Landing = () => {
   return (
-    <div>
+    <div className="pt-[10%]">
       <Image
         src={TopCloud}
         alt="TopCloud"
