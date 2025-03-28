@@ -3,7 +3,7 @@ import Gallery from "@/components/gallery/Gallery";
 import Image from "next/image";
 import pinkFlower from "@/public/gallery/pinkFlower.webp";
 import blueFlower from "@/public/gallery/blueFlower.webp";
-import CarouselGallery from "@/components/gallery/CarouselGallery";
+import CarouselGallery from "@/components/gallery/CaroGallery";
 
 const Page = () => {
   return (

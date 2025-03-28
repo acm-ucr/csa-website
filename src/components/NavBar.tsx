@@ -10,6 +10,14 @@ import { AlignJustify } from "lucide-react";
 const Navigation = () => {
   const pathname = usePathname();
 
+  const classes: { [key: string]: string } = {
+    Home: "mx-5",
+    About: "mx-5",
+    Board: "mx-5",
+    Events: "mx-6",
+    Gallery: "mx-7",
+  };
+
   return (
     <div className="top-0 z-50 flex w-full items-center justify-between border-b-8 border-csa-yellow-100 bg-csa-red-200">
       <Link href="/">
@@ -32,28 +40,11 @@ const Navigation = () => {
             }`}
           >
             {name}
-            {pathname === link &&
-              name !== "Gallery" &&
-              name !== "Join" &&
-              name !== "Events" && (
-                <Image
-                  src={WebMarker}
-                  alt="WebMarker"
-                  className="absolute mx-5 mt-12 w-4"
-                />
-              )}
-            {pathname === link && name === "Gallery" && (
+            {pathname === link && (
               <Image
                 src={WebMarker}
                 alt="WebMarker"
-                className="absolute mx-7 mt-12 w-4"
-              />
-            )}
-            {pathname === link && name === "Events" && (
-              <Image
-                src={WebMarker}
-                alt="WebMarker"
-                className="absolute mx-6 mt-12 w-4"
+                className={`absolute ${classes[name]} mt-12 w-4`}
               />
             )}
           </Link>

@@ -94,14 +94,14 @@ const Landing = () => {
       <Image
         src={RightCloud}
         alt="right cloud"
-        className="absolute bottom-[15%] right-0 opacity-70 md:bottom-[10%] md:opacity-100 2xl:bottom-[20%]"
+        className="absolute bottom-28 right-0 opacity-70 md:bottom-14 md:opacity-100 2xl:bottom-56"
       />
 
       <div>
         <Image
           src={Dragon}
           alt="dragon"
-          className="absolute left-0 top-[14vh] w-[25vw] md:top-[18%] md:w-[25vw] 2xl:top-[11%] 2xl:w-[20vw]"
+          className="absolute left-0 top-28 w-[25vw] md:top-24 md:w-[25vw] 2xl:top-28 2xl:w-[20vw]"
         />
       </div>
     </div>
