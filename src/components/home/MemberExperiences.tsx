@@ -3,8 +3,11 @@ import Ram from "@/public/home/ram.webp";
 
 const MemberExperiences = () => {
   return (
-    <div>
-      <div className="flex justify-center">
+    <>
+      <p className="flex justify-center py-[2vh] text-4xl font-semibold text-csa-red-100 md:pt-4 md:text-5xl xl:py-[5vh]">
+        Member Experiences
+      </p>
+      <div className="flex justify-center pb-32">
         <div className="font-lora mb-4 w-3/4 rounded-2xl bg-white shadow-quote md:w-3/5">
           <p className="pl-4 pt-4 text-8xl font-bold leading-none text-csa-yellow-100">
             “
@@ -25,12 +28,9 @@ const MemberExperiences = () => {
       <Image
         src={Ram}
         alt="Chinese Ram"
-        className="absolute left-[3vw] w-6/12 translate-y-[-8vh] md:w-4/12 md:translate-y-[-16vh] lg:w-1/4 lg:translate-y-[-10vh] xl:w-1/4 xl:translate-y-[-2vh] 2xl:translate-y-[-4vh]"
+        className="absolute left-[3vw] w-4/12 translate-y-[-21vh] sm:w-1/3 sm:translate-y-[-19vh] md:w-1/4 md:translate-y-[-20vh] lg:w-1/4 lg:translate-y-[-24vh] xl:w-1/6 xl:translate-y-[-39vh] 2xl:w-1/6 2xl:translate-y-[-38vh]"
       />
-      <p className="flex justify-end pb-[4vh] pr-4 pt-[12vh] text-4xl font-semibold text-csa-red-100 md:text-5xl xl:py-[15vh]">
-        Member Experiences
-      </p>
-    </div>
+    </>
   );
 };
 

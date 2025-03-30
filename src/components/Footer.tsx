@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CsaLogo from "@/public/home/csalogo.webp";
-import { icons } from "@/data/footerData";
+import { icons } from "@/data/footer";
 
 const Footer = () => {
   return (

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import xinImage from "@/public/home/xinimage.svg";
+import xinImage from "@/public/home/xinimage.webp";
 
 const XinDescription = () => {
   return (
@@ -11,7 +11,7 @@ const XinDescription = () => {
         that defines the Chinese American.
       </p>
       <div className="relative my-[6vh] flex items-center justify-center md:py-[0]">
-        <div className="aspect-square w-[45vw] rounded-full border-8 border-csa-tan-200 bg-csa-tan-100 md:w-[16vw]"></div>
+        <div className="aspect-square w-[45vw] rounded-full border-8 border-csa-tan-200 bg-csa-tan-100 md:w-[16vw]" />
         <Image
           src={xinImage}
           alt="Xin_Image"

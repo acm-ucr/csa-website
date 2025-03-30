@@ -1,7 +1,7 @@
 import Image from "next/image";
 import GroupImage from "@/public/board/Group-Photo-CSA.webp";
-import WhiteFlower from "@/public/board/whiteflowers.svg";
-import Boar from "@/public/board/boar.webp";
+import WhiteFlower from "@/public/board/whiteflowers.webp";
+import Ox from "@/public/board/ox.webp";
 
 const GroupPhoto = () => {
   return (
@@ -19,7 +19,7 @@ const GroupPhoto = () => {
         />
       </div>
       <Image
-        src={Boar}
+        src={Ox}
         alt="Boar"
         className="absolute right-4 w-4/12 overflow-hidden md:right-0 md:-translate-y-4"
       />
