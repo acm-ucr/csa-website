@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CarouselCSA from "@/components/home/CarouselCSA";
+import CarouselCSA from "@/components/home/Carousel";
 import { carouselHome } from "@/data/carouselHome";
 import branch from "@/public/home/Cherry_blossom.webp";
 import pendant from "@/public/home/Jade_pendent.webp";
