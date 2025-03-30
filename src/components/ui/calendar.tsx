@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { useState } from "react";
 import { GoogleEventProps } from "@/components/events/CalendarCall";
-import CalendarTop from "@/components/events/CalendarTop";
-import CalendarDay from "@/components/events/CalendarDay";
+import CalendarTop from "@/components/events/Top";
+import CalendarDay from "@/components/events/Day";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker> & {
   events: GoogleEventProps[];

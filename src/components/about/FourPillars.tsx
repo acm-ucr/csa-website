@@ -6,7 +6,7 @@ import gradCap from "@/public/about/gradCap.webp";
 
 const FourPillars = () => {
   return (
-    <div>
+    <>
       <div className="mt-10 flex flex-col">
         <p className="ml-[7%] mr-[6%] text-right text-5xl font-semibold text-csa-red-100">
           Four Pillars
@@ -53,11 +53,11 @@ const FourPillars = () => {
           <Image
             src={gradCap}
             alt="gradCap"
-            className="absolute w-[42vw] translate-x-[40%] translate-y-[-12%] sm:translate-x-[40%] sm:translate-y-[-9%] md:w-[28vw] md:translate-x-[60%] md:translate-y-[-9%] lg:w-[18vw] lg:translate-x-[120%]"
+            className="absolute translate-x-[40%] translate-y-[-9%] md:w-[70%] md:translate-x-[40%]"
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
